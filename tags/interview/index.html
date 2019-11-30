@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>Archive：2019/11 - Hexo</title>
+  <title>Tags：interview - Hexo</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,7 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;interview&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -24,7 +24,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1575098479750">
+  <link rel="stylesheet" href="/css/style.css?v=1575098479771">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -177,40 +177,6 @@
         <section class="nexmoe-posts" id="brand-waterfall">
     
     <div class="nexmoe-post">
-        <a href="/2019/11/27/2019-11-27-CommandPattern/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="命令模式">
-                
-                <h1>命令模式</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月27日</a>
-            <a><i class="nexmoefont icon-areachart"></i>167 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
-            
-            
-                <a class="nexmoefont icon-tag-fill -link" href="/tags/learning/" rel="tag">learning</a>
-            
-        </div>
-        <article>
-            
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<ul>
-<li>命令模式</li>
-</ul>
-<p>下图为命令模式类图<br><img src="https://raw.githubusercontent.com/csxiaoshang/images/master/bolg/images20191127153840.png" alt=""><br><br><br><br><br>简单的看，命令模式实现了命令发起者和命令执行者的解耦，中间增加了一层调用者。<br>命令组合命令执行者，调用者中维护一个命令列表，并封装命令执行方法。命令发起者则将命令添加到命令调用者中。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    putCommand(Command command,Receiver receiver);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Invoker</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    List&lt;Command&gt; commandList;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    executeCommand()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        commandList.forEach(command-&gt;command.execute());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Command</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    execute();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CommandA</span> <span class="keyword">implements</span> <span class="title">Command</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    Receiver receiver;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    execute()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        receiver.action();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Receiver</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    action()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 需要执行的业务逻辑</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-            
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
         <a href="/2019/11/26/2019-11-26-iqiyi/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
@@ -244,6 +210,75 @@
         </article>
     </div>
     
+    <div class="nexmoe-post">
+        <a href="/2018/09/22/2018-09-22-toutiaomianshibuqu/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="考虑后不去参加头条实习面试">
+                
+                <h1>考虑后不去参加头条实习面试</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月22日</a>
+            <a><i class="nexmoefont icon-areachart"></i>287 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/note/">note</a>
+            
+            
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/interview/" rel="tag">interview</a>
+            
+        </div>
+        <article>
+            
+            <ul>
+<li><p>content<br>{:toc}</p>
+<p>  昨天下午收到了头条HR的电话，让过去参加面试，本来挺高兴的，寻思就算去不上，过去面试吸取下经验也是好的。</p>
+<p>  今天正好大学同学一起聚餐，特别高兴聊了很多。也寻思去过去看看肯定是好的，回来后，打算看看头条JAVA后台的实习面经，看了几篇劝退了。</p>
+<p>  您好，诚意邀请您参加字节跳动的面试。<br>  【面试时间】：2018-09-26 16:00:00<br>  【面试地点】：知春路甲48号盈都大厦B座10层<br>  【面试流程】：笔试/初试-复试-终面<br>  【乘车路线】：地铁10号线或13号线（知春路站B口出），西行约100米左转，前方左手边的写字楼即到。</p>
+<p>  深深的感觉到自己水平能力还有很大欠缺，想要做好java后台开发还有很长的路要走。</p>
+<p>  同时也很高兴自己来到了北京，这里机会真的是多。自己投了3份简历，两个让我去面试。在这种大环境下，真的是海阔凭鱼跃，天高任鸟飞。</p>
+</li>
+</ul>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2018/09/21/2018-09-21-sougoumianshi/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="面试搜狗实习">
+                
+                <h1>面试搜狗实习</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月21日</a>
+            <a><i class="nexmoefont icon-areachart"></i>294 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/note/">note</a>
+            
+            
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/interview/" rel="tag">interview</a>
+            
+        </div>
+        <article>
+            
+            <ul>
+<li>content<br>{:toc}</li>
+</ul>
+<p>###面试搜狗的实习，估计凉了</p>
+<p>  之前没事投了几个简历，也记不清这次是 java 还是android的了，还有点不太想去。。<br>  寻思了下还是过去吧，面试下还能增长下经验，了解下今后的学习方向。<br>  过去后，先去了前台登记了下，等一会面试的人过来了，叫到一个屋子里面试。先给了我一份试题，一串代码关于继承和上转型的，有一些 activity的lanchmode啥的 sevice的生命周期啥的，不太会;后面是两道编程题，比较简单，一个是用链表实现堆栈的push pop peak，一个是查找字符串里第一个不重复的字符。自我介绍了下，聊了下项目，项目怎么实现的啥的，后来问了点java的多态啥的，有点忘了，面试中我想起来，这个投的应该是android，他说了一句话，看你做的东西应该是没有调用过一些android核心的api，应该是凉了。</p>
+<p>  算是个经验，不会的东西还有很多，没事多刷刷leetcode，把java研究精通些。</p>
+
+            
+        </article>
+    </div>
+    
 </section>
 
     </div>
@@ -261,7 +296,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1575098479753"></script>
+<script src="/js/app.js?v=1575098479774"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

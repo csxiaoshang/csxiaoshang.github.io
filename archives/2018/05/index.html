@@ -3,7 +3,7 @@
 
 <head>
   
-  <title>Archive：2019/11 - Hexo</title>
+  <title>Archive：2018/5 - Hexo</title>
   <meta charset="UTF-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -13,7 +13,7 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;11&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2018&#x2F;05&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -24,7 +24,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1575098479750">
+  <link rel="stylesheet" href="/css/style.css?v=1575098479732">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -177,20 +177,20 @@
         <section class="nexmoe-posts" id="brand-waterfall">
     
     <div class="nexmoe-post">
-        <a href="/2019/11/27/2019-11-27-CommandPattern/">
+        <a href="/2018/05/18/2018-05-18-create-vpn/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="命令模式">
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="搭一个自己的vpn">
                 
-                <h1>命令模式</h1>
+                <h1>搭一个自己的vpn</h1>
             </div>
         </a>
         <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月27日</a>
-            <a><i class="nexmoefont icon-areachart"></i>167 字</a>
+            <a><i class="nexmoefont icon-calendar-fill"></i>2018年05月18日</a>
+            <a><i class="nexmoefont icon-areachart"></i>78 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/learning/">learning</a>
             
             
                 <a class="nexmoefont icon-tag-fill -link" href="/tags/learning/" rel="tag">learning</a>
@@ -199,46 +199,50 @@
         <article>
             
             <ul>
-<li>content<br>{:toc}</li>
+<li>content<br>{:toc}<blockquote>
+<p>寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了</p>
+</blockquote>
+</li>
 </ul>
-<ul>
-<li>命令模式</li>
-</ul>
-<p>下图为命令模式类图<br><img src="https://raw.githubusercontent.com/csxiaoshang/images/master/bolg/images20191127153840.png" alt=""><br><br><br><br><br>简单的看，命令模式实现了命令发起者和命令执行者的解耦，中间增加了一层调用者。<br>命令组合命令执行者，调用者中维护一个命令列表，并封装命令执行方法。命令发起者则将命令添加到命令调用者中。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    putCommand(Command command,Receiver receiver);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Invoker</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    List&lt;Command&gt; commandList;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    executeCommand()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        commandList.forEach(command-&gt;command.execute());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Command</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    execute();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CommandA</span> <span class="keyword">implements</span> <span class="title">Command</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    Receiver receiver;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    execute()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        receiver.action();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Receiver</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    action()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 需要执行的业务逻辑</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p><a href="https://www.yigeni.com/build-a-wall-ss-server/" target="_blank" rel="noopener">参考博客</a></p>
+<p><a href="https://www.flyzy2005.com/fan-qiang/shadowsocks/install-shadowsocks-in-one-command/" target="_blank" rel="noopener">参考博客2脚本搭建ss</a></p>
+<p><a href="https://my.vultr.com" target="_blank" rel="noopener">服务器网址</a></p>
+<blockquote>
+<p>当然现在还没有搭 &gt;_&lt;！</p>
+</blockquote>
+
             
         </article>
     </div>
     
     <div class="nexmoe-post">
-        <a href="/2019/11/26/2019-11-26-iqiyi/">
+        <a href="/2018/05/16/2018-05-16-firstblog/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
-                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="iqiyi实习总结">
+                    <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg" alt="my first blog">
                 
-                <h1>iqiyi实习总结</h1>
+                <h1>my first blog</h1>
             </div>
         </a>
         <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月26日</a>
-            <a><i class="nexmoefont icon-areachart"></i>480 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+            <a><i class="nexmoefont icon-calendar-fill"></i>2018年05月16日</a>
+            <a><i class="nexmoefont icon-areachart"></i>51 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/note/">note</a>
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/learning/">learning</a>
             
             
-                <a class="nexmoefont icon-tag-fill -link" href="/tags/interview/" rel="tag">interview</a>
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/learning/" rel="tag">learning</a>
             
         </div>
         <article>
             
             <ul>
-<li>content<br>{:toc}</li>
+<li>content<br>{:toc}<blockquote>
+<p>上网学习了一上午怎么用github搭建个人博客，找到了xudailong先生的博客，fork项目，拿来做了一下更改，算是初步完成了，表示感谢！</p>
+</blockquote>
+</li>
 </ul>
-<ul>
-<li>在爱奇艺实习的经验总结</li>
-</ul>
-<p>今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。<br>而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。<br>唯一有点任务量的算是封装httpclient的api上传下载文件，另一个算是这个系统的核心业务了，编写使用jenkins api的通用工具类，自己写完后就将这个工具类开源了，还打包推到了maven中央仓库。。。<br><br><br>之前都是用springboot写项目，虽然大四的时候看了些javaweb的教程，学习了jsp、servlet，但是也不是太明白。通过做这个项目算是明白了spring项目的启动原理，ioc、aop的一些核心的东西，<br>当时在公司里明白了一个http请求到tomcat处理后分发到spring再处理后，再到业务处理完返回的整个流程的时候，特别兴奋，也模仿github上的一个项目编写了一个小的tomcat demo.在公司的时候<br>，同时看了些左潇龙大佬的设计模式博客，受益颇多。对java的继承 泛型理解多了些，尝试编写通用型的代码，注意编码时的解耦。jvm这本书读了内存那块，看了并发实战的一部分内容。<br><br><br>这两个月一下子就过去了，学到了挺多东西，但是又感觉没有多少，技术水平还得继续增强。<br><br><br>掌握好基础，多实践多学习！</p>
 
             
         </article>
@@ -261,7 +265,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1575098479753"></script>
+<script src="/js/app.js?v=1575098479735"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
