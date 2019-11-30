@@ -24,7 +24,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1575098479753">
+  <link rel="stylesheet" href="/css/style.css?v=1575100382970">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -187,7 +187,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月27日</a>
-            <a><i class="nexmoefont icon-areachart"></i>167 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>138 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
@@ -199,13 +199,9 @@
         <article>
             
             <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<ul>
 <li>命令模式</li>
 </ul>
 <p>下图为命令模式类图<br><img src="https://raw.githubusercontent.com/csxiaoshang/images/master/bolg/images20191127153840.png" alt=""><br><br><br><br><br>简单的看，命令模式实现了命令发起者和命令执行者的解耦，中间增加了一层调用者。<br>命令组合命令执行者，调用者中维护一个命令列表，并封装命令执行方法。命令发起者则将命令添加到命令调用者中。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Client</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    putCommand(Command command,Receiver receiver);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Invoker</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    List&lt;Command&gt; commandList;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    executeCommand()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        commandList.forEach(command-&gt;command.execute());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Command</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    execute();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CommandA</span> <span class="keyword">implements</span> <span class="title">Command</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    Receiver receiver;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    execute()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        receiver.action();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Receiver</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    action()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 需要执行的业务逻辑</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
             
         </article>
     </div>
@@ -221,7 +217,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月26日</a>
-            <a><i class="nexmoefont icon-areachart"></i>480 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>478 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/note/">note</a>
@@ -233,9 +229,6 @@
         <article>
             
             <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<ul>
 <li>在爱奇艺实习的经验总结</li>
 </ul>
 <p>今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。<br>而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。<br>唯一有点任务量的算是封装httpclient的api上传下载文件，另一个算是这个系统的核心业务了，编写使用jenkins api的通用工具类，自己写完后就将这个工具类开源了，还打包推到了maven中央仓库。。。<br><br><br>之前都是用springboot写项目，虽然大四的时候看了些javaweb的教程，学习了jsp、servlet，但是也不是太明白。通过做这个项目算是明白了spring项目的启动原理，ioc、aop的一些核心的东西，<br>当时在公司里明白了一个http请求到tomcat处理后分发到spring再处理后，再到业务处理完返回的整个流程的时候，特别兴奋，也模仿github上的一个项目编写了一个小的tomcat demo.在公司的时候<br>，同时看了些左潇龙大佬的设计模式博客，受益颇多。对java的继承 泛型理解多了些，尝试编写通用型的代码，注意编码时的解耦。jvm这本书读了内存那块，看了并发实战的一部分内容。<br><br><br>这两个月一下子就过去了，学到了挺多东西，但是又感觉没有多少，技术水平还得继续增强。<br><br><br>掌握好基础，多实践多学习！</p>
@@ -255,7 +248,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2019年01月26日</a>
-            <a><i class="nexmoefont icon-areachart"></i>441 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>439 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
@@ -266,10 +259,7 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<p>#策略模式<br>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户<br>##单一职责原则<br>就一个类而言，应该只有一个引起它变化的原因<br>##开放封闭原则<br>软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）<br>##依赖倒转原则<br>针对接口编程，不要对实现编程</p>
+            <p>#策略模式<br>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户<br>##单一职责原则<br>就一个类而言，应该只有一个引起它变化的原因<br>##开放封闭原则<br>软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）<br>##依赖倒转原则<br>针对接口编程，不要对实现编程</p>
 <ul>
 <li>高层模块不应该依赖底层模块，两个都应该依赖抽象</li>
 <li>抽象不应该依赖细节，细节应该依赖抽象<br>##里氏代换原则<br>一个软件实体如果使用的是一个父类的话，那么一定适用于其子类，而且它察觉不出父类对象和子类对象的区别。即在软件里面，把父类都替换成它的子类，程序的行为没有变化。</li>
@@ -293,7 +283,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2019年01月16日</a>
-            <a><i class="nexmoefont icon-areachart"></i>137 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>135 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
@@ -304,10 +294,7 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<p>#这段时间学习了下Java编程思想</p>
+            <p>#这段时间学习了下Java编程思想</p>
 <blockquote>
 <p>之前做项目一些不懂的地方，通过这个看书找到很多答案，也知道不太会的问题应该去哪找了，感觉对自己很有帮助。<br>这本书看的时候并没有完完全全详细的看完，看了一些重点章节 仍有很多不会的地方，后续还要通过博客学习完善，甚至得再看看书。最后，感觉这本书对于java学习的进阶很有帮助。</p>
 </blockquote>
@@ -327,7 +314,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2019年01月16日</a>
-            <a><i class="nexmoefont icon-areachart"></i>27 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>25 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/leetcode/">leetcode</a>
@@ -338,10 +325,7 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<blockquote>
+            <blockquote>
 <p>在个人github上新建了一个leetcode仓库，以后的练习将提交到此处</p>
 </blockquote>
 <p><a href="https://github.com/csxiaoshang/leetcode" target="_blank" rel="noopener">地址</a></p>
@@ -361,7 +345,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年11月14日</a>
-            <a><i class="nexmoefont icon-areachart"></i>53 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>51 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/learning/">learning</a>
@@ -372,12 +356,9 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}<blockquote>
+            <blockquote>
 <p>搭建的比较简陋，只是完成了基本的用户和发表博客、展示博客等功能</p>
 </blockquote>
-</li>
-</ul>
 <p><a href="https://github.com/csxiaoshang/blog" target="_blank" rel="noopener">项目地址</a></p>
 <p>之后会继续学习springboot，了解前后端分离的使用。</p>
 
@@ -396,7 +377,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月22日</a>
-            <a><i class="nexmoefont icon-areachart"></i>145 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>111 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/leetcode/">leetcode</a>
@@ -407,11 +388,38 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<h1 id="Question-Implement-the-following-operations-of-a-queue-using-stacks"><a href="#Question-Implement-the-following-operations-of-a-queue-using-stacks" class="headerlink" title="Question: Implement the following operations of a queue using stacks."></a>Question: Implement the following operations of a queue using stacks.</h1><p>  用两个栈就可以实现一个队列的操作，注意判断栈是否为空</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">MyQueue</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">     Stack&lt;Integer&gt; stack1=<span class="keyword">new</span> Stack&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	Stack&lt;Integer&gt; stack2=<span class="keyword">new</span> Stack&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyQueue</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">       </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">while</span>(!stack2.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">				stack1.push(stack2.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			stack1.push(x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">while</span>(!stack1.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">				stack2.push(stack1.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">int</span> x=stack2.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">return</span> x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">while</span>(!stack1.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">				stack2.push(stack1.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">return</span> stack2.peek();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>(stack1.isEmpty()&amp;&amp;stack2.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+            <h1 id="Question-Implement-the-following-operations-of-a-queue-using-stacks"><a href="#Question-Implement-the-following-operations-of-a-queue-using-stacks" class="headerlink" title="Question: Implement the following operations of a queue using stacks."></a>Question: Implement the following operations of a queue using stacks.</h1><p>  用两个栈就可以实现一个队列的操作，注意判断栈是否为空</p>
+<pre><code>    class MyQueue {
+    /** Initialize your data structure here. */
+     Stack&lt;Integer&gt; stack1=new Stack&lt;&gt;();
+    Stack&lt;Integer&gt; stack2=new Stack&lt;&gt;();
+    public MyQueue() {
+
+    }
+
+    public void push(int x) {
+            while(!stack2.isEmpty())
+                stack1.push(stack2.pop());
+            stack1.push(x);
+        }
+        public int pop() {
+            while(!stack1.isEmpty())
+                stack2.push(stack1.pop());
+            int x=stack2.pop();
+            return x;
+        }
+        public int peek() {
+            while(!stack1.isEmpty())
+                stack2.push(stack1.pop());
+            return stack2.peek();
+        }
+        public boolean empty() {
+            if(stack1.isEmpty()&amp;&amp;stack2.isEmpty())
+                return true;
+            else
+                return false;
+        }
+}</code></pre>
             
         </article>
     </div>
@@ -427,7 +435,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月22日</a>
-            <a><i class="nexmoefont icon-areachart"></i>287 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>285 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/note/">note</a>
@@ -438,16 +446,19 @@
         </div>
         <article>
             
-            <ul>
-<li><p>content<br>{:toc}</p>
-<p>  昨天下午收到了头条HR的电话，让过去参加面试，本来挺高兴的，寻思就算去不上，过去面试吸取下经验也是好的。</p>
-<p>  今天正好大学同学一起聚餐，特别高兴聊了很多。也寻思去过去看看肯定是好的，回来后，打算看看头条JAVA后台的实习面经，看了几篇劝退了。</p>
-<p>  您好，诚意邀请您参加字节跳动的面试。<br>  【面试时间】：2018-09-26 16:00:00<br>  【面试地点】：知春路甲48号盈都大厦B座10层<br>  【面试流程】：笔试/初试-复试-终面<br>  【乘车路线】：地铁10号线或13号线（知春路站B口出），西行约100米左转，前方左手边的写字楼即到。</p>
-<p>  深深的感觉到自己水平能力还有很大欠缺，想要做好java后台开发还有很长的路要走。</p>
-<p>  同时也很高兴自己来到了北京，这里机会真的是多。自己投了3份简历，两个让我去面试。在这种大环境下，真的是海阔凭鱼跃，天高任鸟飞。</p>
-</li>
-</ul>
+            <pre><code>昨天下午收到了头条HR的电话，让过去参加面试，本来挺高兴的，寻思就算去不上，过去面试吸取下经验也是好的。
 
+今天正好大学同学一起聚餐，特别高兴聊了很多。也寻思去过去看看肯定是好的，回来后，打算看看头条JAVA后台的实习面经，看了几篇劝退了。
+
+您好，诚意邀请您参加字节跳动的面试。
+【面试时间】：2018-09-26 16:00:00
+【面试地点】：知春路甲48号盈都大厦B座10层
+【面试流程】：笔试/初试-复试-终面
+【乘车路线】：地铁10号线或13号线（知春路站B口出），西行约100米左转，前方左手边的写字楼即到。
+
+深深的感觉到自己水平能力还有很大欠缺，想要做好java后台开发还有很长的路要走。
+
+同时也很高兴自己来到了北京，这里机会真的是多。自己投了3份简历，两个让我去面试。在这种大环境下，真的是海阔凭鱼跃，天高任鸟飞。</code></pre>
             
         </article>
     </div>
@@ -463,7 +474,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月21日</a>
-            <a><i class="nexmoefont icon-areachart"></i>294 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>292 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/note/">note</a>
@@ -474,10 +485,7 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<p>###面试搜狗的实习，估计凉了</p>
+            <p>###面试搜狗的实习，估计凉了</p>
 <p>  之前没事投了几个简历，也记不清这次是 java 还是android的了，还有点不太想去。。<br>  寻思了下还是过去吧，面试下还能增长下经验，了解下今后的学习方向。<br>  过去后，先去了前台登记了下，等一会面试的人过来了，叫到一个屋子里面试。先给了我一份试题，一串代码关于继承和上转型的，有一些 activity的lanchmode啥的 sevice的生命周期啥的，不太会;后面是两道编程题，比较简单，一个是用链表实现堆栈的push pop peak，一个是查找字符串里第一个不重复的字符。自我介绍了下，聊了下项目，项目怎么实现的啥的，后来问了点java的多态啥的，有点忘了，面试中我想起来，这个投的应该是android，他说了一句话，看你做的东西应该是没有调用过一些android核心的api，应该是凉了。</p>
 <p>  算是个经验，不会的东西还有很多，没事多刷刷leetcode，把java研究精通些。</p>
 
@@ -496,7 +504,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月20日</a>
-            <a><i class="nexmoefont icon-areachart"></i>149 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>134 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/leetcode/">leetcode</a>
@@ -507,11 +515,20 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<h2 id="Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty"><a href="#Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty" class="headerlink" title="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty."></a>Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty.</h2><p>这道题比较简单，就是讲两个数组合并下然后排序，找中位数就可以了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span>[] nums1,<span class="keyword">int</span>[] nums2)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span>[] shuzu=Arrays.copyOf(nums1,nums1.length+nums2.length);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	System.arraycopy(nums2, <span class="number">0</span>, shuzu, nums1.length, nums2.length);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	Arrays.sort(shuzu);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> num=nums1.length+nums2.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">double</span> count=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(num%<span class="number">2</span>==<span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		 count=(<span class="keyword">double</span>)(shuzu[num/<span class="number">2</span>-<span class="number">1</span>]+shuzu[num/<span class="number">2</span>])/<span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	&#125;<span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		count=(<span class="keyword">double</span>)shuzu[(num-<span class="number">1</span>)/<span class="number">2</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> count;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+            <h2 id="Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty"><a href="#Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty" class="headerlink" title="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty."></a>Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty.</h2><p>这道题比较简单，就是讲两个数组合并下然后排序，找中位数就可以了</p>
+<pre><code>    public static double findMedianSortedArrays(int[] nums1,int[] nums2) {
+        int[] shuzu=Arrays.copyOf(nums1,nums1.length+nums2.length);
+        System.arraycopy(nums2, 0, shuzu, nums1.length, nums2.length);
+        Arrays.sort(shuzu);
+        int num=nums1.length+nums2.length;
+        double count=0;
+        if(num%2==0) {
+             count=(double)(shuzu[num/2-1]+shuzu[num/2])/2;
+        }else {
+            count=(double)shuzu[(num-1)/2];
+        }
+        return count;
+    }</code></pre>
             
         </article>
     </div>
@@ -537,7 +554,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1575098479756"></script>
+<script src="/js/app.js?v=1575100382973"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

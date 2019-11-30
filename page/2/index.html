@@ -24,7 +24,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1575098479757">
+  <link rel="stylesheet" href="/css/style.css?v=1575100382974">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -187,7 +187,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月18日</a>
-            <a><i class="nexmoefont icon-areachart"></i>148 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>127 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/leetcode/">leetcode</a>
@@ -198,11 +198,26 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<h2 id="Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters"><a href="#Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters" class="headerlink" title="Question: Given a string, find the length of the longest substring without repeating characters."></a>Question: Given a string, find the length of the longest substring without repeating characters.</h2><p>这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       	<span class="keyword">int</span> len=s.length();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	Set&lt;Character&gt; se=<span class="keyword">new</span> HashSet&lt;Character&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">0</span>;j&lt;len;) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">if</span>(!se.contains(s.charAt(j))) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">			se.add(s.charAt(j));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">			j++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			ans=Math.max(ans, j-i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			se.remove(s.charAt(i));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			i++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">   &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+            <h2 id="Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters"><a href="#Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters" class="headerlink" title="Question: Given a string, find the length of the longest substring without repeating characters."></a>Question: Given a string, find the length of the longest substring without repeating characters.</h2><p>这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来</p>
+<pre><code>    class Solution {
+    public int lengthOfLongestSubstring(String s) {
+            int len=s.length();
+        int ans=0;
+        Set&lt;Character&gt; se=new HashSet&lt;Character&gt;();
+        for(int i=0,j=0;j&lt;len;) {
+            if(!se.contains(s.charAt(j))) {
+                se.add(s.charAt(j));
+                j++;
+                ans=Math.max(ans, j-i);
+            }
+            else {
+                se.remove(s.charAt(i));
+                i++;
+            }
+        }
+        return ans;
+    }
+    }</code></pre>
             
         </article>
     </div>
@@ -218,7 +233,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月17日</a>
-            <a><i class="nexmoefont icon-areachart"></i>166 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>128 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/leetcode/">leetcode</a>
@@ -229,13 +244,45 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}<blockquote>
+            <blockquote>
 <p>这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	Stack&lt;Character&gt; stack=<span class="keyword">new</span> Stack&lt;Character&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">char</span> ch=s.charAt(i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">switch</span> (ch) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">case</span> <span class="string">'('</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">case</span> <span class="string">'['</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">case</span> <span class="string">'&#123;'</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">			stack.push(ch);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">case</span> <span class="string">')'</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>((stack.isEmpty())||stack.peek()!=<span class="string">'('</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">				stack.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">case</span> <span class="string">']'</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>((stack.isEmpty())||stack.peek()!=<span class="string">'['</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">				stack.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">case</span> <span class="string">'&#125;'</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">if</span>((stack.isEmpty())||stack.peek()!=<span class="string">'&#125;'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">				stack.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">default</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">			<span class="keyword">break</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(!stack.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> <span class="keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></li>
-</ul>
-
+<pre><code>    public boolean isValid(String s) {
+        Stack&lt;Character&gt; stack=new Stack&lt;Character&gt;();
+        for(int i=0;i&lt;s.length();i++){
+            char ch=s.charAt(i);
+            switch (ch) {
+            case &#39;(&#39;:
+            case &#39;[&#39;:
+            case &#39;{&#39;:
+                stack.push(ch);
+                break;
+            case &#39;)&#39;:
+                if((stack.isEmpty())||stack.peek()!=&#39;(&#39;)
+                    return false;
+                else
+                    stack.pop();
+                break;
+            case &#39;]&#39;:
+                if((stack.isEmpty())||stack.peek()!=&#39;[&#39;)
+                    return false;
+                else
+                    stack.pop();
+                break;
+            case &#39;}&#39;:
+                if((stack.isEmpty())||stack.peek()!=&#39;}&#39;)
+                    return false;
+                else
+                    stack.pop();
+                break;
+            default:
+                break;
+            }
+        }
+        if(!stack.isEmpty())
+            return false;
+        return true;
+    }</code></pre>
             
         </article>
     </div>
@@ -251,7 +298,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年05月18日</a>
-            <a><i class="nexmoefont icon-areachart"></i>78 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>76 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/learning/">learning</a>
@@ -262,12 +309,9 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}<blockquote>
+            <blockquote>
 <p>寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了</p>
 </blockquote>
-</li>
-</ul>
 <p><a href="https://www.yigeni.com/build-a-wall-ss-server/" target="_blank" rel="noopener">参考博客</a></p>
 <p><a href="https://www.flyzy2005.com/fan-qiang/shadowsocks/install-shadowsocks-in-one-command/" target="_blank" rel="noopener">参考博客2脚本搭建ss</a></p>
 <p><a href="https://my.vultr.com" target="_blank" rel="noopener">服务器网址</a></p>
@@ -290,7 +334,7 @@
         </a>
         <div class="nexmoe-post-meta">
             <a><i class="nexmoefont icon-calendar-fill"></i>2018年05月16日</a>
-            <a><i class="nexmoefont icon-areachart"></i>51 字</a>
+            <a><i class="nexmoefont icon-areachart"></i>49 字</a>
             <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
             
                 <a class="nexmoefont icon-appstore-fill -link" href="/categories/learning/">learning</a>
@@ -301,12 +345,9 @@
         </div>
         <article>
             
-            <ul>
-<li>content<br>{:toc}<blockquote>
+            <blockquote>
 <p>上网学习了一上午怎么用github搭建个人博客，找到了xudailong先生的博客，fork项目，拿来做了一下更改，算是初步完成了，表示感谢！</p>
 </blockquote>
-</li>
-</ul>
 
             
         </article>
@@ -333,7 +374,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1575098479760"></script>
+<script src="/js/app.js?v=1575100382977"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

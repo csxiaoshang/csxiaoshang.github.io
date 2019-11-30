@@ -11,15 +11,15 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="content{:toc}  #策略模式它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户##单一职责原则就一个类而言，应该只有一个引起它变化的原因##开放封闭原则软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）##依赖倒转原则针对接口编程，不要对实现编程  高层模块不应该依赖底层模块，两个都应该依赖抽象 抽象不应该依赖细节，细节应该依赖抽">
+  <meta name="description" content="#策略模式它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户##单一职责原则就一个类而言，应该只有一个引起它变化的原因##开放封闭原则软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）##依赖倒转原则针对接口编程，不要对实现编程  高层模块不应该依赖底层模块，两个都应该依赖抽象 抽象不应该依赖细节，细节应该依赖抽象##里氏代换原则一个软件实体如">
 <meta name="keywords" content="learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大话设计模式学习小结">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;01&#x2F;26&#x2F;2019-01-26-DesignPattern&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="content{:toc}  #策略模式它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户##单一职责原则就一个类而言，应该只有一个引起它变化的原因##开放封闭原则软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）##依赖倒转原则针对接口编程，不要对实现编程  高层模块不应该依赖底层模块，两个都应该依赖抽象 抽象不应该依赖细节，细节应该依赖抽">
+<meta property="og:description" content="#策略模式它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户##单一职责原则就一个类而言，应该只有一个引起它变化的原因##开放封闭原则软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）##依赖倒转原则针对接口编程，不要对实现编程  高层模块不应该依赖底层模块，两个都应该依赖抽象 抽象不应该依赖细节，细节应该依赖抽象##里氏代换原则一个软件实体如">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-27T02:35:28.543Z">
+<meta property="og:updated_time" content="2019-11-30T07:34:46.670Z">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -28,7 +28,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1575098479643">
+  <link rel="stylesheet" href="/css/style.css?v=1575100382884">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -187,7 +187,7 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年01月26日</a>
-    <a><i class="nexmoefont icon-areachart"></i>441 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>439 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
@@ -197,10 +197,7 @@
     
   </div>
   <article>
-    <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<p>#策略模式<br>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户<br>##单一职责原则<br>就一个类而言，应该只有一个引起它变化的原因<br>##开放封闭原则<br>软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）<br>##依赖倒转原则<br>针对接口编程，不要对实现编程</p>
+    <p>#策略模式<br>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户<br>##单一职责原则<br>就一个类而言，应该只有一个引起它变化的原因<br>##开放封闭原则<br>软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）<br>##依赖倒转原则<br>针对接口编程，不要对实现编程</p>
 <ul>
 <li>高层模块不应该依赖底层模块，两个都应该依赖抽象</li>
 <li>抽象不应该依赖细节，细节应该依赖抽象<br>##里氏代换原则<br>一个软件实体如果使用的是一个父类的话，那么一定适用于其子类，而且它察觉不出父类对象和子类对象的区别。即在软件里面，把父类都替换成它的子类，程序的行为没有变化。</li>
@@ -255,7 +252,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1575098479647"></script>
+<script src="/js/app.js?v=1575100382888"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

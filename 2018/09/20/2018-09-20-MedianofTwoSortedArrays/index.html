@@ -11,15 +11,15 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png" />
-  <meta name="description" content="content{:toc}  Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You">
+  <meta name="description" content="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1">
 <meta name="keywords" content="learning Array">
 <meta property="og:type" content="article">
 <meta property="og:title" content="4. Median of Two Sorted Arrays">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2018&#x2F;09&#x2F;20&#x2F;2018-09-20-MedianofTwoSortedArrays&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="content{:toc}  Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You">
+<meta property="og:description" content="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-26T07:02:19.684Z">
+<meta property="og:updated_time" content="2019-11-30T07:34:46.826Z">
 <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
@@ -28,7 +28,7 @@
   
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css">
-  <link rel="stylesheet" href="/css/style.css?v=1575098479678">
+  <link rel="stylesheet" href="/css/style.css?v=1575100382919">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -187,7 +187,7 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2018年09月20日</a>
-    <a><i class="nexmoefont icon-areachart"></i>149 字</a>
+    <a><i class="nexmoefont icon-areachart"></i>134 字</a>
     <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/leetcode/">leetcode</a>
@@ -197,11 +197,20 @@
     
   </div>
   <article>
-    <ul>
-<li>content<br>{:toc}</li>
-</ul>
-<h2 id="Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty"><a href="#Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty" class="headerlink" title="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty."></a>Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty.</h2><p>这道题比较简单，就是讲两个数组合并下然后排序，找中位数就可以了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span>[] nums1,<span class="keyword">int</span>[] nums2)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span>[] shuzu=Arrays.copyOf(nums1,nums1.length+nums2.length);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	System.arraycopy(nums2, <span class="number">0</span>, shuzu, nums1.length, nums2.length);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	Arrays.sort(shuzu);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">int</span> num=nums1.length+nums2.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">double</span> count=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(num%<span class="number">2</span>==<span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		 count=(<span class="keyword">double</span>)(shuzu[num/<span class="number">2</span>-<span class="number">1</span>]+shuzu[num/<span class="number">2</span>])/<span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	&#125;<span class="keyword">else</span> &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		count=(<span class="keyword">double</span>)shuzu[(num-<span class="number">1</span>)/<span class="number">2</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	<span class="keyword">return</span> count;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+    <h2 id="Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty"><a href="#Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty" class="headerlink" title="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty."></a>Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty.</h2><p>这道题比较简单，就是讲两个数组合并下然后排序，找中位数就可以了</p>
+<pre><code>    public static double findMedianSortedArrays(int[] nums1,int[] nums2) {
+        int[] shuzu=Arrays.copyOf(nums1,nums1.length+nums2.length);
+        System.arraycopy(nums2, 0, shuzu, nums1.length, nums2.length);
+        Arrays.sort(shuzu);
+        int num=nums1.length+nums2.length;
+        double count=0;
+        if(num%2==0) {
+             count=(double)(shuzu[num/2-1]+shuzu[num/2])/2;
+        }else {
+            count=(double)shuzu[(num-1)/2];
+        }
+        return count;
+    }</code></pre>
   </article>
   
     
@@ -248,7 +257,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1575098479681"></script>
+<script src="/js/app.js?v=1575100382923"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
