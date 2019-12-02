@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>双亲委派模型类加载器问题</title>
+      <link href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/"/>
+      <url>/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>下图是关于类加载顺序的总结</p><a id="more"></a><p><img src="https://raw.githubusercontent.com/csxiaoshang/images/master/bolg/image1241399721.jpg" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>命令模式</title>
+      <link href="/2019/11/27/2019-11-27-CommandPattern/"/>
+      <url>/2019/11/27/2019-11-27-CommandPattern/</url>
+      
+        <content type="html"><![CDATA[<ul><li>命令模式</li></ul><p>下图为命令模式类图<br><img src="https://raw.githubusercontent.com/csxiaoshang/images/master/bolg/images20191127153840.png" alt><br><br><br><br><br>简单的看，命令模式实现了命令发起者和命令执行者的解耦，中间增加了一层调用者。<br>命令组合命令执行者，调用者中维护一个命令列表，并封装命令执行方法。命令发起者则将命令添加到命令调用者中。</p><a id="more"></a> <pre><code>class Client{    putCommand(Command command,Receiver receiver);}class Invoker{    List&lt;Command&gt; commandList;    executeCommand(){        commandList.forEach(command-&gt;command.execute());    }}interface Command{    execute();}class CommandA implements Command{    Receiver receiver;    execute(){        receiver.action();    }}class Receiver{    action(){        // 需要执行的业务逻辑    }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iqiyi实习总结</title>
+      <link href="/2019/11/26/2019-11-26-iqiyi/"/>
+      <url>/2019/11/26/2019-11-26-iqiyi/</url>
+      
+        <content type="html"><![CDATA[<ul><li>在爱奇艺实习的经验总结</li></ul><p>今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。<br>而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。<br>唯一有点任务量的算是封装httpclient的api上传下载文件，另一个算是这个系统的核心业务了，编写使用jenkins api的通用工具类，自己写完后就将这个工具类开源了，还打包推到了maven中央仓库。。。<br><br><br>之前都是用springboot写项目，虽然大四的时候看了些javaweb的教程，学习了jsp、servlet，但是也不是太明白。通过做这个项目算是明白了spring项目的启动原理，ioc、aop的一些核心的东西，<br>当时在公司里明白了一个http请求到tomcat处理后分发到spring再处理后，再到业务处理完返回的整个流程的时候，特别兴奋，也模仿github上的一个项目编写了一个小的tomcat demo.在公司的时候<br>，同时看了些左潇龙大佬的设计模式博客，受益颇多。对java的继承 泛型理解多了些，尝试编写通用型的代码，注意编码时的解耦。jvm这本书读了内存那块，看了并发实战的一部分内容。<br><br><br>这两个月一下子就过去了，学到了挺多东西，但是又感觉没有多少，技术水平还得继续增强。<br><br><br>掌握好基础，多实践多学习！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> interview </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>大话设计模式学习小结</title>
+      <link href="/2019/01/26/2019-01-26-DesignPattern/"/>
+      <url>/2019/01/26/2019-01-26-DesignPattern/</url>
+      
+        <content type="html"><![CDATA[<h1 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h1><p>它定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到算法的客户</p><h2 id="单一职责原则"><a href="#单一职责原则" class="headerlink" title="单一职责原则"></a>单一职责原则</h2><p>就一个类而言，应该只有一个引起它变化的原因</p><h2 id="开放封闭原则"><a href="#开放封闭原则" class="headerlink" title="开放封闭原则"></a>开放封闭原则</h2><p>软件实体应该可以扩展，但是不可修改（增加新需求增加新代码）</p><h2 id="依赖倒转原则"><a href="#依赖倒转原则" class="headerlink" title="依赖倒转原则"></a>依赖倒转原则</h2><p>针对接口编程，不要对实现编程</p><ul><li>高层模块不应该依赖底层模块，两个都应该依赖抽象</li><li>抽象不应该依赖细节，细节应该依赖抽象<h2 id="里氏代换原则"><a href="#里氏代换原则" class="headerlink" title="里氏代换原则"></a>里氏代换原则</h2>一个软件实体如果使用的是一个父类的话，那么一定适用于其子类，而且它察觉不出父类对象和子类对象的区别。即在软件里面，把父类都替换成它的子类，程序的行为没有变化。</li></ul><p><em>子类型必须能够替换掉它们的父类型</em><br><strong>通俗来讲，就是高层模块依赖接口，具体实现则是继承了此接口的实现类</strong></p><h1 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h1><p>动态地给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更为灵活</p><h1 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h1><p>为其他对象提供一种代理以控制对这个对象的访问</p><h1 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h1><p>定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类</p><h1 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h1><p>用原型实例制定创建对象的种类，并且通过拷贝这些原型创建新的对象</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java编程思想学习小结</title>
+      <link href="/2019/01/16/2019-01-16-ThinkInJava/"/>
+      <url>/2019/01/16/2019-01-16-ThinkInJava/</url>
+      
+        <content type="html"><![CDATA[<p>#这段时间学习了下Java编程思想</p><blockquote><p>之前做项目一些不懂的地方，通过这个看书找到很多答案，也知道不太会的问题应该去哪找了，感觉对自己很有帮助。<br>这本书看的时候并没有完完全全详细的看完，看了一些重点章节 仍有很多不会的地方，后续还要通过博客学习完善，甚至得再看看书。最后，感觉这本书对于java学习的进阶很有帮助。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode练习汇总（持续更新）</title>
+      <link href="/2019/01/16/2019-01-16-leetcode/"/>
+      <url>/2019/01/16/2019-01-16-leetcode/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>在个人github上新建了一个leetcode仓库，以后的练习将提交到此处</p></blockquote><p><a href="https://github.com/csxiaoshang/leetcode" target="_blank" rel="noopener">地址</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用springboot+ajax+bootstrap搭建的一个前后端耦合的个人博客项目</title>
+      <link href="/2018/11/14/2018-11-14-springbootblog/"/>
+      <url>/2018/11/14/2018-11-14-springbootblog/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>搭建的比较简陋，只是完成了基本的用户和发表博客、展示博客等功能</p></blockquote><p><a href="https://github.com/csxiaoshang/blog" target="_blank" rel="noopener">项目地址</a></p><p>之后会继续学习springboot，了解前后端分离的使用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> springboot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>232. Implement Queue using Stacks</title>
+      <link href="/2018/09/22/2018-09-22-ImplementQueueusinggStacks/"/>
+      <url>/2018/09/22/2018-09-22-ImplementQueueusinggStacks/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Question-Implement-the-following-operations-of-a-queue-using-stacks"><a href="#Question-Implement-the-following-operations-of-a-queue-using-stacks" class="headerlink" title="Question: Implement the following operations of a queue using stacks."></a>Question: Implement the following operations of a queue using stacks.</h1><p>  用两个栈就可以实现一个队列的操作，注意判断栈是否为空</p><pre><code>    class MyQueue {    /** Initialize your data structure here. */     Stack&lt;Integer&gt; stack1=new Stack&lt;&gt;();    Stack&lt;Integer&gt; stack2=new Stack&lt;&gt;();    public MyQueue() {    }    public void push(int x) {            while(!stack2.isEmpty())                stack1.push(stack2.pop());            stack1.push(x);        }        public int pop() {            while(!stack1.isEmpty())                stack2.push(stack1.pop());            int x=stack2.pop();            return x;        }        public int peek() {            while(!stack1.isEmpty())                stack2.push(stack1.pop());            return stack2.peek();        }        public boolean empty() {            if(stack1.isEmpty()&amp;&amp;stack2.isEmpty())                return true;            else                return false;        }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> stack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>考虑后不去参加头条实习面试</title>
+      <link href="/2018/09/22/2018-09-22-toutiaomianshibuqu/"/>
+      <url>/2018/09/22/2018-09-22-toutiaomianshibuqu/</url>
+      
+        <content type="html"><![CDATA[<pre><code>昨天下午收到了头条HR的电话，让过去参加面试，本来挺高兴的，寻思就算去不上，过去面试吸取下经验也是好的。今天正好大学同学一起聚餐，特别高兴聊了很多。也寻思去过去看看肯定是好的，回来后，打算看看头条JAVA后台的实习面经，看了几篇劝退了。您好，诚意邀请您参加字节跳动的面试。【面试时间】：2018-09-26 16:00:00【面试地点】：知春路甲48号盈都大厦B座10层【面试流程】：笔试/初试-复试-终面【乘车路线】：地铁10号线或13号线（知春路站B口出），西行约100米左转，前方左手边的写字楼即到。深深的感觉到自己水平能力还有很大欠缺，想要做好java后台开发还有很长的路要走。同时也很高兴自己来到了北京，这里机会真的是多。自己投了3份简历，两个让我去面试。在这种大环境下，真的是海阔凭鱼跃，天高任鸟飞。</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> interview </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>面试搜狗实习</title>
+      <link href="/2018/09/21/2018-09-21-sougoumianshi/"/>
+      <url>/2018/09/21/2018-09-21-sougoumianshi/</url>
+      
+        <content type="html"><![CDATA[<p>###面试搜狗的实习，估计凉了</p><p>  之前没事投了几个简历，也记不清这次是 java 还是android的了，还有点不太想去。。<br>  寻思了下还是过去吧，面试下还能增长下经验，了解下今后的学习方向。<br>  过去后，先去了前台登记了下，等一会面试的人过来了，叫到一个屋子里面试。先给了我一份试题，一串代码关于继承和上转型的，有一些 activity的lanchmode啥的 sevice的生命周期啥的，不太会;后面是两道编程题，比较简单，一个是用链表实现堆栈的push pop peak，一个是查找字符串里第一个不重复的字符。自我介绍了下，聊了下项目，项目怎么实现的啥的，后来问了点java的多态啥的，有点忘了，面试中我想起来，这个投的应该是android，他说了一句话，看你做的东西应该是没有调用过一些android核心的api，应该是凉了。</p><p>  算是个经验，不会的东西还有很多，没事多刷刷leetcode，把java研究精通些。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> interview </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>4. Median of Two Sorted Arrays</title>
+      <link href="/2018/09/20/2018-09-20-MedianofTwoSortedArrays/"/>
+      <url>/2018/09/20/2018-09-20-MedianofTwoSortedArrays/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty"><a href="#Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty" class="headerlink" title="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty."></a>Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty.</h2><p>这道题比较简单，就是讲两个数组合并下然后排序，找中位数就可以了</p><pre><code>    public static double findMedianSortedArrays(int[] nums1,int[] nums2) {        int[] shuzu=Arrays.copyOf(nums1,nums1.length+nums2.length);        System.arraycopy(nums2, 0, shuzu, nums1.length, nums2.length);        Arrays.sort(shuzu);        int num=nums1.length+nums2.length;        double count=0;        if(num%2==0) {             count=(double)(shuzu[num/2-1]+shuzu[num/2])/2;        }else {            count=(double)shuzu[(num-1)/2];        }        return count;    }</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning Array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>3.Longest Substring Without Repeating Characters</title>
+      <link href="/2018/09/18/2018-09-18-LongestSubstringWithoutRepeatingCharacters/"/>
+      <url>/2018/09/18/2018-09-18-LongestSubstringWithoutRepeatingCharacters/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters"><a href="#Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters" class="headerlink" title="Question: Given a string, find the length of the longest substring without repeating characters."></a>Question: Given a string, find the length of the longest substring without repeating characters.</h2><p>这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来</p><pre><code>    class Solution {    public int lengthOfLongestSubstring(String s) {            int len=s.length();        int ans=0;        Set&lt;Character&gt; se=new HashSet&lt;Character&gt;();        for(int i=0,j=0;j&lt;len;) {            if(!se.contains(s.charAt(j))) {                se.add(s.charAt(j));                j++;                ans=Math.max(ans, j-i);            }            else {                se.remove(s.charAt(i));                i++;            }        }        return ans;    }    }</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning set </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>20.Valid Parentheses</title>
+      <link href="/2018/09/17/2018-09-17-ValidParentheses/"/>
+      <url>/2018/09/17/2018-09-17-ValidParentheses/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了</p></blockquote><pre><code>    public boolean isValid(String s) {        Stack&lt;Character&gt; stack=new Stack&lt;Character&gt;();        for(int i=0;i&lt;s.length();i++){            char ch=s.charAt(i);            switch (ch) {            case &#39;(&#39;:            case &#39;[&#39;:            case &#39;{&#39;:                stack.push(ch);                break;            case &#39;)&#39;:                if((stack.isEmpty())||stack.peek()!=&#39;(&#39;)                    return false;                else                    stack.pop();                break;            case &#39;]&#39;:                if((stack.isEmpty())||stack.peek()!=&#39;[&#39;)                    return false;                else                    stack.pop();                break;            case &#39;}&#39;:                if((stack.isEmpty())||stack.peek()!=&#39;}&#39;)                    return false;                else                    stack.pop();                break;            default:                break;            }        }        if(!stack.isEmpty())            return false;        return true;    }</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> leetcode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>搭一个自己的vpn</title>
+      <link href="/2018/05/18/2018-05-18-create-vpn/"/>
+      <url>/2018/05/18/2018-05-18-create-vpn/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了</p></blockquote><p><a href="https://www.yigeni.com/build-a-wall-ss-server/" target="_blank" rel="noopener">参考博客</a></p><p><a href="https://www.flyzy2005.com/fan-qiang/shadowsocks/install-shadowsocks-in-one-command/" target="_blank" rel="noopener">参考博客2脚本搭建ss</a></p><p><a href="https://my.vultr.com" target="_blank" rel="noopener">服务器网址</a></p><blockquote><p>当然现在还没有搭 &gt;_&lt;！</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>my first blog</title>
+      <link href="/2018/05/16/2018-05-16-firstblog/"/>
+      <url>/2018/05/16/2018-05-16-firstblog/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>上网学习了一上午怎么用github搭建个人博客，找到了xudailong先生的博客，fork项目，拿来做了一下更改，算是初步完成了，表示感谢！</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> learning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

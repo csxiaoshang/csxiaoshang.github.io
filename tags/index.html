@@ -7,19 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>20.Valid Parentheses - Hexo</title>
+<title>Tags - Hexo</title>
 
 
-    <meta name="description" content="这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了      public boolean isValid(String s) {         Stack&amp;lt;Character&amp;gt; stack&#x3D;new Stack&amp;lt;Character&amp;gt;();         for(int i&#x3D;0;i&amp;lt;s.length(">
-<meta name="keywords" content="learning">
-<meta property="og:type" content="article">
-<meta property="og:title" content="20.Valid Parentheses">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2018&#x2F;09&#x2F;17&#x2F;2018-09-17-ValidParentheses&#x2F;index.html">
+    <meta name="keywords" content="learning,learning set,learning Array,interview,stack,springboot">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了      public boolean isValid(String s) {         Stack&amp;lt;Character&amp;gt; stack&#x3D;new Stack&amp;lt;Character&amp;gt;();         for(int i&#x3D;0;i&amp;lt;s.length(">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-11-30T07:34:47.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
 
@@ -79,7 +76,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="20.Valid Parentheses" height="28">
+                <img src="/images/logo.svg" alt="Hexo" height="28">
             
             </a>
         </div>
@@ -96,7 +93,7 @@
                 <a class="navbar-item"
                 href="/categories">Categories</a>
                 
-                <a class="navbar-item"
+                <a class="navbar-item is-active"
                 href="/tags">Tags</a>
                 
                 <a class="navbar-item"
@@ -128,152 +125,60 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-17T15:02:20.000Z">2018-09-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/leetcode/">leetcode</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 129 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                20.Valid Parentheses
-            
-        </h1>
-        <div class="content">
-            <blockquote>
-<p>这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了</p>
-</blockquote>
-<pre><code>    public boolean isValid(String s) {
-        Stack&lt;Character&gt; stack=new Stack&lt;Character&gt;();
-        for(int i=0;i&lt;s.length();i++){
-            char ch=s.charAt(i);
-            switch (ch) {
-            case &#39;(&#39;:
-            case &#39;[&#39;:
-            case &#39;{&#39;:
-                stack.push(ch);
-                break;
-            case &#39;)&#39;:
-                if((stack.isEmpty())||stack.peek()!=&#39;(&#39;)
-                    return false;
-                else
-                    stack.pop();
-                break;
-            case &#39;]&#39;:
-                if((stack.isEmpty())||stack.peek()!=&#39;[&#39;)
-                    return false;
-                else
-                    stack.pop();
-                break;
-            case &#39;}&#39;:
-                if((stack.isEmpty())||stack.peek()!=&#39;}&#39;)
-                    return false;
-                else
-                    stack.pop();
-                break;
-            default:
-                break;
-            }
-        }
-        if(!stack.isEmpty())
-            return false;
-        return true;
-    }</code></pre>
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/learning/" rel="tag">learning</a>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-<div class="card">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card widget">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
-        <div class="buttons is-centered">
-            
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
                 
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
-</div>
-
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/interview/">
+                        <span class="tag">interview</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
                 
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/learning/">
+                        <span class="tag">learning</span>
+                        <span class="tag is-grey">7</span>
+                    </a>
+                </div>
                 
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
-</div>
-
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/learning-Array/">
+                        <span class="tag">learning Array</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<div class="notification is-danger">
-    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
-</div>
-
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/learning-set/">
+                        <span class="tag">learning set</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/springboot/">
+                        <span class="tag">springboot</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
-<div class="notification is-danger">
-    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
-</div>
-
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/stack/">
+                        <span class="tag">stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
+            </div>
         </div>
     </div>
-</div>
-
-
-
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/09/18/2018-09-18-LongestSubstringWithoutRepeatingCharacters/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">3.Longest Substring Without Repeating Characters</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/05/18/2018-05-18-create-vpn/">
-                <span class="level-item">搭一个自己的vpn</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
-
-
-</div>
+</div></div>
                 
 
 
@@ -1009,7 +914,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="20.Valid Parentheses" height="28">
+                    <img src="/images/logo.svg" alt="Hexo" height="28">
                 
                 </a>
                 <p class="is-size-7">
