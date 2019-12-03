@@ -25,7 +25,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/head.jpeg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -75,7 +75,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="刘云尚|个人博客" height="28">
+                <img src="/images/head.jpeg" alt="刘云尚|个人博客" height="28">
             
             </a>
         </div>
@@ -380,42 +380,7 @@
             <blockquote>
 <p>这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了</p>
 </blockquote>
-<pre><code>    public boolean isValid(String s) {
-        Stack&lt;Character&gt; stack=new Stack&lt;Character&gt;();
-        for(int i=0;i&lt;s.length();i++){
-            char ch=s.charAt(i);
-            switch (ch) {
-            case &#39;(&#39;:
-            case &#39;[&#39;:
-            case &#39;{&#39;:
-                stack.push(ch);
-                break;
-            case &#39;)&#39;:
-                if((stack.isEmpty())||stack.peek()!=&#39;(&#39;)
-                    return false;
-                else
-                    stack.pop();
-                break;
-            case &#39;]&#39;:
-                if((stack.isEmpty())||stack.peek()!=&#39;[&#39;)
-                    return false;
-                else
-                    stack.pop();
-                break;
-            case &#39;}&#39;:
-                if((stack.isEmpty())||stack.peek()!=&#39;}&#39;)
-                    return false;
-                else
-                    stack.pop();
-                break;
-            default:
-                break;
-            }
-        }
-        if(!stack.isEmpty())
-            return false;
-        return true;
-    }</code></pre>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">public boolean isValid(String s) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	Stack&lt;Character&gt; stack&#x3D;new Stack&lt;Character&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	for(int i&#x3D;0;i&lt;s.length();i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		char ch&#x3D;s.charAt(i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">		switch (ch) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">		case &#39;(&#39;:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		case &#39;[&#39;:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		case &#39;&#123;&#39;:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">			stack.push(ch);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			break;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		case &#39;)&#39;:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			if((stack.isEmpty())||stack.peek()!&#x3D;&#39;(&#39;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">				return false;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			else</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">				stack.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			break;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">		case &#39;]&#39;:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			if((stack.isEmpty())||stack.peek()!&#x3D;&#39;[&#39;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">				return false;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">			else</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">				stack.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">			break;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">		case &#39;&#125;&#39;:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">			if((stack.isEmpty())||stack.peek()!&#x3D;&#39;&#125;&#39;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">				return false;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">			else</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">				stack.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">			break;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">		default:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">			break;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">	if(!stack.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">		return false;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">	return true;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
         </div>
         
         
@@ -548,22 +513,22 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/head.jpeg" alt="刘云尚">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        刘云尚
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        北京邮电大学网络技术研究院
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>中国,北京</span>
                     </p>
                     
                 </div>
@@ -609,7 +574,7 @@
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/csxiaoshang" target="_blank">
                 关注我</a>
         </div>
         
@@ -618,7 +583,7 @@
         <div class="level is-mobile">
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/ppoffice">
+                title="Github" href="https://github.com/csxiaoshang">
                 
                 <i class="fab fa-github"></i>
                 
@@ -679,7 +644,7 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://github.com/csxiaoshang" target="_blank">
                     <span class="level-left">
                         <span class="level-item">PPOffice</span>
                     </span>
@@ -1268,7 +1233,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="刘云尚|个人博客" height="28">
+                    <img src="/images/head.jpeg" alt="刘云尚|个人博客" height="28">
                 
                 </a>
                 <p class="is-size-7">

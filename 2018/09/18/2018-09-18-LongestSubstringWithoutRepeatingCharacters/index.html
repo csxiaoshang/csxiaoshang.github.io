@@ -10,13 +10,13 @@
 <title>3.Longest Substring Without Repeating Characters - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="Question: Given a string, find the length of the longest substring without repeating characters.这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来     class Solution {     public int l">
+    <meta name="description" content="Question: Given a string, find the length of the longest substring without repeating characters.这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来 1class Solution &amp;#123;2   public int">
 <meta name="keywords" content="learning set">
 <meta property="og:type" content="article">
 <meta property="og:title" content="3.Longest Substring Without Repeating Characters">
 <meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2018&#x2F;09&#x2F;18&#x2F;2018-09-18-LongestSubstringWithoutRepeatingCharacters&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
-<meta property="og:description" content="Question: Given a string, find the length of the longest substring without repeating characters.这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来     class Solution {     public int l">
+<meta property="og:description" content="Question: Given a string, find the length of the longest substring without repeating characters.这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来 1class Solution &amp;#123;2   public int">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 <meta property="og:updated_time" content="2019-11-30T07:34:46.638Z">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/head.jpeg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="3.Longest Substring Without Repeating Characters" height="28">
+                <img src="/images/head.jpeg" alt="3.Longest Substring Without Repeating Characters" height="28">
             
             </a>
         </div>
@@ -159,25 +159,7 @@
         </h1>
         <div class="content">
             <h2 id="Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters"><a href="#Question-Given-a-string-find-the-length-of-the-longest-substring-without-repeating-characters" class="headerlink" title="Question: Given a string, find the length of the longest substring without repeating characters."></a>Question: Given a string, find the length of the longest substring without repeating characters.</h2><p>这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来</p>
-<pre><code>    class Solution {
-    public int lengthOfLongestSubstring(String s) {
-            int len=s.length();
-        int ans=0;
-        Set&lt;Character&gt; se=new HashSet&lt;Character&gt;();
-        for(int i=0,j=0;j&lt;len;) {
-            if(!se.contains(s.charAt(j))) {
-                se.add(s.charAt(j));
-                j++;
-                ans=Math.max(ans, j-i);
-            }
-            else {
-                se.remove(s.charAt(i));
-                i++;
-            }
-        }
-        return ans;
-    }
-    }</code></pre>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   public int lengthOfLongestSubstring(String s) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       	int len&#x3D;s.length();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	int ans&#x3D;0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	Set&lt;Character&gt; se&#x3D;new HashSet&lt;Character&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	for(int i&#x3D;0,j&#x3D;0;j&lt;len;) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		if(!se.contains(s.charAt(j))) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">			se.add(s.charAt(j));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">			j++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			ans&#x3D;Math.max(ans, j-i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		else &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">			se.remove(s.charAt(i));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			i++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	return ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">   &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -270,22 +252,22 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/head.jpeg" alt="刘云尚">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        刘云尚
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        北京邮电大学网络技术研究院
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>中国,北京</span>
                     </p>
                     
                 </div>
@@ -331,7 +313,7 @@
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/csxiaoshang" target="_blank">
                 关注我</a>
         </div>
         
@@ -340,7 +322,7 @@
         <div class="level is-mobile">
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/ppoffice">
+                title="Github" href="https://github.com/csxiaoshang">
                 
                 <i class="fab fa-github"></i>
                 
@@ -401,7 +383,7 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://github.com/csxiaoshang" target="_blank">
                     <span class="level-left">
                         <span class="level-item">PPOffice</span>
                     </span>
@@ -990,7 +972,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="3.Longest Substring Without Repeating Characters" height="28">
+                    <img src="/images/head.jpeg" alt="3.Longest Substring Without Repeating Characters" height="28">
                 
                 </a>
                 <p class="is-size-7">

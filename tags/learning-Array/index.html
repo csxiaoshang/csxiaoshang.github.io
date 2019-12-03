@@ -25,7 +25,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/head.jpeg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -75,7 +75,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="刘云尚|个人博客" height="28">
+                <img src="/images/head.jpeg" alt="刘云尚|个人博客" height="28">
             
             </a>
         </div>
@@ -166,19 +166,7 @@
         </h1>
         <div class="content">
             <h2 id="Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty"><a href="#Question-There-are-two-sorted-arrays-nums1-and-nums2-of-size-m-and-n-respectively-Find-the-median-of-the-two-sorted-arrays-The-overall-run-time-complexity-should-be-O-log-m-n-You-may-assume-nums1-and-nums2-cannot-be-both-empty" class="headerlink" title="Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty."></a>Question: There are two sorted arrays nums1 and nums2 of size m and n respectively.Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).You may assume nums1 and nums2 cannot be both empty.</h2><p>这道题比较简单，就是讲两个数组合并下然后排序，找中位数就可以了</p>
-<pre><code>    public static double findMedianSortedArrays(int[] nums1,int[] nums2) {
-        int[] shuzu=Arrays.copyOf(nums1,nums1.length+nums2.length);
-        System.arraycopy(nums2, 0, shuzu, nums1.length, nums2.length);
-        Arrays.sort(shuzu);
-        int num=nums1.length+nums2.length;
-        double count=0;
-        if(num%2==0) {
-             count=(double)(shuzu[num/2-1]+shuzu[num/2])/2;
-        }else {
-            count=(double)shuzu[(num-1)/2];
-        }
-        return count;
-    }</code></pre>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">public static double findMedianSortedArrays(int[] nums1,int[] nums2) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	int[] shuzu&#x3D;Arrays.copyOf(nums1,nums1.length+nums2.length);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	System.arraycopy(nums2, 0, shuzu, nums1.length, nums2.length);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	Arrays.sort(shuzu);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	int num&#x3D;nums1.length+nums2.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	double count&#x3D;0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	if(num%2&#x3D;&#x3D;0) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">		 count&#x3D;(double)(shuzu[num&#x2F;2-1]+shuzu[num&#x2F;2])&#x2F;2;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	&#125;else &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">		count&#x3D;(double)shuzu[(num-1)&#x2F;2];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">	return count;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
         </div>
         
         
@@ -209,22 +197,22 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/head.jpeg" alt="刘云尚">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        刘云尚
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        北京邮电大学网络技术研究院
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>中国,北京</span>
                     </p>
                     
                 </div>
@@ -270,7 +258,7 @@
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/csxiaoshang" target="_blank">
                 关注我</a>
         </div>
         
@@ -279,7 +267,7 @@
         <div class="level is-mobile">
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/ppoffice">
+                title="Github" href="https://github.com/csxiaoshang">
                 
                 <i class="fab fa-github"></i>
                 
@@ -340,7 +328,7 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://github.com/csxiaoshang" target="_blank">
                     <span class="level-left">
                         <span class="level-item">PPOffice</span>
                     </span>
@@ -929,7 +917,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="刘云尚|个人博客" height="28">
+                    <img src="/images/head.jpeg" alt="刘云尚|个人博客" height="28">
                 
                 </a>
                 <p class="is-size-7">

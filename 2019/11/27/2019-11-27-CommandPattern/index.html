@@ -29,7 +29,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/head.jpeg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="命令模式" height="28">
+                <img src="/images/head.jpeg" alt="命令模式" height="28">
             
             </a>
         </div>
@@ -164,34 +164,7 @@
 <p>下图为命令模式类图<br><img src="https://raw.githubusercontent.com/csxiaoshang/images/master/bolg/images20191127153840.png" alt><br><br><br><br><br>简单的看，命令模式实现了命令发起者和命令执行者的解耦，中间增加了一层调用者。<br>命令组合命令执行者，调用者中维护一个命令列表，并封装命令执行方法。命令发起者则将命令添加到命令调用者中。</p>
 <a id="more"></a> 
 
-<pre><code>class Client{
-    putCommand(Command command,Receiver receiver);
-}
-
-class Invoker{
-    List&lt;Command&gt; commandList;
-    executeCommand(){
-        commandList.forEach(command-&gt;command.execute());
-    }
-}
-
-interface Command{
-    execute();
-}
-
-class CommandA implements Command{
-    Receiver receiver;
-    execute(){
-        receiver.action();
-    }
-}
-
-class Receiver{
-    action(){
-        // 需要执行的业务逻辑
-    }
-}
-</code></pre>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">class Client&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    putCommand(Command command,Receiver receiver);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">class Invoker&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    List&lt;Command&gt; commandList;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    executeCommand()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        commandList.forEach(command-&gt;command.execute());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">interface Command&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    execute();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">class CommandA implements Command&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    Receiver receiver;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    execute()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        receiver.action();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">class Receiver&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">    action()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        &#x2F;&#x2F; 需要执行的业务逻辑</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -284,22 +257,22 @@ class Receiver{
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/head.jpeg" alt="刘云尚">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        刘云尚
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        北京邮电大学网络技术研究院
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>中国,北京</span>
                     </p>
                     
                 </div>
@@ -345,7 +318,7 @@ class Receiver{
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/csxiaoshang" target="_blank">
                 关注我</a>
         </div>
         
@@ -354,7 +327,7 @@ class Receiver{
         <div class="level is-mobile">
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/ppoffice">
+                title="Github" href="https://github.com/csxiaoshang">
                 
                 <i class="fab fa-github"></i>
                 
@@ -415,7 +388,7 @@ class Receiver{
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://github.com/csxiaoshang" target="_blank">
                     <span class="level-left">
                         <span class="level-item">PPOffice</span>
                     </span>
@@ -1004,7 +977,7 @@ class Receiver{
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="命令模式" height="28">
+                    <img src="/images/head.jpeg" alt="命令模式" height="28">
                 
                 </a>
                 <p class="is-size-7">

@@ -10,13 +10,13 @@
 <title>232. Implement Queue using Stacks - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空     class MyQueue {     &#x2F;** Initialize your data structure here. *&#x2F;      Stack&amp;lt;Integer&amp;gt; stack1&#x3D;n">
+    <meta name="description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空 1	class MyQueue &amp;#123;2    &amp;#x2F;** Initialize your data structure here. *&amp;#x2F;3     Stack&amp;lt;Integer">
 <meta name="keywords" content="stack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="232. Implement Queue using Stacks">
 <meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2018&#x2F;09&#x2F;22&#x2F;2018-09-22-ImplementQueueusinggStacks&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
-<meta property="og:description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空     class MyQueue {     &#x2F;** Initialize your data structure here. *&#x2F;      Stack&amp;lt;Integer&amp;gt; stack1&#x3D;n">
+<meta property="og:description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空 1	class MyQueue &amp;#123;2    &amp;#x2F;** Initialize your data structure here. *&amp;#x2F;3     Stack&amp;lt;Integer">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 <meta property="og:updated_time" content="2019-11-30T07:34:46.738Z">
@@ -29,7 +29,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/head.jpeg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="232. Implement Queue using Stacks" height="28">
+                <img src="/images/head.jpeg" alt="232. Implement Queue using Stacks" height="28">
             
             </a>
         </div>
@@ -159,37 +159,7 @@
         </h1>
         <div class="content">
             <h1 id="Question-Implement-the-following-operations-of-a-queue-using-stacks"><a href="#Question-Implement-the-following-operations-of-a-queue-using-stacks" class="headerlink" title="Question: Implement the following operations of a queue using stacks."></a>Question: Implement the following operations of a queue using stacks.</h1><p>  用两个栈就可以实现一个队列的操作，注意判断栈是否为空</p>
-<pre><code>    class MyQueue {
-    /** Initialize your data structure here. */
-     Stack&lt;Integer&gt; stack1=new Stack&lt;&gt;();
-    Stack&lt;Integer&gt; stack2=new Stack&lt;&gt;();
-    public MyQueue() {
-
-    }
-
-    public void push(int x) {
-            while(!stack2.isEmpty())
-                stack1.push(stack2.pop());
-            stack1.push(x);
-        }
-        public int pop() {
-            while(!stack1.isEmpty())
-                stack2.push(stack1.pop());
-            int x=stack2.pop();
-            return x;
-        }
-        public int peek() {
-            while(!stack1.isEmpty())
-                stack2.push(stack1.pop());
-            return stack2.peek();
-        }
-        public boolean empty() {
-            if(stack1.isEmpty()&amp;&amp;stack2.isEmpty())
-                return true;
-            else
-                return false;
-        }
-}</code></pre>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">	class MyQueue &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    &#x2F;** Initialize your data structure here. *&#x2F;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">     Stack&lt;Integer&gt; stack1&#x3D;new Stack&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	Stack&lt;Integer&gt; stack2&#x3D;new Stack&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    public MyQueue() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">       </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    public void push(int x) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			while(!stack2.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">				stack1.push(stack2.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			stack1.push(x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		public int pop() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			while(!stack1.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">				stack2.push(stack1.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">			int x&#x3D;stack2.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			return x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		public int peek() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">			while(!stack1.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">				stack2.push(stack1.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">			return stack2.peek();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		public boolean empty() &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">			if(stack1.isEmpty()&amp;&amp;stack2.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">				return true;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">			else</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">				return false;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -282,22 +252,22 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/head.jpeg" alt="刘云尚">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        刘云尚
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        北京邮电大学网络技术研究院
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>中国,北京</span>
                     </p>
                     
                 </div>
@@ -343,7 +313,7 @@
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
+            <a class="level-item button is-link is-rounded" href="https://github.com/csxiaoshang" target="_blank">
                 关注我</a>
         </div>
         
@@ -352,7 +322,7 @@
         <div class="level is-mobile">
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/ppoffice">
+                title="Github" href="https://github.com/csxiaoshang">
                 
                 <i class="fab fa-github"></i>
                 
@@ -413,7 +383,7 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://github.com/csxiaoshang" target="_blank">
                     <span class="level-left">
                         <span class="level-item">PPOffice</span>
                     </span>
@@ -1002,7 +972,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="232. Implement Queue using Stacks" height="28">
+                    <img src="/images/head.jpeg" alt="232. Implement Queue using Stacks" height="28">
                 
                 </a>
                 <p class="is-size-7">
