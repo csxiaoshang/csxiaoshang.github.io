@@ -18,7 +18,7 @@
 <meta property="og:description" content="java内存区域线程私有的：程序计数器、虚拟机栈、本地方法栈线程公有的：方法区、堆  程序计数器  和操作系统的程序计数器类似，用于控制程序执行步数，计算跳转内存地址  虚拟机栈  用来存储方法执行时的局部变量、动态链接、方法出口等。  本地方法栈  用来存储java JNI调用的native方法的相关信息，和虚拟机栈类似">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-04T14:30:33.215Z">
+<meta property="og:updated_time" content="2019-12-15T13:44:31.205Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -144,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 405 个字)
+                    3 分钟 读完 (大约 445 个字)
                 </span>
                 
                 
@@ -180,6 +180,7 @@
 <li>堆</li>
 </ul>
 <p>存储几乎所有的实例化对象和数组，包括对象的实例变量。</p>
+<p>Java7之后，String Pool被移到堆内，因为永久代空间有限，在大量使用字符串的场景下会出现OutOfMemoryError错误</p>
 <ul>
 <li>直接内存</li>
 </ul>
@@ -233,6 +234,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/12/05/gc/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">gc</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -291,7 +299,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            16
+                            17
                         </p>
                     </a>
                 </div>
@@ -315,7 +323,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            6
+                            7
                         </p>
                     </a>
                 </div>
@@ -476,7 +484,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
+        <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
     </div>
 </div>
     
@@ -488,6 +496,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/05/gc/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time></div>
+                    <a href="/2019/12/05/gc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">gc</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -565,25 +592,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/01/26/2019-01-26-DesignPattern/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="大话设计模式学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-26T02:47:30.000Z">2019-01-26</time></div>
-                    <a href="/2019/01/26/2019-01-26-DesignPattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">大话设计模式学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -601,7 +609,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -678,6 +686,13 @@
                     <a class="tags has-addons" href="/tags/interview/">
                         <span class="tag">interview</span>
                         <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -740,6 +755,25 @@
         
         <article class="media">
             
+            <a href="/2019/12/05/gc/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time></div>
+                    <a href="/2019/12/05/gc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">gc</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="java内存分配">
@@ -814,25 +848,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/01/26/2019-01-26-DesignPattern/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="大话设计模式学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-26T02:47:30.000Z">2019-01-26</time></div>
-                    <a href="/2019/01/26/2019-01-26-DesignPattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">大话设计模式学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -850,7 +865,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -927,6 +942,13 @@
                     <a class="tags has-addons" href="/tags/interview/">
                         <span class="tag">interview</span>
                         <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 

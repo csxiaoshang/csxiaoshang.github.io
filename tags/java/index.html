@@ -7,13 +7,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>分类 - 刘云尚|个人博客</title>
+<title>标签: java - 刘云尚|个人博客</title>
 
 
-    <meta name="keywords" content="learning,learning set,learning Array,interview,stack,springboot,java">
-<meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="刘云尚|个人博客">
-<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;categories&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;tags&#x2F;java&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
@@ -90,7 +89,7 @@
                 <a class="navbar-item"
                 href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active"
+                <a class="navbar-item"
                 href="/categories">Categories</a>
                 
                 <a class="navbar-item"
@@ -125,67 +124,66 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                分类
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/java/">
-            <span class="level-start">
-                <span class="level-item">java</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/learning/">
-            <span class="level-start">
-                <span class="level-item">learning</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/leetcode/">
-            <span class="level-start">
-                <span class="level-item">leetcode</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">5</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/note/">
-            <span class="level-start">
-                <span class="level-item">note</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
-            <span class="level-start">
-                <span class="level-item">设计模式</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/%E8%AF%BB%E4%B9%A6/">
-            <span class="level-start">
-                <span class="level-item">读书</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/tags">标签</a></li>
+            <li class="is-active"><a href="#" aria-current="page">java</a></li>
+        </ul>
+        </nav>
     </div>
-</div></div>
+</div>
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 267 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/12/05/gc/">gc</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。"><a href="#判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。" class="headerlink" title="判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。"></a>判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。</h3><p>引用计数器：<br>当引用计数器为零的时候，表明没用引用再指向该对象，但是引用计数器不能解决循环引用的情况；<br>可达性分析：</p>
+<ol>
+<li>当不能从GC Root寻找一条路径到达该对象时， 将进行第一次标记。</li>
+<li>第一次标记后检查对象是否重写了finalize() 和是否已经被调用了finalize()方法。若没有重写finalize()方法或已经被调用，则进行回收。</li>
+<li>在已经重写finalize()方法且未调用的情况下，将对象加入一个F-Queue 的队列中，稍后进行第二次检查。</li>
+<li>在第二次标记之前，对象如果执行finalize()方法并完成自救，对象则不会被回收。否则完成第二次标记，进行回收。值得注意的是finalize()方法并不可靠。</li>
+</ol>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
                 
 
 
