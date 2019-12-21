@@ -7,7 +7,7 @@ tags: springboot
 ---
 
 
->搭建的比较简陋，只是完成了基本的用户和发表博客、展示博客等功能
+> 搭建的比较简陋，只是完成了基本的用户和发表博客、展示博客等功能
 
 [项目地址](https://github.com/csxiaoshang/blog)
 

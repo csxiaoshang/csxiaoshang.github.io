@@ -6,8 +6,12 @@ categories: leetcode
 tags: learning
 ---
 
->这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了
-```
+> 这是一道比较简单的堆栈题目，但是本人很少用java写程序做题，做题的过程中出了很多错误，也上网百度了下，算是完成了
+
+<!--more-->
+
+```java
+class Solution {
 	public boolean isValid(String s) {
 		Stack<Character> stack=new Stack<Character>();
 		for(int i=0;i<s.length();i++){
@@ -43,5 +47,6 @@ tags: learning
 		if(!stack.isEmpty())
 			return false;
 		return true;
+	}
 	}
 ```

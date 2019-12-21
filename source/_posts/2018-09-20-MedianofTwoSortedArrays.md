@@ -12,7 +12,10 @@ tags: learning Array
 
 这道题比较简单，就是讲两个数组合并下然后排序，找中位数就可以了
 
-```
+<!--more-->
+
+```java
+class Solution {
 	public static double findMedianSortedArrays(int[] nums1,int[] nums2) {
 		int[] shuzu=Arrays.copyOf(nums1,nums1.length+nums2.length);
 		System.arraycopy(nums2, 0, shuzu, nums1.length, nums2.length);
@@ -25,5 +28,6 @@ tags: learning Array
 			count=(double)shuzu[(num-1)/2];
 		}
 		return count;
+	}
 	}
 ```

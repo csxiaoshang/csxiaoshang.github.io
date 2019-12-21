@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html  lang="zh">
 <head>
     <meta charset="utf-8" />
 
@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>232. Implement Queue using Stacks - Hexo</title>
+<title>232. Implement Queue using Stacks - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空     class MyQueue {     &#x2F;** Initialize your data structure here. *&#x2F;      Stack&amp;lt;Integer&amp;gt; stack1&#x3D;n">
+    <meta name="description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空">
 <meta name="keywords" content="stack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="232. Implement Queue using Stacks">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2018&#x2F;09&#x2F;22&#x2F;2018-09-22-ImplementQueueusinggStacks&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空     class MyQueue {     &#x2F;** Initialize your data structure here. *&#x2F;      Stack&amp;lt;Integer&amp;gt; stack1&#x3D;n">
-<meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-11-30T07:34:46.738Z">
+<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2018&#x2F;09&#x2F;22&#x2F;2018-09-22-ImplementQueueusinggStacks&#x2F;index.html">
+<meta property="og:site_name" content="刘云尚|个人博客">
+<meta property="og:description" content="Question: Implement the following operations of a queue using stacks.  用两个栈就可以实现一个队列的操作，注意判断栈是否为空">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-12-04T14:30:33.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
 
 
@@ -29,7 +29,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/head.jpeg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="232. Implement Queue using Stacks" height="28">
+                <img src="/images/head.jpeg" alt="232. Implement Queue using Stacks" height="28">
             
             </a>
         </div>
@@ -107,7 +107,7 @@
             <div class="navbar-end">
                 
                     
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/csxiaoshang">
                         
                         <i class="fab fa-github"></i>
                         
@@ -116,7 +116,7 @@
                 
                 
                 
-                <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
+                <a class="navbar-item search" title="搜索" href="javascript:;" target="_blank" rel="noopener">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -145,7 +145,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 110 words)
+                    1 分钟 读完 (大约 112 个字)
                 </span>
                 
                 
@@ -159,37 +159,9 @@
         </h1>
         <div class="content">
             <h1 id="Question-Implement-the-following-operations-of-a-queue-using-stacks"><a href="#Question-Implement-the-following-operations-of-a-queue-using-stacks" class="headerlink" title="Question: Implement the following operations of a queue using stacks."></a>Question: Implement the following operations of a queue using stacks.</h1><p>  用两个栈就可以实现一个队列的操作，注意判断栈是否为空</p>
-<pre><code>    class MyQueue {
-    /** Initialize your data structure here. */
-     Stack&lt;Integer&gt; stack1=new Stack&lt;&gt;();
-    Stack&lt;Integer&gt; stack2=new Stack&lt;&gt;();
-    public MyQueue() {
+  <a id="more"></a>
 
-    }
-
-    public void push(int x) {
-            while(!stack2.isEmpty())
-                stack1.push(stack2.pop());
-            stack1.push(x);
-        }
-        public int pop() {
-            while(!stack1.isEmpty())
-                stack2.push(stack1.pop());
-            int x=stack2.pop();
-            return x;
-        }
-        public int peek() {
-            while(!stack1.isEmpty())
-                stack2.push(stack1.pop());
-            return stack2.peek();
-        }
-        public boolean empty() {
-            if(stack1.isEmpty()&amp;&amp;stack2.isEmpty())
-                return true;
-            else
-                return false;
-        }
-}</code></pre>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">	<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyQueue</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-comment">/** Initialize your data structure here. */</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">     Stack&lt;Integer&gt; stack1=<span class="hljs-keyword">new</span> Stack&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	Stack&lt;Integer&gt; stack2=<span class="hljs-keyword">new</span> Stack&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyQueue</span><span class="hljs-params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">       </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">while</span>(!stack2.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">				stack1.push(stack2.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			stack1.push(x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">		<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">pop</span><span class="hljs-params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">while</span>(!stack1.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">				stack2.push(stack1.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">int</span> x=stack2.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">return</span> x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">peek</span><span class="hljs-params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">while</span>(!stack1.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">				stack2.push(stack1.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">return</span> stack2.peek();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">empty</span><span class="hljs-params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">if</span>(stack1.isEmpty()&amp;&amp;stack2.isEmpty())</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">				<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">			<span class="hljs-keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">				<span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">		&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -210,7 +182,7 @@
 
 <div class="card">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
         <div class="buttons is-centered">
             
                 
@@ -282,22 +254,22 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/head.jpeg" alt="刘云尚">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        刘云尚
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        北京邮电大学网络技术研究院
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>中国,北京</span>
                     </p>
                     
                 </div>
@@ -307,11 +279,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        文章
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            15
+                            18
                         </p>
                     </a>
                 </div>
@@ -319,11 +291,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        分类
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            6
+                            7
                         </p>
                     </a>
                 </div>
@@ -331,7 +303,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        标签
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
@@ -343,8 +315,8 @@
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
-                Follow</a>
+            <a class="level-item button is-link is-rounded" href="https://github.com/csxiaoshang" target="_blank">
+                关注我</a>
         </div>
         
         
@@ -352,7 +324,7 @@
         <div class="level is-mobile">
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/ppoffice">
+                title="Github" href="https://github.com/csxiaoshang">
                 
                 <i class="fab fa-github"></i>
                 
@@ -397,7 +369,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Links
+            链接
         </h3>
         <ul class="menu-list">
         
@@ -413,7 +385,7 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://github.com/csxiaoshang" target="_blank">
                     <span class="level-left">
                         <span class="level-item">PPOffice</span>
                     </span>
@@ -434,7 +406,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                分类
             </h3>
             <ul class="menu-list">
             <li>
@@ -443,7 +415,7 @@
                 <span class="level-item">java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/learning/">
@@ -470,6 +442,14 @@
                 <span class="level-item tag">3</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">
+            <span class="level-start">
+                <span class="level-item">程序人生</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
             <span class="level-start">
                 <span class="level-item">设计模式</span>
@@ -494,7 +474,7 @@
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            标签云
         </h3>
         <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
     </div>
@@ -506,8 +486,65 @@
             <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T04:33:05.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="title has-link-black-ter is-size-6 has-text-weight-normal">2019年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/05/gc/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time></div>
+                    <a href="/2019/12/05/gc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">gc</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java内存分配">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time></div>
+                    <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java内存分配</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -547,63 +584,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/26/2019-11-26-iqiyi/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="iqiyi实习总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-26T07:30:00.000Z">2019-11-26</time></div>
-                    <a href="/2019/11/26/2019-11-26-iqiyi/" class="title has-link-black-ter is-size-6 has-text-weight-normal">iqiyi实习总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/26/2019-01-26-DesignPattern/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="大话设计模式学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-26T02:47:30.000Z">2019-01-26</time></div>
-                    <a href="/2019/01/26/2019-01-26-DesignPattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">大话设计模式学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java编程思想学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-16T02:47:30.000Z">2019-01-16</time></div>
-                    <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java编程思想学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -611,17 +591,17 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            归档
         </h3>
         <ul class="menu-list">
         
         <li>
             <a class="level is-marginless" href="/archives/2019/12/">
                 <span class="level-start">
-                    <span class="level-item">December 2019</span>
+                    <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -629,7 +609,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2019</span>
+                    <span class="level-item">十一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -640,7 +620,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/01/">
                 <span class="level-start">
-                    <span class="level-item">January 2019</span>
+                    <span class="level-item">一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">3</span>
@@ -651,7 +631,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2018</span>
+                    <span class="level-item">十一月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">1</span>
@@ -662,7 +642,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
-                    <span class="level-item">September 2018</span>
+                    <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">6</span>
@@ -673,7 +653,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/05/">
                 <span class="level-start">
-                    <span class="level-item">May 2018</span>
+                    <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -690,7 +670,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -755,8 +735,65 @@
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T04:33:05.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="title has-link-black-ter is-size-6 has-text-weight-normal">2019年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/05/gc/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time></div>
+                    <a href="/2019/12/05/gc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">gc</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java内存分配">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time></div>
+                    <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java内存分配</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -796,63 +833,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/26/2019-11-26-iqiyi/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="iqiyi实习总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-26T07:30:00.000Z">2019-11-26</time></div>
-                    <a href="/2019/11/26/2019-11-26-iqiyi/" class="title has-link-black-ter is-size-6 has-text-weight-normal">iqiyi实习总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/26/2019-01-26-DesignPattern/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="大话设计模式学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-26T02:47:30.000Z">2019-01-26</time></div>
-                    <a href="/2019/01/26/2019-01-26-DesignPattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">大话设计模式学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java编程思想学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-16T02:47:30.000Z">2019-01-16</time></div>
-                    <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java编程思想学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -860,17 +840,17 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            归档
         </h3>
         <ul class="menu-list">
         
         <li>
             <a class="level is-marginless" href="/archives/2019/12/">
                 <span class="level-start">
-                    <span class="level-item">December 2019</span>
+                    <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -878,7 +858,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2019</span>
+                    <span class="level-item">十一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -889,7 +869,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/01/">
                 <span class="level-start">
-                    <span class="level-item">January 2019</span>
+                    <span class="level-item">一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">3</span>
@@ -900,7 +880,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2018</span>
+                    <span class="level-item">十一月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">1</span>
@@ -911,7 +891,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
-                    <span class="level-item">September 2018</span>
+                    <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">6</span>
@@ -922,7 +902,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/05/">
                 <span class="level-start">
-                    <span class="level-item">May 2018</span>
+                    <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -939,7 +919,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -1002,11 +982,11 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="232. Implement Queue using Stacks" height="28">
+                    <img src="/images/head.jpeg" alt="232. Implement Queue using Stacks" height="28">
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 John Doe&nbsp;
+                &copy; 2019 csxiaoshang&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
@@ -1048,7 +1028,7 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
-<script>moment.locale("en");</script>
+<script>moment.locale("zh-CN");</script>
 
 <script>
 var IcarusThemeSettings = {
@@ -1120,7 +1100,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
     
     
-<a id="back-to-top" title="Back to Top" href="javascript:;" target="_blank" rel="noopener">
+<a id="back-to-top" title="回到顶端" href="javascript:;" target="_blank" rel="noopener">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -1144,7 +1124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -1156,11 +1136,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
             },
             CONTENT_URL: '/content.json',
         };

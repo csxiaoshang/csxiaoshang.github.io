@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html  lang="zh">
 <head>
     <meta charset="utf-8" />
 
@@ -7,21 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>iqiyi实习总结 - Hexo</title>
+<title>iqiyi实习总结 - 刘云尚|个人博客</title>
 
 
     <meta name="description" content="在爱奇艺实习的经验总结  今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。唯一有点任务量的算是封装httpclient的api上传下载">
 <meta name="keywords" content="interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iqiyi实习总结">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;2019-11-26-iqiyi&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2019&#x2F;11&#x2F;26&#x2F;2019-11-26-iqiyi&#x2F;index.html">
+<meta property="og:site_name" content="刘云尚|个人博客">
 <meta property="og:description" content="在爱奇艺实习的经验总结  今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。唯一有点任务量的算是封装httpclient的api上传下载">
-<meta property="og:locale" content="en">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-11-30T07:34:46.706Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-12-04T14:30:32.935Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;og_image.png">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
 
 
@@ -29,7 +29,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/head.jpeg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="iqiyi实习总结" height="28">
+                <img src="/images/head.jpeg" alt="iqiyi实习总结" height="28">
             
             </a>
         </div>
@@ -107,7 +107,7 @@
             <div class="navbar-end">
                 
                     
-                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/csxiaoshang">
                         
                         <i class="fab fa-github"></i>
                         
@@ -116,7 +116,7 @@
                 
                 
                 
-                <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
+                <a class="navbar-item search" title="搜索" href="javascript:;" target="_blank" rel="noopener">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -145,7 +145,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 524 words)
+                    4 分钟 读完 (大约 525 个字)
                 </span>
                 
                 
@@ -161,8 +161,16 @@
             <ul>
 <li>在爱奇艺实习的经验总结</li>
 </ul>
-<p>今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。<br>而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。<br>唯一有点任务量的算是封装httpclient的api上传下载文件，另一个算是这个系统的核心业务了，编写使用jenkins api的通用工具类，自己写完后就将这个工具类开源了，还打包推到了maven中央仓库。。。<br><br><br>之前都是用springboot写项目，虽然大四的时候看了些javaweb的教程，学习了jsp、servlet，但是也不是太明白。通过做这个项目算是明白了spring项目的启动原理，ioc、aop的一些核心的东西，<br>当时在公司里明白了一个http请求到tomcat处理后分发到spring再处理后，再到业务处理完返回的整个流程的时候，特别兴奋，也模仿github上的一个项目编写了一个小的tomcat demo.在公司的时候<br>，同时看了些左潇龙大佬的设计模式博客，受益颇多。对java的继承 泛型理解多了些，尝试编写通用型的代码，注意编码时的解耦。jvm这本书读了内存那块，看了并发实战的一部分内容。<br><br><br>这两个月一下子就过去了，学到了挺多东西，但是又感觉没有多少，技术水平还得继续增强。<br><br><br>掌握好基础，多实践多学习！</p>
-
+<p>今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。<br>而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。<br>唯一有点任务量的算是封装httpclient的api上传下载文件，另一个算是这个系统的核心业务了，编写使用jenkins api的通用工具类，自己写完后就将这个工具类开源了，还打包推到了maven中央仓库。。。</p>
+<a id="more"></a>
+<br>
+之前都是用springboot写项目，虽然大四的时候看了些javaweb的教程，学习了jsp、servlet，但是也不是太明白。通过做这个项目算是明白了spring项目的启动原理，ioc、aop的一些核心的东西，
+当时在公司里明白了一个http请求到tomcat处理后分发到spring再处理后，再到业务处理完返回的整个流程的时候，特别兴奋，也模仿github上的一个项目编写了一个小的tomcat demo.在公司的时候
+，同时看了些左潇龙大佬的设计模式博客，受益颇多。对java的继承 泛型理解多了些，尝试编写通用型的代码，注意编码时的解耦。jvm这本书读了内存那块，看了并发实战的一部分内容。
+<br>
+这两个月一下子就过去了，学到了挺多东西，但是又感觉没有多少，技术水平还得继续增强。
+<br>
+掌握好基础，多实践多学习！
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -183,7 +191,7 @@
 
 <div class="card">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
         <div class="buttons is-centered">
             
                 
@@ -255,22 +263,22 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="" src="/images/avatar.png" alt="Your name">
+                        <img class="" src="/images/head.jpeg" alt="刘云尚">
                     </figure>
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        刘云尚
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        北京邮电大学网络技术研究院
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>中国,北京</span>
                     </p>
                     
                 </div>
@@ -280,11 +288,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        文章
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            15
+                            18
                         </p>
                     </a>
                 </div>
@@ -292,11 +300,11 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        分类
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            6
+                            7
                         </p>
                     </a>
                 </div>
@@ -304,7 +312,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        标签
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
@@ -316,8 +324,8 @@
         </nav>
         
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/ppoffice" target="_blank">
-                Follow</a>
+            <a class="level-item button is-link is-rounded" href="https://github.com/csxiaoshang" target="_blank">
+                关注我</a>
         </div>
         
         
@@ -325,7 +333,7 @@
         <div class="level is-mobile">
             
             <a class="level-item button is-white is-marginless" target="_blank"
-                title="Github" href="https://github.com/ppoffice">
+                title="Github" href="https://github.com/csxiaoshang">
                 
                 <i class="fab fa-github"></i>
                 
@@ -370,7 +378,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Links
+            链接
         </h3>
         <ul class="menu-list">
         
@@ -386,7 +394,7 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="https://github.com/csxiaoshang" target="_blank">
                     <span class="level-left">
                         <span class="level-item">PPOffice</span>
                     </span>
@@ -407,7 +415,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                分类
             </h3>
             <ul class="menu-list">
             <li>
@@ -416,7 +424,7 @@
                 <span class="level-item">java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/learning/">
@@ -443,6 +451,14 @@
                 <span class="level-item tag">3</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">
+            <span class="level-start">
+                <span class="level-item">程序人生</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
             <span class="level-start">
                 <span class="level-item">设计模式</span>
@@ -467,7 +483,7 @@
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            标签云
         </h3>
         <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
     </div>
@@ -479,8 +495,65 @@
             <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T04:33:05.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="title has-link-black-ter is-size-6 has-text-weight-normal">2019年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/05/gc/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time></div>
+                    <a href="/2019/12/05/gc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">gc</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java内存分配">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time></div>
+                    <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java内存分配</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -520,63 +593,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/26/2019-11-26-iqiyi/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="iqiyi实习总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-26T07:30:00.000Z">2019-11-26</time></div>
-                    <a href="/2019/11/26/2019-11-26-iqiyi/" class="title has-link-black-ter is-size-6 has-text-weight-normal">iqiyi实习总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/26/2019-01-26-DesignPattern/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="大话设计模式学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-26T02:47:30.000Z">2019-01-26</time></div>
-                    <a href="/2019/01/26/2019-01-26-DesignPattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">大话设计模式学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java编程思想学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-16T02:47:30.000Z">2019-01-16</time></div>
-                    <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java编程思想学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -584,17 +600,17 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            归档
         </h3>
         <ul class="menu-list">
         
         <li>
             <a class="level is-marginless" href="/archives/2019/12/">
                 <span class="level-start">
-                    <span class="level-item">December 2019</span>
+                    <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -602,7 +618,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2019</span>
+                    <span class="level-item">十一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -613,7 +629,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/01/">
                 <span class="level-start">
-                    <span class="level-item">January 2019</span>
+                    <span class="level-item">一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">3</span>
@@ -624,7 +640,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2018</span>
+                    <span class="level-item">十一月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">1</span>
@@ -635,7 +651,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
-                    <span class="level-item">September 2018</span>
+                    <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">6</span>
@@ -646,7 +662,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/05/">
                 <span class="level-start">
-                    <span class="level-item">May 2018</span>
+                    <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -663,7 +679,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -728,8 +744,65 @@
         <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T04:33:05.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="title has-link-black-ter is-size-6 has-text-weight-normal">2019年终总结</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/05/gc/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time></div>
+                    <a href="/2019/12/05/gc/" class="title has-link-black-ter is-size-6 has-text-weight-normal">gc</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java内存分配">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time></div>
+                    <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java内存分配</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -769,63 +842,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/26/2019-11-26-iqiyi/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="iqiyi实习总结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-26T07:30:00.000Z">2019-11-26</time></div>
-                    <a href="/2019/11/26/2019-11-26-iqiyi/" class="title has-link-black-ter is-size-6 has-text-weight-normal">iqiyi实习总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/26/2019-01-26-DesignPattern/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="大话设计模式学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-26T02:47:30.000Z">2019-01-26</time></div>
-                    <a href="/2019/01/26/2019-01-26-DesignPattern/" class="title has-link-black-ter is-size-6 has-text-weight-normal">大话设计模式学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java编程思想学习小结">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-16T02:47:30.000Z">2019-01-16</time></div>
-                    <a href="/2019/01/16/2019-01-16-ThinkInJava/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java编程思想学习小结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -833,17 +849,17 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            归档
         </h3>
         <ul class="menu-list">
         
         <li>
             <a class="level is-marginless" href="/archives/2019/12/">
                 <span class="level-start">
-                    <span class="level-item">December 2019</span>
+                    <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -851,7 +867,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2019</span>
+                    <span class="level-item">十一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -862,7 +878,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2019/01/">
                 <span class="level-start">
-                    <span class="level-item">January 2019</span>
+                    <span class="level-item">一月 2019</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">3</span>
@@ -873,7 +889,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/11/">
                 <span class="level-start">
-                    <span class="level-item">November 2018</span>
+                    <span class="level-item">十一月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">1</span>
@@ -884,7 +900,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/09/">
                 <span class="level-start">
-                    <span class="level-item">September 2018</span>
+                    <span class="level-item">九月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">6</span>
@@ -895,7 +911,7 @@
         <li>
             <a class="level is-marginless" href="/archives/2018/05/">
                 <span class="level-start">
-                    <span class="level-item">May 2018</span>
+                    <span class="level-item">五月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">2</span>
@@ -912,7 +928,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                标签
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -975,11 +991,11 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="iqiyi实习总结" height="28">
+                    <img src="/images/head.jpeg" alt="iqiyi实习总结" height="28">
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 John Doe&nbsp;
+                &copy; 2019 csxiaoshang&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
@@ -1021,7 +1037,7 @@
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
-<script>moment.locale("en");</script>
+<script>moment.locale("zh-CN");</script>
 
 <script>
 var IcarusThemeSettings = {
@@ -1093,7 +1109,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
     
     
-<a id="back-to-top" title="Back to Top" href="javascript:;" target="_blank" rel="noopener">
+<a id="back-to-top" title="回到顶端" href="javascript:;" target="_blank" rel="noopener">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -1117,7 +1133,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -1129,11 +1145,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
             },
             CONTENT_URL: '/content.json',
         };

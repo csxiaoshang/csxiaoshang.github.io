@@ -12,7 +12,9 @@ tags: learning set
 
 这道题两个循环遍历找最大的子串也可以，但是那样会慢一些，这里借助set的性质处理的这道题，感觉还可以用KMP算法，等回头做了再贴上来
 
-```
+<!--more-->
+
+```java
 	class Solution {
     public int lengthOfLongestSubstring(String s) {
         	int len=s.length();

@@ -12,7 +12,9 @@ tags: stack
 
   用两个栈就可以实现一个队列的操作，注意判断栈是否为空
   
-```
+  <!--more-->
+  
+```java
 	class MyQueue {
     /** Initialize your data structure here. */
      Stack<Integer> stack1=new Stack<>();
