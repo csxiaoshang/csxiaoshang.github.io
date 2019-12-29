@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>搭一个自己的vpn - 刘云尚|个人博客</title>
+<title>TCP状态问题 - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了">
-<meta name="keywords" content="learning">
+    <meta name="description" content="TCP三次握手建立连接 Client发送带有SYN和seq &#x3D; x的包到Server;Client转为SYN_SENT Server返回SYN、ACK、ack &#x3D; x +1和seq &#x3D; y的包，Server从LISTEN切换到SYN_RCVD Client发送ACK、 ack &#x3D; y +1和seq &#x3D; x+1 的包，都转为ESTABLISHED">
+<meta name="keywords" content="TCP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭一个自己的vpn">
-<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2018&#x2F;05&#x2F;18&#x2F;2018-05-18-create-vpn&#x2F;index.html">
+<meta property="og:title" content="TCP状态问题">
+<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2019&#x2F;12&#x2F;27&#x2F;TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
-<meta property="og:description" content="寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了">
+<meta property="og:description" content="TCP三次握手建立连接 Client发送带有SYN和seq &#x3D; x的包到Server;Client转为SYN_SENT Server返回SYN、ACK、ack &#x3D; x +1和seq &#x3D; y的包，Server从LISTEN切换到SYN_RCVD Client发送ACK、 ack &#x3D; y +1和seq &#x3D; x+1 的包，都转为ESTABLISHED">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-04T14:30:33.351Z">
+<meta property="og:updated_time" content="2019-12-29T05:23:12.016Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/head.jpeg" alt="搭一个自己的vpn" height="28">
+                <img src="/images/head.jpeg" alt="TCP状态问题" height="28">
             
             </a>
         </div>
@@ -135,17 +135,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-18T02:31:20.000Z">2018-05-18</time>
+                <time class="level-item has-text-grey" datetime="2019-12-27T03:10:46.000Z">2019-12-27</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/learning/">learning</a>
+                <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 104 个字)
+                    4 分钟 读完 (大约 637 个字)
                 </span>
                 
                 
@@ -154,21 +154,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                搭一个自己的vpn
+                TCP状态问题
             
         </h1>
         <div class="content">
-            <blockquote>
-<p>寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了</p>
-</blockquote>
+            <h4 id="TCP三次握手建立连接"><a href="#TCP三次握手建立连接" class="headerlink" title="TCP三次握手建立连接"></a>TCP三次握手建立连接</h4><ul>
+<li>Client发送带有SYN和seq = x的包到Server;Client转为SYN_SENT</li>
+<li>Server返回SYN、ACK、ack = x +1和seq = y的包，Server从LISTEN切换到SYN_RCVD</li>
+<li>Client发送ACK、 ack = y +1和seq = x+1 的包，都转为ESTABLISHED</li>
+</ul>
 <a id="more"></a>
 
-<p><a href="https://www.yigeni.com/build-a-wall-ss-server/" target="_blank" rel="noopener">参考博客</a></p>
-<p><a href="https://www.flyzy2005.com/fan-qiang/shadowsocks/install-shadowsocks-in-one-command/" target="_blank" rel="noopener">参考博客2脚本搭建ss</a></p>
-<p><a href="https://my.vultr.com" target="_blank" rel="noopener">服务器网址</a></p>
-<blockquote>
-<p>当然现在还没有搭 &gt;_&lt;！</p>
-</blockquote>
+<p>三次握手的主要目的是：<strong>信息对等和防止超时</strong>。防止超时导致脏连接。<br>如果使用的是两次握手建立连接，假设有这样一种场景，客户端发送了第一个请求连接并且没有丢失，只是因为在网络结点中滞留的时间太长了，由于TCP的客户端迟迟没有收到确认报文，以为服务器没有收到，此时重新向服务器发送这条报文，此后客户端和服务器经过两次握手完成连接，传输数据，然后关闭连接。<br>此时此前滞留的那一次请求连接，网络通畅了到达了服务器，这个报文本该是失效的，但是，两次握手的机制将会让客户端和服务器再次建立连接，这将导致不必要的错误和资源的浪费。如果采用的是三次握手，就算是那一次失效的报文传送过来了，服务端接受到了那条失效报文并且回复了确认报文，但是客户端不会再次发出确认。由于服务器收不到确认，就知道客户端并没有请求连接。</p>
+<h4 id="TCP四次挥手释放连接"><a href="#TCP四次挥手释放连接" class="headerlink" title="TCP四次挥手释放连接"></a>TCP四次挥手释放连接</h4><ul>
+<li>Client发送带有FIN和seq = x的包到Server，Client从ESTABLISHED转为FIN_WAIT_1</li>
+<li>Server发送带有Ack 、ack= x+1和seq = y的包到Client，Server进入到CLOSE_WAIT状态</li>
+<li>Client收到确认请求后，进入FIN_WAIT_2，等待服务器发送释放报文</li>
+<li>Server最后的数据发送完毕后，便发送释放报文，FIN = 1,ack = x+1 和 seq = w ,Server进入到LAST_ACK状态</li>
+<li>Client收到释放报文后，发出ACK、ack = w+1和seq = x+1，进入到TIME_WAIT状态。这是TCP连接还没有释放，必须等待2<br>MSL（最长报文段寿命）时间后，当Client撤销相应的TCB后，才进入CLOSED状态</li>
+<li>Server只要收到了客户端发出的确认，立即进入CLOSED状态。Server结束TCP连接的时间要比客户端早一些。</li>
+</ul>
 
         </div>
         
@@ -176,7 +181,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/learning/" rel="tag">learning</a>
+                    <a class="has-link-grey -link" href="/tags/TCP/" rel="tag">TCP</a>
                 </div>
             </div>
         </div>
@@ -227,17 +232,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/09/17/2018-09-17-ValidParentheses/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">20.Valid Parentheses</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/05/16/2018-05-16-firstblog/">
-                <span class="level-item">my first blog</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">
+                <span class="level-item">2019年终总结</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -1012,7 +1010,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/head.jpeg" alt="搭一个自己的vpn" height="28">
+                    <img src="/images/head.jpeg" alt="TCP状态问题" height="28">
                 
                 </a>
                 <p class="is-size-7">
