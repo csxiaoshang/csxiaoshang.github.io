@@ -57,7 +57,15 @@
 <link rel="stylesheet" href="/css/back-to-top.css">
 
     
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155169787-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155169787-1');
+</script>
+
     
     
     
@@ -169,44 +177,20 @@
         
         
         
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
     </div>
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<div class="notification is-danger">
-    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-        </div>
-    </div>
-</div>
 
 
 
@@ -232,6 +216,29 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '4ec1d6fb276c7b2f06c1d0e8662be983',
+		owner: 'ashang',
+		repo: 'csxiaoshang.github.io',
+		oauth: {
+			client_id: 'a89f0fa076eeec1d33a7',
+			client_secret: '0bce8398bab321b1ca33e09eaac68729195077a1',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -277,7 +284,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            19
+                            20
                         </p>
                     </a>
                 </div>
@@ -301,7 +308,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            7
+                            8
                         </p>
                     </a>
                 </div>
@@ -409,7 +416,7 @@
                 <span class="level-item">java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/learning/">
@@ -478,7 +485,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/TCP/" style="font-size: 10px;">TCP</a> <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
+        <a href="/tags/TCP/" style="font-size: 10px;">TCP</a> <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
     </div>
 </div>
     
@@ -493,10 +500,29 @@
         
         <article class="media">
             
+            <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T13:24:11.000Z">2019-12-30</time></div>
+                    <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java基础</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/27/TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="TCP状态问题">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
@@ -513,9 +539,9 @@
         <article class="media">
             
             <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
@@ -532,9 +558,9 @@
         <article class="media">
             
             <a href="/2019/12/05/gc/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
@@ -551,34 +577,15 @@
         <article class="media">
             
             <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="java内存分配">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time></div>
                     <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java内存分配</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="双亲委派模型类加载器问题">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-02T11:10:04.000Z">2019-12-02</time></div>
-                    <a href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">双亲委派模型类加载器问题</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -603,7 +610,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -687,6 +694,13 @@
                     <a class="tags has-addons" href="/tags/interview/">
                         <span class="tag">interview</span>
                         <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">1</span>
                     </a>
                 </div>
                 
@@ -749,10 +763,29 @@
         
         <article class="media">
             
+            <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T13:24:11.000Z">2019-12-30</time></div>
+                    <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java基础</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/java/">java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/12/27/TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="TCP状态问题">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
@@ -769,9 +802,9 @@
         <article class="media">
             
             <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
@@ -788,9 +821,9 @@
         <article class="media">
             
             <a href="/2019/12/05/gc/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="gc">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
@@ -807,34 +840,15 @@
         <article class="media">
             
             <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="media-left">
-                <p class="image is-64x64">
+<!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="java内存分配">
-                </p>
+                </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time></div>
                     <a href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" class="title has-link-black-ter is-size-6 has-text-weight-normal">java内存分配</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="双亲委派模型类加载器问题">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-02T11:10:04.000Z">2019-12-02</time></div>
-                    <a href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">双亲委派模型类加载器问题</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/java/">java</a>
                     </p>
@@ -859,7 +873,7 @@
                     <span class="level-item">十二月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -947,6 +961,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/java/">
+                        <span class="tag">java</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/learning/">
                         <span class="tag">learning</span>
                         <span class="tag is-grey">7</span>
@@ -1002,7 +1023,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 csxiaoshang&nbsp;
+                &copy; 2020 csxiaoshang&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
