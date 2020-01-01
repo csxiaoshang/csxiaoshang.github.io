@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>搭一个自己的vpn - 刘云尚|个人博客</title>
+<title>Java基础 - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了">
-<meta name="keywords" content="learning">
+    <meta name="description" content="一、 数据类型基本类型 byte 8 short 16 char 16 int 32 float 32 long 64 double 64 boolean ~  boolean类型可以使用1bit来存储，但是具体大小没有明确规定。jvm会在编译时期将boolean类型转int，使用1 0 表示。">
+<meta name="keywords" content="java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭一个自己的vpn">
-<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2018&#x2F;05&#x2F;18&#x2F;2018-05-18-create-vpn&#x2F;index.html">
+<meta property="og:title" content="Java基础">
+<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2019&#x2F;12&#x2F;30&#x2F;Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
-<meta property="og:description" content="寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了">
+<meta property="og:description" content="一、 数据类型基本类型 byte 8 short 16 char 16 int 32 float 32 long 64 double 64 boolean ~  boolean类型可以使用1bit来存储，但是具体大小没有明确规定。jvm会在编译时期将boolean类型转int，使用1 0 表示。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-04T14:30:33.351Z">
+<meta property="og:updated_time" content="2020-01-01T14:14:36.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -87,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/head.jpeg" alt="搭一个自己的vpn" height="28">
+                <img src="/images/head.jpeg" alt="Java基础" height="28">
             
             </a>
         </div>
@@ -143,17 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-05-18T02:31:20.000Z">2018-05-18</time>
+                <time class="level-item has-text-grey" datetime="2019-12-30T13:24:11.000Z">2019-12-30</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/learning/">learning</a>
+                <a class="has-link-grey -link" href="/categories/java/">java</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 104 个字)
+                    9 分钟 读完 (大约 1408 个字)
                 </span>
                 
                 
@@ -162,21 +162,84 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                搭一个自己的vpn
+                Java基础
             
         </h1>
         <div class="content">
-            <blockquote>
-<p>寻思自己搭建一个VPN留着用来翻墙学习游戏，了解到可以使用shadowsocks，再租一个国外的服务器搭好环境基本就可以使用了</p>
-</blockquote>
+            <h3 id="一、-数据类型"><a href="#一、-数据类型" class="headerlink" title="一、 数据类型"></a>一、 数据类型</h3><h4 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h4><ul>
+<li>byte 8</li>
+<li>short 16</li>
+<li>char 16</li>
+<li>int 32</li>
+<li>float 32</li>
+<li>long 64</li>
+<li>double 64</li>
+<li>boolean ~</li>
+</ul>
+<p>boolean类型可以使用1bit来存储，但是具体大小没有明确规定。jvm会在编译时期将boolean类型转int，使用1 0 表示。</p>
 <a id="more"></a>
+<h4 id="缓存池"><a href="#缓存池" class="headerlink" title="缓存池"></a>缓存池</h4><p>基本类型对应的缓存池如下：</p>
+<ul>
+<li>boolean true false</li>
+<li>short -128 and 127</li>
+<li>int -128 and 127</li>
+<li>char in the range \u0000 to \u007F</li>
+</ul>
+<p>以Integer为例子， new Integer()将新增一个对象，而Integer.valueOf()则会首先在缓存池里选取。</p>
+<h3 id="二、-String"><a href="#二、-String" class="headerlink" title="二、 String"></a>二、 String</h3><h4 id="String-Pool"><a href="#String-Pool" class="headerlink" title="String Pool"></a>String Pool</h4><p>字符串常量池保存着所有的字符串字面量。一般来说，这些字面量编译期就确定。也可以使用String.intern()在<br>运行时期将字符串添加到String Pool中。</p>
+<h3 id="三、-运算"><a href="#三、-运算" class="headerlink" title="三、 运算"></a>三、 运算</h3><h4 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h4><p>java中的参数传递是以值传递的方式，而不是引用传递。<br>可以认为传递的参数是针对原有引用存储值的拷贝，并不是原来的引用。</p>
+<h3 id="四、-关键字"><a href="#四、-关键字" class="headerlink" title="四、 关键字"></a>四、 关键字</h3><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><p>声明数据为常量</p>
+<ul>
+<li>对于基本类型，final使数据不变</li>
+<li>对于引用类型，final是引用不变，即不可引用其他对象，但被引用的对象可以修改</li>
+</ul>
+<p>声明方法不能被子类重写<br>private方法隐式地定义为final，如果子类中出现和基类的一个private方法名相同的方法，不是对基类方法的重写，而是新定义的一个方法</p>
+<p>声明类不允许被继承</p>
+<h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><p>静态方法必须有实现，不能还是抽象方法<br>静态方法中不能有this super关键字，这两个关键字与具体对象关联</p>
+<p>静态代码块在类初始化时运行一次</p>
+<p>初始化顺序：<br>静态变量和静态代码块优于实例变量和普通代码块，构造函数最后初始化</p>
+<p>存在继承的情况下，初始化顺序为：</p>
+<ul>
+<li>父类 （静态变量、静态代码块）</li>
+<li>子类 （静态变量、静态代码块）</li>
+<li>父类 （实例变量、普通代码块）</li>
+<li>父类 （构造函数）</li>
+<li>子类 （实例变量、普通代码块）</li>
+<li>子类 （构造函数）</li>
+</ul>
+<h3 id="五、-Object通用方法"><a href="#五、-Object通用方法" class="headerlink" title="五、 Object通用方法"></a>五、 Object通用方法</h3><h4 id="equals"><a href="#equals" class="headerlink" title="equals()"></a>equals()</h4><p>实现：</p>
+<ul>
+<li>检查是否为同一个对象的引用，如果是直接返回true</li>
+<li>检查是否为同一种类型，如果不是直接返回false</li>
+<li>将Object对象进行转型</li>
+<li>判断每个关键字段是否相等</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Example</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">int</span> a;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">int</span> b;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-meta">@Override</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">equals</span><span class="hljs-params">(Object o)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span> == o ) <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">if</span>(o ==<span class="hljs-keyword">null</span> || getClass() != o.getClass()) <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        Example that = (Example) o;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.a == that.a &amp;&amp; <span class="hljs-keyword">this</span>.b == that.b)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">else</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
-<p><a href="https://www.yigeni.com/build-a-wall-ss-server/" target="_blank" rel="noopener">参考博客</a></p>
-<p><a href="https://www.flyzy2005.com/fan-qiang/shadowsocks/install-shadowsocks-in-one-command/" target="_blank" rel="noopener">参考博客2脚本搭建ss</a></p>
-<p><a href="https://my.vultr.com" target="_blank" rel="noopener">服务器网址</a></p>
-<blockquote>
-<p>当然现在还没有搭 &gt;_&lt;！</p>
-</blockquote>
+
+<h4 id="hashCode"><a href="#hashCode" class="headerlink" title="hashCode()"></a>hashCode()</h4><p>等价的两个对象散列值一定相等<br>在覆盖equals()方法时应当总是覆盖hashCode()方法，保证等价的两个对象哈希值也相等。</p>
+<p>理想的哈希函数应当具有均匀性，即不相等的对象应当均匀分布到所有可能的哈希值上。这就要求<br>了哈希函数要把所有域的值都考虑进来。可以将每个域都当成R进制的某一位，然后组成一个R进制<br>的整数。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Override</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">hashCode</span><span class="hljs-params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">int</span> result = <span class="hljs-number">17</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    result = <span class="hljs-number">31</span> * result + x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    result = <span class="hljs-number">31</span> * result + y;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    result = <span class="hljs-number">31</span> * result + z;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">return</span> result;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h4 id="clone"><a href="#clone" class="headerlink" title="clone()"></a>clone()</h4><p><strong>1.cloneable</strong></p>
+<p>clone()是Object的project方法，一个类没有重写Clone()方法，其他类就不能直接去调用该<br>类实例的Clone()方法。还需要实现Cloneable接口。</p>
+<p><strong>2.浅拷贝与深拷贝</strong></p>
+<p>浅拷贝：原始对象和拷贝对象引用指向同一个对象<br>深拷贝：原始对象和拷贝对象引用指向不同的对象</p>
+<p>上文中的clone()方法通常是对依照原始对象new一个新的拷贝对象，然后根据原始对象的每个域<br>复制给拷贝对象。</p>
+<p><strong>3.clone()的替代方案</strong><br>使用clone()方法比较复杂，最好不要使用clone()，可以使用拷贝构造函数或者拷贝工厂<br>来拷贝一个对象</p>
+<p>也可以使用序列化的方式拷贝</p>
+<h3 id="六、继承"><a href="#六、继承" class="headerlink" title="六、继承"></a>六、继承</h3><h4 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h4><p><strong>1.抽象类</strong><br>如果一个类中包含抽象方法，那这个类必须声明为抽象类<br>抽象类和普通类最大的区别是抽象类不能被实例化，只能被继承</p>
+<p><strong>2.接口</strong></p>
+<p>接口的成员(字段+方法)默认都是public的，并且不允许定义为private和protected<br>接口的字段默认都是static和final的</p>
+<p><strong>3.比较</strong></p>
+<ul>
+<li>从设计层面看，抽象类提供一种is-a关系，需要满足里氏代换原则，即子类对象必须<br>能够替换掉所有父类对象；接口更像是一种like-a关系</li>
+<li>从使用上看，一个类可以实现多个接口，但是不能继承多个抽象类。</li>
+<li>接口字段只能是static和final类型的，抽象类没有限制</li>
+<li>接口的成员只能是public的，抽象类成员可有多种访问权限</li>
+</ul>
+<h3 id="七、泛型"><a href="#七、泛型" class="headerlink" title="七、泛型"></a>七、泛型</h3><p>使用泛型的好处：<br>1.在集合中存储对象并在使用前进行类型转换不方便，泛型提供了编译期间的类型安全，<br>确保能能够把正确类型的对象放入到集合中<br><br><br>2.在写业务封装对象时，泛型可以提供限定某种类型</p>
+<p><a href="https://cloud.tencent.com/developer/article/1033693" target="_blank" rel="noopener">10道java泛型面试题</a></p>
 
         </div>
         
@@ -184,7 +247,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/learning/" rel="tag">learning</a>
+                    <a class="has-link-grey -link" href="/tags/java/" rel="tag">java</a>
                 </div>
             </div>
         </div>
@@ -211,17 +274,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/09/17/2018-09-17-ValidParentheses/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">20.Valid Parentheses</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/05/16/2018-05-16-firstblog/">
-                <span class="level-item">my first blog</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/27/TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98/">
+                <span class="level-item">TCP状态问题</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -240,7 +296,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 	var gitment = new Gitment({
-		id: '724274f280fa7eb29ecf458e0f1bf85d',
+		id: '1fb8c95360d409b98cb50074e2f36306',
 		owner: 'ashang',
 		repo: 'csxiaoshang.github.io',
 		oauth: {
@@ -1033,7 +1089,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/head.jpeg" alt="搭一个自己的vpn" height="28">
+                    <img src="/images/head.jpeg" alt="Java基础" height="28">
                 
                 </a>
                 <p class="is-size-7">
