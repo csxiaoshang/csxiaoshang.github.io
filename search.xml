@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数据库行级锁</title>
+      <link href="/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/"/>
+      <url>/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/</url>
+      
+        <content type="html"><![CDATA[<p>今天写支付接口时，在客户端调用支付完成后，微信会调用微信支付通知接口<br>，而且存在多次调用问题，此时需要是使用数据锁，解决并发访问问题。</p><a id="more"></a><ul><li>redis锁</li></ul><p>首先考虑使用redis锁，将订单主键作为redis键值，使用redis setx方法，<br>将锁粒度控制在单一订单上，也比较合适，但是使用的话需要引入redis、不算简单。<br>好处是以后方便拓展</p><ul><li>数据库行级锁</li></ul><blockquote><p>表级锁：开销小，加锁快；不会出现死锁；锁定粒度大，发生锁冲突的概率最高，并发度最低。<br>行级锁：开销大，加锁慢；会出现死锁；锁定粒度最小，发生锁冲突的概率最低，并发度也最高。<br>页面锁：开销和加锁时间界于表锁和行锁之间；会出现死锁；锁定粒度界于表锁和行锁之间，并发度一般</p></blockquote><p>考虑直接使用数据库行级锁，使用起来比较简单，配合事务，一行sql就搞定了</p><p>测试了一下，在查询的时候 相应字段普通索引不会是用行级锁，使用的还是表锁。<br>于是将订单的流水号字段建立唯一索引，使用for update查询测试为是行级锁。</p><p>spring具体使用方法为：业务方法上添加@Tranactional注解，可手写sql或者使用jpa @LOCK注解即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java基础</title>
       <link href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
       <url>/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
