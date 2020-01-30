@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 646 个字)
+                    10 分钟 读完 (大约 1562 个字)
                 </span>
                 
                 
@@ -183,29 +183,17 @@
 <h4 id="2-List"><a href="#2-List" class="headerlink" title="2.List"></a>2.List</h4><ul>
 <li>ArrayList：基于动态数组实现，支持随机访问</li>
 <li>Vector：和ArrayList相似，但它是线程安全的</li>
-<li>LinkedList：基于双向链表实现，只能顺序访问。LinkedList还可以用作栈、队列和双向队列。</li>
-</ul>
-<h4 id="3-Queue"><a href="#3-Queue" class="headerlink" title="3.Queue"></a>3.Queue</h4><ul>
-<li>LinkedList ： 可用作双向队列</li>
-<li>PriorityQueue：基于堆实现，可用作优先队列</li>
-</ul>
-<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul>
-<li>TreeMap：基于红黑树实现</li>
-<li>HashMap：基于哈希表实现</li>
-<li>HashTable：和HashMap相似，但它是线程安全的，但是一般不使用它，使用ConcurrentHashMap效率更高，因为引入了分段锁</li>
-<li>LinkedHashMap：使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用（LRU）顺序</li>
-</ul>
-<h2 id="二、容器中的设计模式"><a href="#二、容器中的设计模式" class="headerlink" title="二、容器中的设计模式"></a>二、容器中的设计模式</h2><h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p>Collection继承了Iterable接口，其中的iterator()方法能够产生一个Iterator对象，通过这个对象可以遍历Collection中的元素。</p>
-<h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><p>java.util.Arrays#asList()可以把数组类型转换为List类型。</p>
-<h2 id="三、源码分析"><a href="#三、源码分析" class="headerlink" title="三、源码分析"></a>三、源码分析</h2><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><h4 id="1-概览"><a href="#1-概览" class="headerlink" title="1.概览"></a>1.概览</h4><p>ArrayList基于数组实现，所以支持快速随机访问，RandomAccess接口标志该类支持快速随机访问。<br>数组默认大小为10。</p>
-<h4 id="2-扩容"><a href="#2-扩容" class="headerlink" title="2.扩容"></a>2.扩容</h4><p>添加元素时使用ensureCapacityInternal()来保证容量足够，如果不够，扩容。<br>新容量大小为旧容量大小的1.5倍。<br><br><br>扩容操作需调用Arrays.copyOf()把原数组整个复制到新数组中，这个操作代价很高，因此最好在创建 ArrayList 对象时就指定大概的容量大小，减少扩容操作的次数。</p>
-<h4 id="3-Fail-fast"><a href="#3-Fail-fast" class="headerlink" title="3.Fail-fast"></a>3.Fail-fast</h4><p>modCount用来记录ArrayList结构发生变化的次数，在进行序列化或者迭代的时候，需要<br>比较前后modCount是否改变，若改变了需要抛出ConcurrentModificationException异常.</p>
-<h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><h4 id="1-同步"><a href="#1-同步" class="headerlink" title="1.同步"></a>1.同步</h4><p>使用synchronized进行同步</p>
-<h4 id="2-比较"><a href="#2-比较" class="headerlink" title="2.比较"></a>2.比较</h4><p>因为使用synchronized同步，所以开销要比ArrayList大一些</p>
-<p>在使用方面，可使用Collections.synchronizedList()和CopyOnWriteArrayList代替</p>
-<h3 id="CopyOnWriteArrayList"><a href="#CopyOnWriteArrayList" class="headerlink" title="CopyOnWriteArrayList"></a>CopyOnWriteArrayList</h3>
+<li>LinkedList：基于双向链表实现，只能顺序访问。LinkedList还可以用作栈、队列和双向队列。</li></ul>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/01/06/Java%E5%AE%B9%E5%99%A8/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -288,6 +276,58 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-05T01:42:57.000Z">2019-12-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Java/">Java</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 267 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/12/05/gc/">gc</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。"><a href="#判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。" class="headerlink" title="判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。"></a>判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。</h3><p>引用计数器：<br>当引用计数器为零的时候，表明没用引用再指向该对象，但是引用计数器不能解决循环引用的情况；<br>可达性分析：</p>
+<ol>
+<li>当不能从GC Root寻找一条路径到达该对象时， 将进行第一次标记。</li>
+<li>第一次标记后检查对象是否重写了finalize() 和是否已经被调用了finalize()方法。若没有重写finalize()方法或已经被调用，则进行回收。</li>
+<li>在已经重写finalize()方法且未调用的情况下，将对象加入一个F-Queue 的队列中，稍后进行第二次检查。</li>
+<li>在第二次标记之前，对象如果执行finalize()方法并完成自救，对象则不会被回收。否则完成第二次标记，进行回收。值得注意的是finalize()方法并不可靠。</li>
+</ol>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time>
                 
                 <div class="level-item">
@@ -331,6 +371,59 @@
             <div class="level-start">
                 <div class="level-item">
                 <a class="button is-size-7 is-light" href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-12-02T11:10:04.000Z">2019-12-02</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Java/">Java</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    几秒 读完 (大约 24 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/">双亲委派模型类加载器问题</a>
+            
+        </h1>
+        <div class="content">
+            <p>下图是关于类加载顺序的总结</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/#more">阅读更多</a>
                 </div>
             </div>
         </div>
@@ -403,7 +496,7 @@
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            10
+                            9
                         </p>
                     </a>
                 </div>
@@ -523,15 +616,7 @@
                 <span class="level-item">Java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/java/">
-            <span class="level-start">
-                <span class="level-item">java</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/learning/">

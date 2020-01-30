@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 646 个字)
+                    10 分钟 读完 (大约 1562 个字)
                 </span>
                 
                 
@@ -182,29 +182,17 @@
 <h4 id="2-List"><a href="#2-List" class="headerlink" title="2.List"></a>2.List</h4><ul>
 <li>ArrayList：基于动态数组实现，支持随机访问</li>
 <li>Vector：和ArrayList相似，但它是线程安全的</li>
-<li>LinkedList：基于双向链表实现，只能顺序访问。LinkedList还可以用作栈、队列和双向队列。</li>
-</ul>
-<h4 id="3-Queue"><a href="#3-Queue" class="headerlink" title="3.Queue"></a>3.Queue</h4><ul>
-<li>LinkedList ： 可用作双向队列</li>
-<li>PriorityQueue：基于堆实现，可用作优先队列</li>
-</ul>
-<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul>
-<li>TreeMap：基于红黑树实现</li>
-<li>HashMap：基于哈希表实现</li>
-<li>HashTable：和HashMap相似，但它是线程安全的，但是一般不使用它，使用ConcurrentHashMap效率更高，因为引入了分段锁</li>
-<li>LinkedHashMap：使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用（LRU）顺序</li>
-</ul>
-<h2 id="二、容器中的设计模式"><a href="#二、容器中的设计模式" class="headerlink" title="二、容器中的设计模式"></a>二、容器中的设计模式</h2><h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p>Collection继承了Iterable接口，其中的iterator()方法能够产生一个Iterator对象，通过这个对象可以遍历Collection中的元素。</p>
-<h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><p>java.util.Arrays#asList()可以把数组类型转换为List类型。</p>
-<h2 id="三、源码分析"><a href="#三、源码分析" class="headerlink" title="三、源码分析"></a>三、源码分析</h2><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><h4 id="1-概览"><a href="#1-概览" class="headerlink" title="1.概览"></a>1.概览</h4><p>ArrayList基于数组实现，所以支持快速随机访问，RandomAccess接口标志该类支持快速随机访问。<br>数组默认大小为10。</p>
-<h4 id="2-扩容"><a href="#2-扩容" class="headerlink" title="2.扩容"></a>2.扩容</h4><p>添加元素时使用ensureCapacityInternal()来保证容量足够，如果不够，扩容。<br>新容量大小为旧容量大小的1.5倍。<br><br><br>扩容操作需调用Arrays.copyOf()把原数组整个复制到新数组中，这个操作代价很高，因此最好在创建 ArrayList 对象时就指定大概的容量大小，减少扩容操作的次数。</p>
-<h4 id="3-Fail-fast"><a href="#3-Fail-fast" class="headerlink" title="3.Fail-fast"></a>3.Fail-fast</h4><p>modCount用来记录ArrayList结构发生变化的次数，在进行序列化或者迭代的时候，需要<br>比较前后modCount是否改变，若改变了需要抛出ConcurrentModificationException异常.</p>
-<h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><h4 id="1-同步"><a href="#1-同步" class="headerlink" title="1.同步"></a>1.同步</h4><p>使用synchronized进行同步</p>
-<h4 id="2-比较"><a href="#2-比较" class="headerlink" title="2.比较"></a>2.比较</h4><p>因为使用synchronized同步，所以开销要比ArrayList大一些</p>
-<p>在使用方面，可使用Collections.synchronizedList()和CopyOnWriteArrayList代替</p>
-<h3 id="CopyOnWriteArrayList"><a href="#CopyOnWriteArrayList" class="headerlink" title="CopyOnWriteArrayList"></a>CopyOnWriteArrayList</h3>
+<li>LinkedList：基于双向链表实现，只能顺序访问。LinkedList还可以用作栈、队列和双向队列。</li></ul>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/01/06/Java%E5%AE%B9%E5%99%A8/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -337,7 +325,7 @@
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            10
+                            9
                         </p>
                     </a>
                 </div>
@@ -457,15 +445,7 @@
                 <span class="level-item">Java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/java/">
-            <span class="level-start">
-                <span class="level-item">java</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/learning/">
