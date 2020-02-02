@@ -1,8 +1,8 @@
 ---
 title: Java基础
 date: 2019-12-30 21:24:11
-categories: java
-tags: java
+categories: Java
+tags: Java
 ---
 
 ### 一、 数据类型

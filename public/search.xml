@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Java容器</title>
+      <link href="/2020/01/30/Java%E5%AE%B9%E5%99%A8/"/>
+      <url>/2020/01/30/Java%E5%AE%B9%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、概览"><a href="#一、概览" class="headerlink" title="一、概览"></a>一、概览</h2><p>容器主要包括Collection和Map两种，Collection存储着对象的集合，Map存储着键值对(两个对象)的映射表</p><h3 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h3><h4 id="1-Set"><a href="#1-Set" class="headerlink" title="1.Set"></a>1.Set</h4><ul><li>TreeSet：基于红黑树实现，支持有序性操作，例如根据一个范围查找元素的操作</li><li>HashSet：基于哈希表实现，不支持有序性操作</li><li>LinkedHashSet：具有HashSet的查找效率，内部使用双向链表维护元素的插入顺序</li></ul><h4 id="2-List"><a href="#2-List" class="headerlink" title="2.List"></a>2.List</h4><ul><li>ArrayList：基于动态数组实现，支持随机访问</li><li>Vector：和ArrayList相似，但它是线程安全的</li><li>LinkedList：基于双向链表实现，只能顺序访问。LinkedList还可以用作栈、队列和双向队列。<a id="more"></a></li></ul><h4 id="3-Queue"><a href="#3-Queue" class="headerlink" title="3.Queue"></a>3.Queue</h4><ul><li>LinkedList ： 可用作双向队列</li><li>PriorityQueue：基于堆实现，可用作优先队列</li></ul><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul><li>TreeMap：基于红黑树实现</li><li>HashMap：基于哈希表实现</li><li>HashTable：和HashMap相似，但它是线程安全的，但是一般不使用它，使用ConcurrentHashMap效率更高，因为引入了分段锁</li><li>LinkedHashMap：使用双向链表来维护元素的顺序，顺序为插入顺序或者最近最少使用（LRU）顺序</li></ul><h2 id="二、容器中的设计模式"><a href="#二、容器中的设计模式" class="headerlink" title="二、容器中的设计模式"></a>二、容器中的设计模式</h2><h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p>Collection继承了Iterable接口，其中的iterator()方法能够产生一个Iterator对象，通过这个对象可以遍历Collection中的元素。</p><h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><p>java.util.Arrays#asList()可以把数组类型转换为List类型。</p><h2 id="三、源码分析"><a href="#三、源码分析" class="headerlink" title="三、源码分析"></a>三、源码分析</h2><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><h4 id="1-概览"><a href="#1-概览" class="headerlink" title="1.概览"></a>1.概览</h4><p>ArrayList基于数组实现，所以支持快速随机访问，RandomAccess接口标志该类支持快速随机访问。<br>数组默认大小为10。</p><h4 id="2-扩容"><a href="#2-扩容" class="headerlink" title="2.扩容"></a>2.扩容</h4><p>添加元素时使用ensureCapacityInternal()来保证容量足够，如果不够，扩容。<br>新容量大小为旧容量大小的1.5倍。<br><br><br>扩容操作需调用Arrays.copyOf()把原数组整个复制到新数组中，这个操作代价很高，因此最好在创建 ArrayList 对象时就指定大概的容量大小，减少扩容操作的次数。</p><h4 id="3-Fail-fast"><a href="#3-Fail-fast" class="headerlink" title="3.Fail-fast"></a>3.Fail-fast</h4><p>modCount用来记录ArrayList结构发生变化的次数，在进行序列化或者迭代的时候，需要<br>比较前后modCount是否改变，若改变了需要抛出ConcurrentModificationException异常.</p><h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><h4 id="1-同步"><a href="#1-同步" class="headerlink" title="1.同步"></a>1.同步</h4><p>使用synchronized进行同步</p><h4 id="2-比较"><a href="#2-比较" class="headerlink" title="2.比较"></a>2.比较</h4><p>因为使用synchronized同步，所以开销要比ArrayList大一些</p><p>在使用方面，可使用Collections.synchronizedList()和CopyOnWriteArrayList代替</p><h3 id="CopyOnWriteArrayList"><a href="#CopyOnWriteArrayList" class="headerlink" title="CopyOnWriteArrayList"></a>CopyOnWriteArrayList</h3><h4 id="1-读写分离"><a href="#1-读写分离" class="headerlink" title="1.读写分离"></a>1.读写分离</h4><p>CopyOnWriteArrayList写操作时，加锁，将原有数组元素拷贝到一个新的数组中，写入元素，将原有数组指向新的数组，释放锁<br>读操作在原有数组中，读写分离，互不影响</p><p>CopyOnWriteArrayList 存在内存占用和数据不一致性问题<br>所以它不适合内存敏感以及对实时性要求高的场景</p><h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><p>基于双向链表实现</p><p>和ArrayList的区别可以归结为数组和链表的区别</p><h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><h4 id="1-存储结构"><a href="#1-存储结构" class="headerlink" title="1.存储结构"></a>1.存储结构</h4><p>内部维护一个Node类型的数组，作为hash表；Node数据结构包含4个字段，有key、value、next指针、int型hash值</p><p>数组的每一个位置被当做一个桶，一个桶存放一个链表。</p><h4 id="2-拉链法的工作原理"><a href="#2-拉链法的工作原理" class="headerlink" title="2.拉链法的工作原理"></a>2.拉链法的工作原理</h4><p>哈希表为解决hash冲突有开放地址法和链地址法。比较来说，链地址法更适合于大规模数据和不确定性数据的存储，处理冲突简单且不易出现堆积问题，节省空间</p><ul><li>确定hash桶数组索引位置<br>key值取哈希值时采用高位运算使得hash值的高位通常也能参与到计算hash表值中，使用与运算代替取模提高一定的效率。</li><li>HashMap的put方法<br>JDK 1.7 之前使用头插法、JDK 1.8 使用尾插法<br><img src="https://awps-assets.meituan.net/mit-x/blog-images-bundle-2016/d669d29c.png" alt></li><li>扩容机制<br>在hash表容量扩大为两倍时，在rehash时有了一定的优化，在数组位置上只有一个元素时，rehash赋值到新的hash表；有多个元素时，根据扩容的位为1或0，进行优化</li></ul><h4 id="3-参看链接"><a href="#3-参看链接" class="headerlink" title="3.参看链接"></a>3.参看链接</h4><p><a href="https://tech.meituan.com/2016/06/24/java-hashmap.html" target="_blank" rel="noopener">Java 8系列之重新认识HashMap</a><br><a href="https://www.jianshu.com/p/75adf47958a7" target="_blank" rel="noopener">HashMap 相关面试题及其解答</a></p><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>(1) 扩容是一个特别耗性能的操作，所以当程序员在使用HashMap的时候，估算map的大小，初始化的时候给一个大致的数值，避免map进行频繁的扩容。</p><p>(2) 负载因子是可以修改的，也可以大于1，但是建议不要轻易修改，除非情况非常特殊。</p><p>(3) HashMap是线程不安全的，不要在并发的环境中同时操作HashMap，建议使用ConcurrentHashMap。</p><p>(4) JDK1.8引入红黑树大程度优化了HashMap的性能。</p><p>(5) 还没升级JDK1.8的，现在开始升级吧。HashMap的性能提升仅仅是JDK1.8的冰山一角。</p><pre><code>Q：HashMap，LinkedHashMap，TreeMap 有什么区别？A：HashMap 参考其他问题；LinkedHashMap 保存了记录的插入顺序，在用 Iterator 遍历时，先取到的记录肯定是先插入的；遍历比 HashMap 慢；TreeMap 实现 SortMap 接口，能够把它保存的记录根据键排序（默认按键值升序排序，也可以指定排序的比较器）Q：HashMap 和 HashTable 有什么区别？A：①、HashMap 是线程不安全的，HashTable 是线程安全的；②、由于线程安全，所以 HashTable 的效率比不上 HashMap；③、HashMap最多只允许一条记录的键为null，允许多条记录的值为null，而 HashTable 不允许；④、HashMap 默认初始化数组的大小为16，HashTable 为 11，前者扩容时，扩大两倍，后者扩大两倍+1；⑤、HashMap 需要重新计算 hash 值，而 HashTable 直接使用对象的 hashCode</code></pre><h3 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h3><p><a href="https://www.ibm.com/developerworks/cn/java/java-lo-concurrenthashmap/" target="_blank" rel="noopener">jdk1.7版本的ConcurrentHashMap解析</a><br><a href="https://blog.csdn.net/weixin_44460333/article/details/86770169" target="_blank" rel="noopener">HashMap？ConcurrentHashMap？相信看完这篇没人能难住你！</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据库行级锁</title>
+      <link href="/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/"/>
+      <url>/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/</url>
+      
+        <content type="html"><![CDATA[<p>今天写支付接口时，在客户端调用支付完成后，微信会调用微信支付通知接口<br>，而且存在多次调用问题，此时需要是使用数据锁，解决并发访问问题。</p><a id="more"></a><ul><li>redis锁</li></ul><p>首先考虑使用redis锁，将订单主键作为redis键值，使用redis setx方法，<br>将锁粒度控制在单一订单上，也比较合适，但是使用的话需要引入redis、不算简单。<br>好处是以后方便拓展</p><ul><li>数据库行级锁</li></ul><blockquote><p>表级锁：开销小，加锁快；不会出现死锁；锁定粒度大，发生锁冲突的概率最高，并发度最低。<br>行级锁：开销大，加锁慢；会出现死锁；锁定粒度最小，发生锁冲突的概率最低，并发度也最高。<br>页面锁：开销和加锁时间界于表锁和行锁之间；会出现死锁；锁定粒度界于表锁和行锁之间，并发度一般</p></blockquote><p>考虑直接使用数据库行级锁，使用起来比较简单，配合事务，一行sql就搞定了</p><p>测试了一下，在查询的时候 相应字段普通索引不会是用行级锁，使用的还是表锁。<br>于是将订单的流水号字段建立唯一索引，使用for update查询测试为是行级锁。</p><p>spring具体使用方法为：业务方法上添加@Tranactional注解，可手写sql或者使用jpa @LOCK注解即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java基础</title>
       <link href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
       <url>/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
@@ -13,14 +63,14 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Java </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> java </tag>
+            <tag> Java </tag>
             
         </tags>
       
@@ -82,7 +132,7 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Java </category>
           
       </categories>
       
@@ -101,7 +151,7 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Java </category>
           
       </categories>
       
@@ -120,7 +170,7 @@
       
       <categories>
           
-          <category> java </category>
+          <category> Java </category>
           
       </categories>
       

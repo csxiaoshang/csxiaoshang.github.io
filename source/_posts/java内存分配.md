@@ -1,7 +1,7 @@
 ---
 title: java内存分配
 date: 2019-12-04 22:09:38
-categories: java
+categories: Java
 ---
 
 ### java内存区域

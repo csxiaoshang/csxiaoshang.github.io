@@ -1,7 +1,7 @@
 ---
 title: gc
 date: 2019-12-05 09:42:57
-categories: java
+categories: Java
 ---
 
 ### 判断对象是否存活，可以使用引用计数器或者可达性分析两种方法。
