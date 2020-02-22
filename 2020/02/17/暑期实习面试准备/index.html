@@ -10,16 +10,16 @@
 <title>暑期实习面试准备 - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="数据结构 红黑树 B树和B+树  参考链接：二叉树，平衡二叉树，红黑树，B-树、B+树、B*树的区别红黑树和AVL树（平衡二叉树）区别 Java基础">
+    <meta name="description" content="数据结构 红黑树 B树和B+树  参考链接：二叉树，平衡二叉树，红黑树，B-树、B+树、B*树的区别红黑树和AVL树（平衡二叉树）区别 Java基础反射原理">
 <meta name="keywords" content="interview">
 <meta property="og:type" content="article">
 <meta property="og:title" content="暑期实习面试准备">
 <meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2020&#x2F;02&#x2F;17&#x2F;%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
-<meta property="og:description" content="数据结构 红黑树 B树和B+树  参考链接：二叉树，平衡二叉树，红黑树，B-树、B+树、B*树的区别红黑树和AVL树（平衡二叉树）区别 Java基础">
+<meta property="og:description" content="数据结构 红黑树 B树和B+树  参考链接：二叉树，平衡二叉树，红黑树，B-树、B+树、B*树的区别红黑树和AVL树（平衡二叉树）区别 Java基础反射原理">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-02-22T03:14:39.189Z">
+<meta property="og:updated_time" content="2020-02-22T07:52:04.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 小时 读完 (大约 9705 个字)
+                    1 小时 读完 (大约 11870 个字)
                 </span>
                 
                 
@@ -171,7 +171,8 @@
 <li>B树和B+树</li>
 </ul>
 <p>参考链接：<br><a href="https://blog.csdn.net/wyqwilliam/article/details/82935922" target="_blank" rel="noopener">二叉树，平衡二叉树，红黑树，B-树、B+树、B*树的区别</a><br><a href="https://blog.csdn.net/u010899985/article/details/80981053#commentBox" target="_blank" rel="noopener">红黑树和AVL树（平衡二叉树）区别</a></p>
-<h3 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h3><a id="more"></a>
+<h3 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h3><p><a href="https://blog.csdn.net/h2604396739/article/details/83109292" target="_blank" rel="noopener">反射原理</a></p>
+<a id="more"></a>
 <h3 id="Jvm"><a href="#Jvm" class="headerlink" title="Jvm"></a>Jvm</h3><ul>
 <li><p>分代回收算法:<a href="http://www.importnew.com/19255.html" target="_blank" rel="noopener">http://www.importnew.com/19255.html</a><br>年轻代：复制回收算法 Scavenge GC（Eden-&gt;Survivor-&gt;Survivor）<br>老年代：年轻代n次回收后，扔存在的对象进入老年代。Full GC（老年、持久被写满或显示调用）用的是标记／清除法，老年代的垃圾回收会导致长时间的停顿<br>持久代：存放静态文件<br>收集器：串行：单线程效率高（适用于client模式下）；并行：多线程（最大垃圾回收暂停:吞吐量）；并发：应用不停止，响应要求高。浮动垃圾，需要保证内存空间<br>CMS收集器，目前web服务器开发最常用的收集器，并发收集（也就是垃圾回收线程和应用程序线程同时运行）。问豪神：（由于这个阶段应用程序同时也在运行，所以并发标记阶段结束后，并不能标记出所有的存活对象。为了解决这个问题，需要再次停顿应用程序，称为 再次标记阶段（remark））</p>
 </li>
@@ -259,10 +260,11 @@
 <p>2）代理对象只服务于一种类型的对象，如果要服务多类型的对象。势必要为每一种对象都进行代理，静态代理在程序规模稍大时就无法胜任了。如上的代码是只为UserManager类的访问提供了代理，但是如果还要为其他类如Department类提供代理的话，就需要我们再次添加代理Department的代理类。</p>
 <p>参考链接：<br><a href="https://www.cnblogs.com/zuoxiaolong/p/pattern3.html" target="_blank" rel="noopener">代理模式</a><br><a href="https://blog.csdn.net/hejingyuan6/article/details/36203505" target="_blank" rel="noopener">JAVA学习篇–静态代理VS动态代理</a></p>
 <h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><ul>
-<li><p>引擎对比<br>MyISAM拥有较高的插入、查询速度，但不支持事务。MyISAM引擎使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。MyISAM的索引文件仅仅保存数据记录的地址。在MyISAM中，主索引和辅助索引（Secondary key）在结构上没有任何区别，只是主索引要求key是唯一的，而辅助索引的key可以重复<br>InnoDB是事务型数据库的首选引擎，支持事务安全表（ACID），支持行锁定和外键，InnoDB是默认的MySQL引擎。InnoDB将它的表和索引在一个逻辑表空间中，表空间可以包含数个文件。这与MyISAM表不同，比如在MyISAM表中每个表被存放在分离的文件中。聚集索引。因为InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键，如果不存在这种列，则MySQL自动为InnoDB表生成一个隐含字段作为主键。辅助索引data域存储相应记录主键的值而不是地址。InnoDB还支持外键（FOREIGN KEY）</p>
-</li>
-<li><p>事务</p>
-</li>
+<li>引擎对比<br>MyISAM拥有较高的插入、查询速度，但不支持事务。MyISAM引擎使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。MyISAM的索引文件仅仅保存数据记录的地址。在MyISAM中，主索引和辅助索引（Secondary key）在结构上没有任何区别，只是主索引要求key是唯一的，而辅助索引的key可以重复<br>InnoDB是事务型数据库的首选引擎，支持事务安全表（ACID），支持行锁定和外键，InnoDB是默认的MySQL引擎。InnoDB将它的表和索引在一个逻辑表空间中，表空间可以包含数个文件。这与MyISAM表不同，比如在MyISAM表中每个表被存放在分离的文件中。聚集索引。因为InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键，如果不存在这种列，则MySQL自动为InnoDB表生成一个隐含字段作为主键。辅助索引data域存储相应记录主键的值而不是地址。InnoDB还支持外键（FOREIGN KEY）</li>
+</ul>
+<p><a href>MySQL存储引擎MyISAM与InnoDB区别总结整理</a></p>
+<ul>
+<li>事务</li>
 </ul>
 <p>数据库事务的实现原理：<br>事务每开启一个实例，都会分配一个版本号给它，如果读取的数据行正在被其它事务执行DELETE或UPDATE操作（即该行上有排他锁），这时该事物的读取操作不会等待行上的锁释放，而是根据版本号去读取行的快照数据（记录在undo log中），这样，事务中的查询操作返回的都是同一版本下的数据，解决了不可重复读问题。<br>原子性和一致性通过Undo log来实现。UndoLog的原理很简单，为了满足事务的原子性，在操作任何数据之前，首先将数据备份到一个地方（这个存储数据备份的地方称为UndoLog）。然后进行数据的修改。如果出现了错误或者用户执行了ROLLBACK语句，系统可以利用Undo Log中的备份将数据恢复到事务开始之前的状态。<br>RedoLog记录的是新数据的备份。在事务提交前，只要将RedoLog持久化即可，不需要将数据持久化。当系统崩溃时，虽然数据没有持久化，但是RedoLog已经持久化。系统可以根据RedoLog的内容，将所有数据恢复到最新的状态。</p>
 <p>脏读：是指一个事务中访问到了另外一个事务未提交的数据。不可重复读是指在一个事务内根据同一个条件对行记录进行多次查询，但是搜出来的结果却不一致。幻读是指同一个事务内多次查询返回的结果集不一样（比如增加了或者减少了行记录）。不同在于不可重复读是同一个记录的数据内容被修改了，幻读是数据行记录变多了或者少了<br>事务隔离：read uncommitted（读取未提交数据：导致脏读）　read committed（可以读取其他事务提交的数据：导致不可重复读）—大多数数据库默认的隔离级别；repeatable read（可重读：导致幻读）—MySQL默认的隔离级别；serializable（串行化：有事务读的时候其他写会被挂起）</p>
@@ -281,6 +283,34 @@
 </ul>
 <p>查询优化：面对大规模数据量时，采取SELECT * FROM table WHERE id &gt;= (SELECT id FROM table LIMIT 1000000, 1) LIMIT 10; 对分页查询进行优化，由于查询出id后，会遍历按照id 去外存区table数据　然后丢弃前面的，导致效率低下。<br><a href="http://www.nowamagic.net/librarys/veda/detail/1900" target="_blank" rel="noopener">如何提高MySQL Limit查询的性能</a><br><a href="https://blog.csdn.net/u013628152/article/details/82184809" target="_blank" rel="noopener">数据库优化方案整理</a></p>
 <p>参考链接：<br><a href="https://blog.csdn.net/hcmony/article/details/80694560" target="_blank" rel="noopener">为什么分布式一定要有redis，redis的一些优缺点q</a><br><a href="https://blog.csdn.net/qq360694660/article/details/88695365" target="_blank" rel="noopener">数据库本地事务的实现原理</a><br><a href="https://blog.csdn.net/oracle_29/article/details/85717855" target="_blank" rel="noopener">数据库 redo undo log</a><br><a href="https://www.cnblogs.com/CodeBear/p/10911177.html" target="_blank" rel="noopener">大白话布隆过滤器</a><br><a href="https://www.cnblogs.com/CodeBear/p/12118050.html#4472208" target="_blank" rel="noopener">谈谈数据库，缓存一致性</a><br><a href="https://www.cnblogs.com/xichji/p/11286443.html" target="_blank" rel="noopener">REDIS缓存穿透，缓存击穿，缓存雪崩原因+解决方案</a></p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><ul>
+<li><p>tcp三次握手的本质：交换并确认双方的数据序号。</p>
+<pre><code>1.SYN-SENT --&gt; &lt;SEQ=100&gt;&lt;CTL=SYN&gt; --&gt; SYN-RECEIVED ​ 
+2.ESTABLISHED &lt;-- &lt;SEQ=300&gt;&lt;ACK=101&gt;&lt;CTL=SYN,ACK&gt; &lt;-- SYN-RECEIVED ​ 
+3.ESTABLISHED --&gt; &lt;SEQ=101&gt;&lt;ACK=301&gt;&lt;CTL=ACK&gt; --&gt; ESTABLISHED
+四次挥手，每一端的关闭请求都需要被确认一次：2（client, server）*2(FIN, ACK)　服务器主动关闭链接的话会只有两次挥手　后续会回复客户端RST
+
+TIME_WAIT的产生条件：主动关闭方在发送四次挥手的最后一个ACK（第四次挥手后不会立刻关闭）会变为TIME_WAIT状态，保留次状态的时间为两个MSL（linux里一个MSL为30s，是不可配置的）
+TIME_WAIT两个MSL的作用：可靠安全的关闭TCP连接。比如网络拥塞，主动方最后一个ACK被动方没收到，这时被动方会对FIN开启TCP重传，发
+送多个FIN包，在这时尚未关闭的TIME_WAIT就会把这些尾巴问题处理掉，不至于对新连接及其它服务产生影响。
+TIME_WAIT占用的资源：少量内存（查资料大概4K）和一个fd。
+TIME_WAIT关闭的危害：1、  网络情况不好时，如果主动方无TIME_WAIT等待，关闭前个连接后，主动方与被动方又建立起新的TCP连接，这时被
+动方重传或延时过来的FIN包过来后会直接影响新的TCP连接；2、  同样网络情况不好并且无TIME_WAIT等待，关闭连接后无新连接，当接收到被动
+方重传或延迟的FIN包后，会给被动方回一个RST包，可能会影响被动方其它的服务连接。
+TIME_WAIT过多的解决办法： net.ipv4.tcp_tw_recycle=1  　表示开启TCP连接中TIME-WAIT sockets的快速回收</code></pre></li>
+<li><p>Reactor模式<br>  　一种比较流行的做法是服务端监听线程和 IO 线程分离，类似于 Reactor 的多线程模型。bossGrouＰ线程组实际就是 Acceptor 线程池，负责处理客户端的 TCP 连接请求，workerGroup 是真正负责 I/O 读写操作的线程组</p>
+</li>
+<li><p>TCP确保可靠性的机制　校验和　序列号　确认应答　超时重传　连接管理（三次握手　四次挥手）　<br>流量控制　在TCP协议的报头信息当中，有窗口大小，即接收端接收数据缓冲区的剩余大小。接收端会在确认应答发送ACK报文时，将自己的即时窗口大小填入，并跟随ACK报文一起发送过去。而发送方根据ACK报文里的窗口大小的值的改变进而改变自己的发送速度。如果接收到窗口大小的值为0，那么发送方将停止发送数据。并定期的向接收端发送窗口探测数据段，让接收端把窗口大小告诉发送端。<br>拥塞控制　 快重传算法首先要求接收方每收到一个失序的报文段后就立即发出重复确认<br>RST标志位表示强制断开链接<br>sack selective acknowledgment，也就是选择性确认，添加sack功能需要在TCP包头加两个选项，一个是开启选项（enabling optiocookie 一般由服务器生成，可设置失效时间。如果在浏览器端生成Cookie，默认是关闭浏览器后失效,存放数据大小一般4K左右，而sessionStorage与localStorage大小在5兆左右，在客户端生成，localStorage除非被清除，否则会永久保存，sessionStorage仅在当前会话下有效，关闭页面或浏览器后被清除，cookie在与服务器端通信每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题,而sessionStorage与localStorage仅在客户端（即浏览器）中保存，不参与和服务器的通信。n），另一个是sack选项（sack option）本身。开启sack选项后，receiver会将自己收到了哪些包，没收到哪些包的信息记录在sack段中告诉给sender，这样sender便可以一次性重传所有的丢包。<br>MSS : Maximum Segment Size最大分段大小</p>
+</li>
+<li><p>状态码:<br>100（Continue）客户端应该继续它的请求。这个过渡的响应用于告知客户端，请求的初始部分已经被服务器收到，并且没有被服务器拒绝。客户端应该继续发送剩余的请求，如果请求已经完成，就忽略这个响应。服务器必须在请求完成后发送一个最终的响应。<br>206状态码（Partial Content）服务器已经成功处理了部分GET请求。类似于FlashGet或者迅雷这类的HTTP 下载工具都是使用此类响应实现断点续传或者将一个大文档分解为多个下载段同时下载。<br>304 表明了客户端中所请求资源的缓存仍然是有效的,也就是说该资源从上次缓存到现在并没有被修改过.条件请求可以在确保客户端的资源是最新的同时避免因每次都请求完整资源给服务器带来的性能问题.<br>301 redirect: 301 代表永久性转移(Permanently Moved) 302 redirect: 302 代表暂时性转移(Temporarily Moved )</p>
+</li>
+<li><p>EPoll两种工作模式<br>  ET:当有事件发生时，系统只会通知你一次，即在调用epoll_wait返回fd后，不管这个事件你处理还是没处理，处理完没有处理完，当再次调用epoll_wait时，都不会再返回该fd　LT:使用LT模式意味着只要fd处于可读或者可写状态，每次epoll_wait都会返回该fd，这样的话会带来很大的系统开销，且处理时候每次都需要把这些fd轮询一遍，如果fd的数量巨大，不管有没有事件发生，epoll_wait都会触发这些fd的轮询判断。</p>
+</li>
+<li><p>TCP报文段是面向字节流的，UDP包是面向数据报的<br>  面向报文的传输方式是应用层交给UDP多长的报文，UDP就照样发送，即一次发送一个报文。因此，应用程序必须选择合适大小的报文。若报文太长，则IP层需要分片，降低效率。若太短，会是IP太小。UDP对应用层交下来的报文，既不合并，也不拆分，而是保留这些报文的边界。这也就是说，应用层交给UDP多长的报文，UDP就照样发送，即一次发送一个报文。虽然应用程序和TCP的交互是一次一个数据块（大小不等），但TCP把应用程序看成是一连串的无结构的字节流。TCP有一个缓冲，当应用程序传送的数据块太长，TCP就可以把它划分短一些再传送。如果应用程序一次只发送一个字节，TCP也可以等待积累有足够多的字节后再构成报文段发送出去。在TCP建立连接前两次握手的SYN报文中选项字段的MSS值，通信双方商定通信的最大报文长度。如果应用层交付下来的数据过大，就会对数据分段，然后发送；否则通过滑动窗口协议来控制通信双发的数据。<br>  tcp传输对准确性要求高速度相对可以慢，因此用于HTTP,FTP，邮件传输，远程连接；udp用于即时通讯延迟低，准确性低，网络电话，语音通信</p>
+</li>
+<li><p>netty的零拷贝<br>  将内存空间分段的字节数组在逻辑上整合为一个整体的字节数组（段式内存思想，将逻辑index变成分块编号和段内偏移）<br>参考链接：<br><a href="https://www.cnblogs.com/lvyahui/p/9030232.html" target="_blank" rel="noopener">Reactor三种线程模型与Netty线程模型</a>    </p>
+</li>
+</ul>
 
         </div>
         
