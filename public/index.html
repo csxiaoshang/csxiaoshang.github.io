@@ -140,6 +140,233 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-24T14:50:47.000Z">2020-02-24</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 794 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/">阿里巴巴用户增长部提前批面经</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li>用户增长部<br>２月２０号做了笔试，三道题目<br>  1、单向链表“双节”点逆转 ，比如：1-&gt;2 -&gt;3 -&gt;4 -&gt;5    逆转后  4-&gt;5-&gt;2-&gt;3-&gt;1  <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">solution</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">     <span class="hljs-keyword">int</span> value;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      Node next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">solution</span><span class="hljs-params">(node root)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">      <span class="hljs-keyword">if</span>(root == <span class="hljs-keyword">null</span> || root.next == <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">return</span> root</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">      &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">Node  index = root.next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">      root.next = <span class="hljs-keyword">null</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      Node last;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">      <span class="hljs-keyword">while</span>(index != <span class="hljs-keyword">null</span> &amp;&amp; index.next != <span class="hljs-keyword">null</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        Node tem = index.next.next</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">          index.next.next =root;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        root = index;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        index = tem;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span>(index != <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">  index.next = root;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">  root = index;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">      <span class="hljs-keyword">return</span> root;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr></table></figure></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-17T08:36:25.000Z">2020-02-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 小时 读完 (大约 12286 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">暑期实习面试准备</a>
+            
+        </h1>
+        <div class="content">
+            <h3 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h3><ul>
+<li><p>红黑树</p>
+</li>
+<li><p>B树和B+树</p>
+</li>
+<li><p>大文件排序<br><a href="https://blog.csdn.net/qq_29048719/article/details/81133643" target="_blank" rel="noopener">对含有一亿数据的大文件进行排序，要求使用内存小于32MB</a><br>参考链接：<br><a href="https://blog.csdn.net/wyqwilliam/article/details/82935922" target="_blank" rel="noopener">二叉树，平衡二叉树，红黑树，B-树、B+树、B*树的区别</a><br><a href="https://blog.csdn.net/u010899985/article/details/80981053#commentBox" target="_blank" rel="noopener">红黑树和AVL树（平衡二叉树）区别</a><br><a href="https://www.cnblogs.com/aspirant/p/9214485.html" target="_blank" rel="noopener">一步步分析为什么B+树适合作为索引的结构 以及索引原理 (阿里面试)</a></p>
+<h3 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h3><p><a href="https://www.cnblogs.com/nanqiang/p/9934063.html" target="_blank" rel="noopener">面向对象与面向过程的优缺点</a><br><a href="https://blog.csdn.net/qq_34375473/article/details/84852650" target="_blank" rel="noopener">面向对象五大基本原则详解</a><br><a href="https://blog.csdn.net/h2604396739/article/details/83109292" target="_blank" rel="noopener">反射原理</a><br><a href="https://blog.csdn.net/leonliu06/article/details/78685197" target="_blank" rel="noopener">补码原理——负数为什么要用补码表示</a></p></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-15T05:18:28.000Z">2020-02-15</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 356 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/">数据库事务</a>
+            
+        </h1>
+        <div class="content">
+            <p>数据库事务级别依次由低到高有：</p>
+<ul>
+<li>读未提交</li>
+<li>读已提交</li>
+<li>可重复读</li>
+<li>序列化<br>mysql默认隔离级别是可重复读</li>
+</ul>
+<p>不同事务级别带来的问题，主要是同一事务内多次读取的内容不一致问题<br><br></p>
+<ul>
+<li>脏读：事务A中，读取到另一个事务B未提交的内容，然后事务B回滚，导致事务A读取的数据为脏数据。<br>事务A读取了内容C，事务B更新了内容C但是未提交，事务A又一次读取内容C，但是内容C改变，两次读取内容不一致。</li>
+<li>不可重复读：事务A多次读取同一数据，事务B在事务A多次读取过程中，对数据进行了更新并提交，导致<br>事务A多次读取同一数据，但结果不一致。</li>
+<li>幻读：事务A读取了表内所有行，事务B新增了一行，A再次读取时发现两次结果不一致，多了一行。</li>
+</ul>
+<p>小结：不可重复读的和幻读很容易混淆，不可重复读侧重于修改，幻读侧重于新增或删除。解决不可重复读的问题只需锁住满足条件的行，解决幻读需要锁表</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 181 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/">解决TIME_WAIT过多的问题</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li><p>TIME_WAIT产生原因<br>一般在是TCP断开连接时，主动断开的一方会进入到TIME_WAIT的状态。此状态<br>会保留2MSL时间（30s 1min 2min不等）</p>
+<br>
+在web应用中，基于TCP的http短连接通常由Server端先断开连接，往往Server端会产生TIME_WAIT连接记录，
+在高并发的应用中，此状态的连接较多。
+</li>
+<li><p>解决办法<br>配置文件中写入 net.ipv4.tcp_tw_recycle=1  　表示开启TCP连接中TIME-WAIT sockets的快速回收</p>
+</li>
+</ul>
+<p>-参考连接<br><a href="https://www.cnblogs.com/dadonggg/p/8778318.html" target="_blank" rel="noopener">解决TIME_WAIT过多造成的问题</a><br><br><br><a href="https://blog.csdn.net/hemin1003/article/details/82963558" target="_blank" rel="noopener">阿里ECS/Linux大量TIME_WAIT解决方案</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-01-30T13:12:39.000Z">2020-01-30</time>
                 
                 <div class="level-item">
@@ -473,236 +700,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-04T14:09:38.000Z">2019-12-04</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Java/">Java</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分钟 读完 (大约 445 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">java内存分配</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="java内存区域"><a href="#java内存区域" class="headerlink" title="java内存区域"></a>java内存区域</h3><p>线程私有的：程序计数器、虚拟机栈、本地方法栈<br>线程公有的：方法区、堆</p>
-<ul>
-<li>程序计数器</li>
-</ul>
-<p>和操作系统的程序计数器类似，用于控制程序执行步数，计算跳转内存地址</p>
-<ul>
-<li>虚拟机栈</li>
-</ul>
-<p>用来存储方法执行时的局部变量、动态链接、方法出口等。</p>
-<ul>
-<li>本地方法栈</li>
-</ul>
-<p>用来存储java JNI调用的native方法的相关信息，和虚拟机栈类似</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/12/04/java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-02T11:10:04.000Z">2019-12-02</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Java/">Java</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 24 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/">双亲委派模型类加载器问题</a>
-            
-        </h1>
-        <div class="content">
-            <p>下图是关于类加载顺序的总结</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/12/02/%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8%E9%97%AE%E9%A2%98/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-27T07:30:00.000Z">2019-11-27</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 155 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/27/2019-11-27-CommandPattern/">命令模式</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li>命令模式</li>
-</ul>
-<p>下图为命令模式类图<br><img src="https://raw.githubusercontent.com/csxiaoshang/images/master/bolg/images20191127153840.png" alt><br><br><br><br><br>简单的看，命令模式实现了命令发起者和命令执行者的解耦，中间增加了一层调用者。<br>命令组合命令执行者，调用者中维护一个命令列表，并封装命令执行方法。命令发起者则将命令添加到命令调用者中。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/27/2019-11-27-CommandPattern/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-26T07:30:00.000Z">2019-11-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/note/">note</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 525 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/26/2019-11-26-iqiyi/">iqiyi实习总结</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li>在爱奇艺实习的经验总结</li>
-</ul>
-<p>今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。<br>而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。<br>唯一有点任务量的算是封装httpclient的api上传下载文件，另一个算是这个系统的核心业务了，编写使用jenkins api的通用工具类，自己写完后就将这个工具类开源了，还打包推到了maven中央仓库。。。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/26/2019-11-26-iqiyi/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -769,7 +766,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            22
+                            26
                         </p>
                     </a>
                 </div>
@@ -793,7 +790,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            9
+                            10
                         </p>
                     </a>
                 </div>
@@ -925,7 +922,7 @@
                 <span class="level-item">note</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
@@ -933,7 +930,7 @@
                 <span class="level-item">数据库</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">
@@ -949,7 +946,7 @@
                 <span class="level-item">网络</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
@@ -978,7 +975,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Java/" style="font-size: 13.33px;">Java</a> <a href="/tags/TCP/" style="font-size: 10px;">TCP</a> <a href="/tags/interview/" style="font-size: 16.67px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
+        <a href="/tags/Java/" style="font-size: 13.33px;">Java</a> <a href="/tags/TCP/" style="font-size: 13.33px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 10px;">alibaba</a> <a href="/tags/interview/" style="font-size: 16.67px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 13.33px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
     </div>
 </div>
     
@@ -990,6 +987,82 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴用户增长部提前批面经">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-24T14:50:47.000Z">2020-02-24</time></div>
+                    <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴用户增长部提前批面经</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="暑期实习面试准备">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-17T08:36:25.000Z">2020-02-17</time></div>
+                    <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="title has-link-black-ter is-size-6 has-text-weight-normal">暑期实习面试准备</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库事务">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-15T05:18:28.000Z">2020-02-15</time></div>
+                    <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库事务</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决TIME_WAIT过多的问题">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time></div>
+                    <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决TIME_WAIT过多的问题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1010,82 +1083,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库行级锁">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-06T12:28:31.000Z">2020-01-06</time></div>
-                    <a href="/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库行级锁</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T13:24:11.000Z">2019-12-30</time></div>
-                    <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java基础</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Java/">Java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/27/TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TCP状态问题">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T03:10:46.000Z">2019-12-27</time></div>
-                    <a href="/2019/12/27/TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">TCP状态问题</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T04:33:05.000Z">2019-12-21</time></div>
-                    <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="title has-link-black-ter is-size-6 has-text-weight-normal">2019年终总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1096,6 +1093,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/01/">
@@ -1197,6 +1205,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TCP/">
                         <span class="tag">TCP</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/alibaba/">
+                        <span class="tag">alibaba</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1204,7 +1219,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/interview/">
                         <span class="tag">interview</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1232,7 +1247,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/mysql/">
                         <span class="tag">mysql</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1274,6 +1289,82 @@
         
         <article class="media">
             
+            <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴用户增长部提前批面经">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-24T14:50:47.000Z">2020-02-24</time></div>
+                    <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴用户增长部提前批面经</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="暑期实习面试准备">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-17T08:36:25.000Z">2020-02-17</time></div>
+                    <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="title has-link-black-ter is-size-6 has-text-weight-normal">暑期实习面试准备</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库事务">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-15T05:18:28.000Z">2020-02-15</time></div>
+                    <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库事务</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决TIME_WAIT过多的问题">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time></div>
+                    <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决TIME_WAIT过多的问题</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/01/30/Java%E5%AE%B9%E5%99%A8/" class="media-left">
 <!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Java容器">
@@ -1291,82 +1382,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库行级锁">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-06T12:28:31.000Z">2020-01-06</time></div>
-                    <a href="/2020/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%8C%E7%BA%A7%E9%94%81/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库行级锁</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java基础">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T13:24:11.000Z">2019-12-30</time></div>
-                    <a href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java基础</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Java/">Java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/27/TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="TCP状态问题">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T03:10:46.000Z">2019-12-27</time></div>
-                    <a href="/2019/12/27/TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">TCP状态问题</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="2019年终总结">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T04:33:05.000Z">2019-12-21</time></div>
-                    <a href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" class="title has-link-black-ter is-size-6 has-text-weight-normal">2019年终总结</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1377,6 +1392,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/02/">
+                <span class="level-start">
+                    <span class="level-item">二月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/01/">
@@ -1478,6 +1504,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/TCP/">
                         <span class="tag">TCP</span>
+                        <span class="tag is-grey">2</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/alibaba/">
+                        <span class="tag">alibaba</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1485,7 +1518,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/interview/">
                         <span class="tag">interview</span>
-                        <span class="tag is-grey">3</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1513,7 +1546,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/mysql/">
                         <span class="tag">mysql</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
