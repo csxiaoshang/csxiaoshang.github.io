@@ -10,16 +10,16 @@
 <title>2020/2/28　淘系技术部一面 - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="个人介绍 自己遇到的项目中比较有挑战的点 项目问题 负载均衡 HTTP1 HTTP2优缺点 场景：长url到短url ThreadLocal使用场景 young gc full gc时机 年轻代对象转入到老年代的方式 两个线程串行执行方式 TCP如何保证可靠连接 乐观锁　悲观锁 数据库实现乐观锁　悲观锁 数据库分库分表 现有的最新的服务端架构　微服务等 个人对服务端架构的探索 HashMap 数">
+    <meta name="description" content="个人介绍 自己遇到的项目中比较有挑战的点 项目问题 负载均衡 HTTP1 HTTP2优缺点  http2增加了多路复用、头部压缩 场景：长url到短url ThreadLocal使用场景 young gc full gc时机 年轻代对象转入到老年代的方式 两个线程串行执行方式 TCP如何保证可靠连接 乐观锁　悲观锁 数据库实现乐观锁　悲观锁 数据库分库分表 现有的最新的服务端架构　微服务等 个人">
 <meta name="keywords" content="alibaba">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2020&#x2F;2&#x2F;28　淘系技术部一面">
 <meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2020&#x2F;02&#x2F;28&#x2F;2020-2-28-%E6%B7%98%E7%B3%BB%E6%8A%80%E6%9C%AF%E9%83%A8%E4%B8%80%E9%9D%A2&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
-<meta property="og:description" content="个人介绍 自己遇到的项目中比较有挑战的点 项目问题 负载均衡 HTTP1 HTTP2优缺点 场景：长url到短url ThreadLocal使用场景 young gc full gc时机 年轻代对象转入到老年代的方式 两个线程串行执行方式 TCP如何保证可靠连接 乐观锁　悲观锁 数据库实现乐观锁　悲观锁 数据库分库分表 现有的最新的服务端架构　微服务等 个人对服务端架构的探索 HashMap 数">
+<meta property="og:description" content="个人介绍 自己遇到的项目中比较有挑战的点 项目问题 负载均衡 HTTP1 HTTP2优缺点  http2增加了多路复用、头部压缩 场景：长url到短url ThreadLocal使用场景 young gc full gc时机 年轻代对象转入到老年代的方式 两个线程串行执行方式 TCP如何保证可靠连接 乐观锁　悲观锁 数据库实现乐观锁　悲观锁 数据库分库分表 现有的最新的服务端架构　微服务等 个人">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-02-28T09:00:18.073Z">
+<meta property="og:updated_time" content="2020-02-28T13:08:10.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 263 个字)
+                    2 分钟 读完 (大约 354 个字)
                 </span>
                 
                 
@@ -170,7 +170,7 @@
 <li>个人介绍</li>
 <li>自己遇到的项目中比较有挑战的点</li>
 <li>项目问题 负载均衡</li>
-<li>HTTP1 HTTP2优缺点</li>
+<li>HTTP1 HTTP2优缺点<br>  http2增加了多路复用、头部压缩</li>
 <li>场景：长url到短url</li>
 <li>ThreadLocal使用场景</li>
 <li>young gc full gc时机</li>
@@ -192,9 +192,10 @@
 <li>常见oom异常类型，什么情况下出现</li>
 <li>mysql 优化方式</li>
 <li>了解的设计模式　单例模式</li>
-<li>对称加密和非对称加密有哪些 优缺点</li>
+<li>对称加密和非对称加密有哪些 优缺点<br>  对称加密有　aes des　加密快　安全性低<br>  非对称加密　rsa 加密慢　安全性高<br>  对称加密用来加密内容，非对称机密一般还是用公钥加密对称加密密钥，私钥解密</li>
 <li>linux 查看ｃｐｕ　内存的命令</li>
 <li>linux统计日志的命令　根据日志字段统计信息等</li>
+<li>linux机器间传输文件命令</li>
 </ul>
 
         </div>
@@ -229,6 +230,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">阿里巴巴钉钉面试</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -310,7 +318,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            27
+                            29
                         </p>
                     </a>
                 </div>
@@ -466,7 +474,7 @@
                 <span class="level-item">note</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">6</span>
+                <span class="level-item tag">8</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
@@ -519,7 +527,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Java/" style="font-size: 13.33px;">Java</a> <a href="/tags/TCP/" style="font-size: 13.33px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 13.33px;">alibaba</a> <a href="/tags/interview/" style="font-size: 16.67px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 13.33px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
+        <a href="/tags/Java/" style="font-size: 13.33px;">Java</a> <a href="/tags/TCP/" style="font-size: 13.33px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 16.67px;">alibaba</a> <a href="/tags/interview/" style="font-size: 16.67px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 13.33px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
     </div>
 </div>
     
@@ -531,6 +539,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/03/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4ihome%E5%9B%A2%E9%98%9F%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴ihome团队面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-03T12:33:18.000Z">2020-03-03</time></div>
+                    <a href="/2020/03/03/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4ihome%E5%9B%A2%E9%98%9F%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴ihome团队面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴钉钉面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:51:00.000Z">2020-02-29</time></div>
+                    <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴钉钉面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -589,44 +635,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库事务">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-15T05:18:28.000Z">2020-02-15</time></div>
-                    <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库事务</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决TIME_WAIT过多的问题">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time></div>
-                    <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决TIME_WAIT过多的问题</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -639,12 +647,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2020/02/">
                 <span class="level-start">
                     <span class="level-item">二月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -756,7 +775,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/alibaba/">
                         <span class="tag">alibaba</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -833,6 +852,44 @@
         
         <article class="media">
             
+            <a href="/2020/03/03/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4ihome%E5%9B%A2%E9%98%9F%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴ihome团队面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-03T12:33:18.000Z">2020-03-03</time></div>
+                    <a href="/2020/03/03/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4ihome%E5%9B%A2%E9%98%9F%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴ihome团队面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴钉钉面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:51:00.000Z">2020-02-29</time></div>
+                    <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴钉钉面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/02/28/2020-2-28-%E6%B7%98%E7%B3%BB%E6%8A%80%E6%9C%AF%E9%83%A8%E4%B8%80%E9%9D%A2/" class="media-left">
 <!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="2020/2/28　淘系技术部一面">
@@ -888,44 +945,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库事务">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-15T05:18:28.000Z">2020-02-15</time></div>
-                    <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库事务</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决TIME_WAIT过多的问题">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time></div>
-                    <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决TIME_WAIT过多的问题</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -938,12 +957,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2020/02/">
                 <span class="level-start">
                     <span class="level-item">二月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1055,7 +1085,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/alibaba/">
                         <span class="tag">alibaba</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
