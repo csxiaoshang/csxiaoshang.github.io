@@ -140,6 +140,61 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 181 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/">解决TIME_WAIT过多的问题</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li><p>TIME_WAIT产生原因<br>一般在是TCP断开连接时，主动断开的一方会进入到TIME_WAIT的状态。此状态<br>会保留2MSL时间（30s 1min 2min不等）</p>
+<br>
+在web应用中，基于TCP的http短连接通常由Server端先断开连接，往往Server端会产生TIME_WAIT连接记录，
+在高并发的应用中，此状态的连接较多。
+</li>
+<li><p>解决办法<br>配置文件中写入 net.ipv4.tcp_tw_recycle=1  　表示开启TCP连接中TIME-WAIT sockets的快速回收</p>
+</li>
+</ul>
+<p>-参考连接<br><a href="https://www.cnblogs.com/dadonggg/p/8778318.html" target="_blank" rel="noopener">解决TIME_WAIT过多造成的问题</a><br><br><br><a href="https://blog.csdn.net/hemin1003/article/details/82963558" target="_blank" rel="noopener">阿里ECS/Linux大量TIME_WAIT解决方案</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-01-30T13:12:39.000Z">2020-01-30</time>
                 
                 <div class="level-item">
@@ -647,62 +702,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-26T07:30:00.000Z">2019-11-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/note/">note</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分钟 读完 (大约 525 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/26/2019-11-26-iqiyi/">iqiyi实习总结</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li>在爱奇艺实习的经验总结</li>
-</ul>
-<p>今年算是在7月到9月在爱奇艺实习了两个月，算是偷偷的跑了出去。说实话这两个月在爱奇艺学到的东西不多，接手的项目并不是一个线上使用的能够盈利的项目。<br>而是一个公司内部使用的一个持续集成、持续部署的系统，给爱奇艺电视打包各种不同的软件。用的是ssh框架，比较老，给自己的活主要是一些curd，也包括修改前端页面jsp。<br>唯一有点任务量的算是封装httpclient的api上传下载文件，另一个算是这个系统的核心业务了，编写使用jenkins api的通用工具类，自己写完后就将这个工具类开源了，还打包推到了maven中央仓库。。。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/26/2019-11-26-iqiyi/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -771,7 +770,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            32
+                            33
                         </p>
                     </a>
                 </div>
@@ -795,7 +794,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            10
+                            11
                         </p>
                     </a>
                 </div>
@@ -927,7 +926,7 @@
                 <span class="level-item">note</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">11</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
@@ -980,7 +979,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Java/" style="font-size: 12.5px;">Java</a> <a href="/tags/TCP/" style="font-size: 12.5px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 17.5px;">alibaba</a> <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 12.5px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
+        <a href="/tags/Java/" style="font-size: 12.5px;">Java</a> <a href="/tags/TCP/" style="font-size: 12.5px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 17.5px;">alibaba</a> <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 12.5px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a>
     </div>
 </div>
     
@@ -992,6 +991,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="腾讯pcg实习面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-13T08:45:43.000Z">2020-03-13</time></div>
+                    <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">腾讯pcg实习面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1069,25 +1087,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴钉钉面试">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:51:00.000Z">2020-02-29</time></div>
-                    <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴钉钉面试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1105,7 +1104,7 @@
                     <span class="level-item">三月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1277,6 +1276,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/stack/">
                         <span class="tag">stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%85%BE%E8%AE%AF/">
+                        <span class="tag">腾讯</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1305,6 +1311,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="腾讯pcg实习面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-13T08:45:43.000Z">2020-03-13</time></div>
+                    <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">腾讯pcg实习面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴淘宝互动平台实习生面试">
@@ -1379,25 +1404,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴钉钉面试">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:51:00.000Z">2020-02-29</time></div>
-                    <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴钉钉面试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1415,7 +1421,7 @@
                     <span class="level-item">三月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1587,6 +1593,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/stack/">
                         <span class="tag">stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%85%BE%E8%AE%AF/">
+                        <span class="tag">腾讯</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>

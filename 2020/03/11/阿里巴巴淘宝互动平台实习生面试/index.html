@@ -19,7 +19,7 @@
 <meta property="og:description" content="一面(2020.3.9 11:10)  自我介绍 项目介绍 负载均衡 常用的负载均衡算法、有没有看过其他优秀的比赛代码 tcp">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-03-11T08:03:36.848Z">
+<meta property="og:updated_time" content="2020-03-12T10:31:13.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 347 个字)
+                    5 分钟 读完 (大约 741 个字)
                 </span>
                 
                 
@@ -179,28 +179,50 @@
 </li>
 <li><p>二面(2020.3.11 10:15)</p>
 <ul>
-<li>为何去爱奇艺实习,其他同学去了吗　还是就你自己去了</li>
-<li>实习经历描述</li>
-<li>安卓和电视客户端包形式有何不同</li>
-<li>为何考虑转移到jenkins构建，还有其他的构建平台吗？jenkins如何做到构建的</li>
-<li>pipeline介绍下，ant gradle的区别和优缺点</li>
-<li>多节点无锁构建如何实现？和数据加锁有何区别?你这种实现方式缺点是什么？还有什么其他解决方案</li>
-<li>使用redis如何使用加锁，为何redis是原子性的</li>
-<li>redis的hash表是如何实现的和java的hash表有什么区别</li>
-<li>redis的字符串如何是实现,search list如何实现</li>
-<li>mysql索引如何实现,mysql如何实现加锁</li>
-<li>有没有其他的实现缓存的nosql数据库</li>
-<li>spring springboot springcloud</li>
-<li>springboot自动配置</li>
-<li>java为何标了注解可以实现相应的功能</li>
-<li>spring bean初始化过程</li>
-<li>解析xml的方法 </li>
-<li>jaxb和dom方式的区别</li>
-<li>http1 http2的区别</li>
-<li>http 301 302区别</li>
-<li>如何验证负载均衡的效果</li>
-<li>rest和rpc有什么区别</li>
-<li>有什么想问的</li>
+<li><p>为何去爱奇艺实习,其他同学去了吗　还是就你自己去了</p>
+</li>
+<li><p>实习经历描述</p>
+</li>
+<li><p>安卓和电视客户端包形式有何不同<br>  一般来说都是apk形式的，就是功能上　安卓的更倾向于支持点、划等触屏操作，电视上则是遥控器上的相关操作</p>
+</li>
+<li><p>为何考虑转移到jenkins构建，还有其他的构建平台吗？jenkins如何做到构建的</p>
+<pre><code>CruiseControl 阿里云效　Hudson</code></pre></li>
+<li><p>pipeline介绍下，ant gradle的区别和优缺点<br>  于是jenkins2.x开始流行pipeline的写法，以代码的方式来进行job的构建。<br>  ANT是最早的构建工具，基于idea,好象是2000年有的，当时是最流行java构建工具，不过它的XML脚本编写格式让XML文件特别大。对工程构建过程中的过程控制特别好。<br>  Maven它是用来给Ant补坑的，Maven第一次支持了从网络上下载的功能，仍然采用xml作为配置文件格式，它的问题是不能很好的相同库文件的版本冲突。Maven专注的是依赖管理，构建神马的并不擅长。<br>  Gradle是一个自动化的构建工具，Gradle属于结合以上两个的优点，它继承了Ant的灵活和Maven的生命周期管理，它最后被google作为了Android御用管理工具。它最大的*区别是不用XML作为配置文件格式，采用了DSL格式，使得脚本更加简洁。Gradle引入了基于Groovy语言的DSL语法来代替XML配置，因此它的配置文件是一个Groovy文件。</p>
+</li>
+<li><p>多节点无锁构建如何实现？和数据加锁有何区别?你这种实现方式缺点是什么？还有什么其他解决方案</p>
+</li>
+<li><p>使用redis如何使用加锁，为何redis是原子性的</p>
+</li>
+<li><p>redis的hash表是如何实现的和java的hash表有什么区别</p>
+</li>
+<li><p>redis的字符串如何是实现,search list如何实现</p>
+</li>
+<li><p>mysql索引如何实现,mysql如何实现加锁</p>
+</li>
+<li><p>有没有其他的实现缓存的nosql数据库,redis和memcache的区别</p>
+</li>
+<li><p>spring springboot springcloud</p>
+</li>
+<li><p>springboot自动配置</p>
+</li>
+<li><p>java为何标了注解可以实现相应的功能</p>
+</li>
+<li><p>spring bean初始化过程</p>
+</li>
+<li><p>解析xml的方法<br>  SAX DOM JAXB</p>
+</li>
+<li><p>jaxb和dom方式的区别<br>  性能和解析复杂程度上</p>
+</li>
+<li><p>http1 http2的区别</p>
+</li>
+<li><p>http 301 302区别<br>  301永久性转移　302暂时性转移</p>
+</li>
+<li><p>如何验证负载均衡的效果</p>
+</li>
+<li><p>rest和rpc有什么区别</p>
+</li>
+<li><p>有什么想问的</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -237,6 +259,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">腾讯pcg实习面试</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -318,7 +347,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            32
+                            33
                         </p>
                     </a>
                 </div>
@@ -342,7 +371,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            10
+                            11
                         </p>
                     </a>
                 </div>
@@ -474,7 +503,7 @@
                 <span class="level-item">note</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">10</span>
+                <span class="level-item tag">11</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
@@ -527,7 +556,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Java/" style="font-size: 12.5px;">Java</a> <a href="/tags/TCP/" style="font-size: 12.5px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 17.5px;">alibaba</a> <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 12.5px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
+        <a href="/tags/Java/" style="font-size: 12.5px;">Java</a> <a href="/tags/TCP/" style="font-size: 12.5px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 17.5px;">alibaba</a> <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 12.5px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a>
     </div>
 </div>
     
@@ -539,6 +568,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="腾讯pcg实习面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-13T08:45:43.000Z">2020-03-13</time></div>
+                    <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">腾讯pcg实习面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -616,25 +664,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴钉钉面试">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:51:00.000Z">2020-02-29</time></div>
-                    <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴钉钉面试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -652,7 +681,7 @@
                     <span class="level-item">三月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -824,6 +853,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/stack/">
                         <span class="tag">stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%85%BE%E8%AE%AF/">
+                        <span class="tag">腾讯</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -852,6 +888,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="腾讯pcg实习面试">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-13T08:45:43.000Z">2020-03-13</time></div>
+                    <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">腾讯pcg实习面试</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴淘宝互动平台实习生面试">
@@ -926,25 +981,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴钉钉面试">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:51:00.000Z">2020-02-29</time></div>
-                    <a href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴钉钉面试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/note/">note</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -962,7 +998,7 @@
                     <span class="level-item">三月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1134,6 +1170,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/stack/">
                         <span class="tag">stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%85%BE%E8%AE%AF/">
+                        <span class="tag">腾讯</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
