@@ -151,6 +151,420 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-19T03:39:20.000Z">2020-03-19</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 354 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/19/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%BA%97saas%E4%B8%9A%E5%8A%A1%E9%9D%A2%E8%AF%95/">美团到店saas业务面试</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li>一面<ul>
+<li>HashSet的实现;如何判断不重复;插入数据是头插入还是尾插入<br>  同样要遍历比较key，为啥要采用头插入</li>
+<li>多线程了解吗;x打印值的范围为多少；如何是打印值为200，有集中方法<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Runnable</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> x;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-meta">@override</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">          <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">100</span>;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">          x++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">         Test test = <span class="hljs-keyword">new</span> Test();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">         <span class="hljs-keyword">new</span> Tread(test).start();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">         <span class="hljs-keyword">new</span> Tread(test).start();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">         system.out.println(x);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">     &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr></table></figure></li>
+<li>condition和barrier原理是什么</li>
+<li>AQS是干什么用的;wait notify和park　unPark区别;AQS为何是双向链表;如何是实现公平锁和非公平锁</li>
+<li>两个线程交替打印”A” “B”  <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> <span class="hljs-title">implement</span> <span class="hljs-title">Runnable</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    ReentrantLock lock = <span class="hljs-keyword">new</span> ReenTrantLock();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    Condition condition = lock.condition();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run1</span><span class="hljs-params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">               system.out.println(<span class="hljs-string">"A"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run1</span><span class="hljs-params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">                <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">               system.out.println(<span class="hljs-string">"B"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        Test test = <span class="hljs-keyword">new</span> Test();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">new</span> Thread((test) -&gt; &#123;        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">               system.out.println(<span class="hljs-string">"A"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">        &#125;&#125;).start();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;                <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">               system.out.println(<span class="hljs-string">"B"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-comment">// condition</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        &#125;&#125;).start();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// AtomicInteger</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">volatile</span> AtomicInteger count = <span class="hljs-keyword">new</span> AtomicInteger(<span class="hljs-number">1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">new</span> Thread((count)-&gt;&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">if</span>(count == <span class="hljs-number">1</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">                               system.out.println(<span class="hljs-string">"A"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">                count.getAndIncrement();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">44</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">45</span></pre></td><td class="code"><pre><span class="line">    &#125;).start();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">46</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">new</span> Thread((count)-&gt;&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">47</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">48</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">if</span>(count == <span class="hljs-number">2</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">49</span></pre></td><td class="code"><pre><span class="line">                system.out.println(<span class="hljs-string">"B"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">50</span></pre></td><td class="code"><pre><span class="line">                count.getAndDec();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">51</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">52</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">53</span></pre></td><td class="code"><pre><span class="line">    &#125;).start();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">54</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<ul>
+<li>二叉树前序遍历非递归实现，后序遍历非递归实现<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; pre</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">public void solution(TreeNode node )&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    LinkedList&lt;TreeNode&gt; stack &#x3D; new LinkedList&lt;&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    if(node &#x3D;&#x3D; null)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        return;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    stack.push(node);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#x2F;&#x2F; visit node;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    while(!stack.isEmpty())&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        TreeNode tem &#x3D; stack.peak();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        if(tem.left!&#x3D;null)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            &#x2F;&#x2F; visit tem.left;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">            stack.push(tem.left);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            tem.left &#x3D;&#x3D; null;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        &#125;else&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            stack.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            if(tem.right!&#x3D;null)&#123;  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">                &#x2F;&#x2F; visit tem.right</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">                stack.push(tem.right);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-13T08:45:43.000Z">2020-03-13</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 135 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/">腾讯pcg实习面试</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li>一面<br>  -自我介绍<ul>
+<li>linux命令　cat awk top</li>
+<li>mysql 查询　多表查询　sql语句</li>
+<li>联合索引查询 idx(a,b) select * from t where a = 1和select * from t where b = 1　走不走索引<br>  <a href="https://www.cnblogs.com/xcsg/p/11109713.html" target="_blank" rel="noopener">https://www.cnblogs.com/xcsg/p/11109713.html</a></li>
+<li>垃圾回收</li>
+<li>redis sds hash 扩容　增长因子还是二倍扩容</li>
+<li>10TB数据找出最大值</li>
+<li>负载均衡算法</li>
+<li>1000个值里找最小值</li>
+</ul>
+</li>
+<li>二面<ul>
+<li>中间件负载均衡比赛</li>
+<li>多个负载节点如何处理</li>
+<li>爱奇艺实习多久</li>
+<li>是否想来深圳发展</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-11T03:08:41.000Z">2020-03-11</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 792 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/">阿里巴巴淘宝互动平台实习生面试</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li><p>一面(2020.3.9 11:10)</p>
+<ul>
+<li>自我介绍</li>
+<li>项目介绍</li>
+<li>负载均衡 常用的负载均衡算法、有没有看过其他优秀的比赛代码</li>
+<li>tcp</li></ul></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-06T08:15:10.000Z">2020-03-06</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 282 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/06/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9D%A2%E8%AF%95/">阿里巴巴支付宝面试</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li>一面<ul>
+<li>String s = new String(“abc);会生成几个对象</li>
+<li>final 在java中的作用</li>
+<li>hashMap原理</li></ul></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/06/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9D%A2%E8%AF%95/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-03T12:33:18.000Z">2020-03-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 497 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/03/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4ihome%E5%9B%A2%E9%98%9F%E9%9D%A2%E8%AF%95/">阿里巴巴ihome团队面试</a>
+            
+        </h1>
+        <div class="content">
+            <h4 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h4><ul>
+<li>自我介绍</li>
+<li>中间件比赛、负载均衡算法　使用什么java组件，底层怎么实现的，业界有哪些负载均衡算法以及优缺点</li>
+<li>springboot springcloud 了解和使用经验,使用到springcloud哪些模块</li>
+<li>让你自己实现rpc，讲解下思路<ul>
+<li>将注册中心分离开使用请求方式注册发现服务，使用spring resttemplate发送请求调用提供者服务</li></ul></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/03/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4ihome%E5%9B%A2%E9%98%9F%E9%9D%A2%E8%AF%95/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-29T13:51:00.000Z">2020-02-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 607 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/">阿里巴巴钉钉面试</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li>一面<ul>
+<li>个人介绍</li>
+<li>项目介绍 亮点</li>
+<li>多节点乐观锁实现</li>
+<li>重复支付解决办法<br>  <a href="https://www.jianshu.com/p/6e9387218e12" target="_blank" rel="noopener">支付系统设计中，如何防止重复支付?</a></li>
+<li>rbac介绍 具体实现</li></ul></li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/02/29/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%92%89%E9%92%89%E9%9D%A2%E8%AF%95/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-02-28T07:36:08.000Z">2020-02-28</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 355 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/02/28/2020-2-28-%E6%B7%98%E7%B3%BB%E6%8A%80%E6%9C%AF%E9%83%A8%E4%B8%80%E9%9D%A2/">2020/2/28　淘系技术部一面</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li>个人介绍</li>
+<li>自己遇到的项目中比较有挑战的点</li>
+<li>项目问题 负载均衡</li>
+<li>HTTP1 HTTP2优缺点</li></ul>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/02/28/2020-2-28-%E6%B7%98%E7%B3%BB%E6%8A%80%E6%9C%AF%E9%83%A8%E4%B8%80%E9%9D%A2/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-02-24T14:50:47.000Z">2020-02-24</time>
                 
                 <div class="level-item">
@@ -161,7 +575,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 794 个字)
+                    5 分钟 读完 (大约 795 个字)
                 </span>
                 
                 
@@ -175,7 +589,7 @@
         </h1>
         <div class="content">
             <ul>
-<li>用户增长部<br>２月２０号做了笔试，三道题目<br>  1、单向链表“双节”点逆转 ，比如：1-&gt;2 -&gt;3 -&gt;4 -&gt;5    逆转后  4-&gt;5-&gt;2-&gt;3-&gt;1  <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">  <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">solution</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">     <span class="hljs-keyword">int</span> value;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      Node next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Node <span class="hljs-title">solution</span><span class="hljs-params">(node root)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">      <span class="hljs-keyword">if</span>(root == <span class="hljs-keyword">null</span> || root.next == <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">return</span> root</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">      &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">Node  index = root.next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">      root.next = <span class="hljs-keyword">null</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">      Node last;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">      <span class="hljs-keyword">while</span>(index != <span class="hljs-keyword">null</span> &amp;&amp; index.next != <span class="hljs-keyword">null</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        Node tem = index.next.next</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">          index.next.next =root;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        root = index;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        index = tem;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span>(index != <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">  index.next = root;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">  root = index;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">      <span class="hljs-keyword">return</span> root;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr></table></figure></li></ul>
+<li>用户增长部<br>２月２０号做了笔试，三道题目</li></ul>
         </div>
         
         
@@ -215,7 +629,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    1 小时 读完 (大约 12286 个字)
+                    2 小时 读完 (大约 13550 个字)
                 </span>
                 
                 
@@ -228,13 +642,19 @@
             
         </h1>
         <div class="content">
-            <h3 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h3><ul>
+            <h3 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h3><ul>
+<li>多思考，挖掘项目难点，多总结<br>做完项目一定要总结，自己在项目中担任什么角色，解决了什么痛点，项目有哪些难点，怎么解决难点这些，<br>以及可以优化的地方，优化方案等，可以不一定实现，但是一定要知道怎么去解决。<br>但是如果没有想清楚难点、优化思路，再多的项目经验也白搭。</li>
+<li>引导式面试<br>面试肯定会遇到不会的地方，这个时候直接说不会，虽然不一定会直接挂，但是对整个面试肯定会有影响，<br>这个时候就可以把面试官引导到自己熟悉的相关技术上，一般绝大多数面试官会让继续讲，<br>建议可以各个方面知识都研究一个，研究深入点即可，例如缓存redis、消息队列kafka等。<br>去理解面试官想要问的东西，主动去说，不一定要等到面试官问透，而且很多面试官表述问题不清楚，<br>这时候一定要问清楚面试官想问的是不是你要回答的，答非所问也十分不可取。</li>
+<li>每次面试必总结<br>面试真的是学习技术最快的过程，很多时候自己学的，不一定学透了，经过面试官一顿灵魂拷问后发现自己什么都不会，<br>面试完总结这些知识，然后多面试几次后面就很容易了。</li>
+<li>自信<br>很多时候会被面试官问到怀疑人生，也可能会经历压力面，面试问的越难，反倒可能说明面试官对你很认可，<br>需要问些更深入的问题提高评级。<br>不论面试官问的问题是已经准备了很久的、烂熟于心还是从未接触过，都要自信，从容面对，也千万不要因为简单问题而放松，简单问题也可以回答的不一样，<br>例如java gc可以降到jdk11最新回收算法，这肯定比书上看到的cms g1有亮点的多，面试官也会觉得你热爱技术。</li>
+</ul>
+<h3 id="数据结构和算法"><a href="#数据结构和算法" class="headerlink" title="数据结构和算法"></a>数据结构和算法</h3><ul>
 <li><p>红黑树</p>
 </li>
 <li><p>B树和B+树</p>
 </li>
 <li><p>大文件排序<br><a href="https://blog.csdn.net/qq_29048719/article/details/81133643" target="_blank" rel="noopener">对含有一亿数据的大文件进行排序，要求使用内存小于32MB</a><br>参考链接：<br><a href="https://blog.csdn.net/wyqwilliam/article/details/82935922" target="_blank" rel="noopener">二叉树，平衡二叉树，红黑树，B-树、B+树、B*树的区别</a><br><a href="https://blog.csdn.net/u010899985/article/details/80981053#commentBox" target="_blank" rel="noopener">红黑树和AVL树（平衡二叉树）区别</a><br><a href="https://www.cnblogs.com/aspirant/p/9214485.html" target="_blank" rel="noopener">一步步分析为什么B+树适合作为索引的结构 以及索引原理 (阿里面试)</a></p>
-<h3 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h3><p><a href="https://www.cnblogs.com/nanqiang/p/9934063.html" target="_blank" rel="noopener">面向对象与面向过程的优缺点</a><br><a href="https://blog.csdn.net/qq_34375473/article/details/84852650" target="_blank" rel="noopener">面向对象五大基本原则详解</a><br><a href="https://blog.csdn.net/h2604396739/article/details/83109292" target="_blank" rel="noopener">反射原理</a><br><a href="https://blog.csdn.net/leonliu06/article/details/78685197" target="_blank" rel="noopener">补码原理——负数为什么要用补码表示</a></p></li></ul>
+<h3 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h3><p><a href="https://tech.meituan.com/2018/11/15/java-lock.html" target="_blank" rel="noopener">不可不说的Java“锁”事</a><br><a href="https://www.cnblogs.com/nanqiang/p/9934063.html" target="_blank" rel="noopener">面向对象与面向过程的优缺点</a><br><a href="https://blog.csdn.net/qq_34375473/article/details/84852650" target="_blank" rel="noopener">面向对象五大基本原则详解</a><br><a href="https://blog.csdn.net/h2604396739/article/details/83109292" target="_blank" rel="noopener">反射原理</a><br><a href="https://blog.csdn.net/leonliu06/article/details/78685197" target="_blank" rel="noopener">补码原理——负数为什么要用补码表示</a><br><a href="https://blog.csdn.net/sunxianghuang/article/details/52221913?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">跳表（SkipList）及ConcurrentSkipListMap源码解析</a></p></li></ul>
         </div>
         
         
@@ -313,112 +733,25 @@
 
 
 
+
     
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-22T10:22:36.000Z">2018-09-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/note/">note</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 316 个字)
-                </span>
-                
-                
-            </div>
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/note/page/0/">上一页</a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/categories/note/page/2/">下一页</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
             
-                <a class="has-link-black-ter" href="/2018/09/22/2018-09-22-toutiaomianshibuqu/">考虑后不去参加头条实习面试</a>
+            <li><a class="pagination-link is-current" href="/categories/note/">1</a></li>
             
-        </h1>
-        <div class="content">
-            <p>昨天下午收到了头条HR的电话，让过去参加面试，本来挺高兴的，寻思就算去不上，过去面试吸取下经验也是好的。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/09/22/2018-09-22-toutiaomianshibuqu/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
+            <li><a class="pagination-link has-text-black-ter" href="/categories/note/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
 </div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-09-21T09:34:36.000Z">2018-09-21</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/note/">note</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 328 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/09/21/2018-09-21-sougoumianshi/">面试搜狗实习</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="面试搜狗的实习，估计凉了"><a href="#面试搜狗的实习，估计凉了" class="headerlink" title="面试搜狗的实习，估计凉了"></a>面试搜狗的实习，估计凉了</h3>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/09/21/2018-09-21-sougoumianshi/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 </div>
                 
 
@@ -464,7 +797,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            26
+                            34
                         </p>
                     </a>
                 </div>
@@ -488,7 +821,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            10
+                            12
                         </p>
                     </a>
                 </div>
@@ -620,7 +953,7 @@
                 <span class="level-item">note</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">12</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">
@@ -636,7 +969,7 @@
                 <span class="level-item">程序人生</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E7%BD%91%E7%BB%9C/">
@@ -673,7 +1006,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Java/" style="font-size: 13.33px;">Java</a> <a href="/tags/TCP/" style="font-size: 13.33px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 10px;">alibaba</a> <a href="/tags/interview/" style="font-size: 16.67px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 13.33px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a>
+        <a href="/tags/Java/" style="font-size: 12.5px;">Java</a> <a href="/tags/TCP/" style="font-size: 12.5px;">TCP</a> <a href="/tags/alibaba/" style="font-size: 17.5px;">alibaba</a> <a href="/tags/interview/" style="font-size: 15px;">interview</a> <a href="/tags/learning/" style="font-size: 20px;">learning</a> <a href="/tags/learning-Array/" style="font-size: 10px;">learning Array</a> <a href="/tags/learning-set/" style="font-size: 10px;">learning set</a> <a href="/tags/mysql/" style="font-size: 12.5px;">mysql</a> <a href="/tags/springboot/" style="font-size: 10px;">springboot</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/%E7%BE%8E%E5%9B%A2/" style="font-size: 10px;">美团</a> <a href="/tags/%E8%85%BE%E8%AE%AF/" style="font-size: 10px;">腾讯</a>
     </div>
 </div>
     
@@ -688,16 +1021,16 @@
         
         <article class="media">
             
-            <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="media-left">
+            <a href="/2020/03/19/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%BA%97saas%E4%B8%9A%E5%8A%A1%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴用户增长部提前批面经">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="美团到店saas业务面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-24T14:50:47.000Z">2020-02-24</time></div>
-                    <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴用户增长部提前批面经</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-19T03:39:20.000Z">2020-03-19</time></div>
+                    <a href="/2020/03/19/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%BA%97saas%E4%B8%9A%E5%8A%A1%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">美团到店saas业务面试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
@@ -707,16 +1040,16 @@
         
         <article class="media">
             
-            <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="media-left">
+            <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="暑期实习面试准备">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="腾讯pcg实习面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-17T08:36:25.000Z">2020-02-17</time></div>
-                    <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="title has-link-black-ter is-size-6 has-text-weight-normal">暑期实习面试准备</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-13T08:45:43.000Z">2020-03-13</time></div>
+                    <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">腾讯pcg实习面试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
@@ -726,18 +1059,18 @@
         
         <article class="media">
             
-            <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="media-left">
+            <a href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库事务">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴淘宝互动平台实习生面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-15T05:18:28.000Z">2020-02-15</time></div>
-                    <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库事务</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T03:08:41.000Z">2020-03-11</time></div>
+                    <a href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴淘宝互动平台实习生面试</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
                 </div>
             </div>
@@ -745,18 +1078,18 @@
         
         <article class="media">
             
-            <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="media-left">
+            <a href="/2020/03/10/%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%EF%BC%8C%E8%87%B3%E6%AD%A4%E6%97%B6%E5%A4%A7%E7%BA%A6%E4%B8%80%E4%B8%AA%E6%9C%88/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决TIME_WAIT过多的问题">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="准备找暑期实习，至此时大约一个月">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time></div>
-                    <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决TIME_WAIT过多的问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-10T06:22:06.000Z">2020-03-10</time></div>
+                    <a href="/2020/03/10/%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%EF%BC%8C%E8%87%B3%E6%AD%A4%E6%97%B6%E5%A4%A7%E7%BA%A6%E4%B8%80%E4%B8%AA%E6%9C%88/" class="title has-link-black-ter is-size-6 has-text-weight-normal">准备找暑期实习，至此时大约一个月</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
                     </p>
                 </div>
             </div>
@@ -764,18 +1097,18 @@
         
         <article class="media">
             
-            <a href="/2020/01/30/Java%E5%AE%B9%E5%99%A8/" class="media-left">
+            <a href="/2020/03/06/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java容器">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴支付宝面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-30T13:12:39.000Z">2020-01-30</time></div>
-                    <a href="/2020/01/30/Java%E5%AE%B9%E5%99%A8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java容器</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-06T08:15:10.000Z">2020-03-06</time></div>
+                    <a href="/2020/03/06/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴支付宝面试</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Java/">Java</a>
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
                 </div>
             </div>
@@ -793,12 +1126,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2020/02/">
                 <span class="level-start">
                     <span class="level-item">二月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -910,7 +1254,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/alibaba/">
                         <span class="tag">alibaba</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -959,6 +1303,20 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/stack/">
                         <span class="tag">stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E7%BE%8E%E5%9B%A2/">
+                        <span class="tag">美团</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%85%BE%E8%AE%AF/">
+                        <span class="tag">腾讯</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -987,16 +1345,16 @@
         
         <article class="media">
             
-            <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="media-left">
+            <a href="/2020/03/19/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%BA%97saas%E4%B8%9A%E5%8A%A1%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴用户增长部提前批面经">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="美团到店saas业务面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-24T14:50:47.000Z">2020-02-24</time></div>
-                    <a href="/2020/02/24/%E7%94%A8%E6%88%B7%E5%A2%9E%E9%95%BF%E9%83%A8%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E7%BB%8F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴用户增长部提前批面经</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-19T03:39:20.000Z">2020-03-19</time></div>
+                    <a href="/2020/03/19/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%BA%97saas%E4%B8%9A%E5%8A%A1%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">美团到店saas业务面试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
@@ -1006,16 +1364,16 @@
         
         <article class="media">
             
-            <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="media-left">
+            <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="暑期实习面试准备">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="腾讯pcg实习面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-17T08:36:25.000Z">2020-02-17</time></div>
-                    <a href="/2020/02/17/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" class="title has-link-black-ter is-size-6 has-text-weight-normal">暑期实习面试准备</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-13T08:45:43.000Z">2020-03-13</time></div>
+                    <a href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">腾讯pcg实习面试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
@@ -1025,18 +1383,18 @@
         
         <article class="media">
             
-            <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="media-left">
+            <a href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据库事务">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴淘宝互动平台实习生面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-15T05:18:28.000Z">2020-02-15</time></div>
-                    <a href="/2020/02/15/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据库事务</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T03:08:41.000Z">2020-03-11</time></div>
+                    <a href="/2020/03/11/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%B7%98%E5%AE%9D%E4%BA%92%E5%8A%A8%E5%B9%B3%E5%8F%B0%E5%AE%9E%E4%B9%A0%E7%94%9F%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴淘宝互动平台实习生面试</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
                 </div>
             </div>
@@ -1044,18 +1402,18 @@
         
         <article class="media">
             
-            <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="media-left">
+            <a href="/2020/03/10/%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%EF%BC%8C%E8%87%B3%E6%AD%A4%E6%97%B6%E5%A4%A7%E7%BA%A6%E4%B8%80%E4%B8%AA%E6%9C%88/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="解决TIME_WAIT过多的问题">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="准备找暑期实习，至此时大约一个月">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-09T14:48:30.000Z">2020-02-09</time></div>
-                    <a href="/2020/02/09/%E8%A7%A3%E5%86%B3TIME-WAIT%E8%BF%87%E5%A4%9A%E7%9A%84%E9%97%AE%E9%A2%98/" class="title has-link-black-ter is-size-6 has-text-weight-normal">解决TIME_WAIT过多的问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-10T06:22:06.000Z">2020-03-10</time></div>
+                    <a href="/2020/03/10/%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%EF%BC%8C%E8%87%B3%E6%AD%A4%E6%97%B6%E5%A4%A7%E7%BA%A6%E4%B8%80%E4%B8%AA%E6%9C%88/" class="title has-link-black-ter is-size-6 has-text-weight-normal">准备找暑期实习，至此时大约一个月</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                        <a class="has-link-grey -link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
                     </p>
                 </div>
             </div>
@@ -1063,18 +1421,18 @@
         
         <article class="media">
             
-            <a href="/2020/01/30/Java%E5%AE%B9%E5%99%A8/" class="media-left">
+            <a href="/2020/03/06/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9D%A2%E8%AF%95/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Java容器">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="阿里巴巴支付宝面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-30T13:12:39.000Z">2020-01-30</time></div>
-                    <a href="/2020/01/30/Java%E5%AE%B9%E5%99%A8/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Java容器</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-06T08:15:10.000Z">2020-03-06</time></div>
+                    <a href="/2020/03/06/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">阿里巴巴支付宝面试</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Java/">Java</a>
+                        <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
                 </div>
             </div>
@@ -1092,12 +1450,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">三月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">6</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2020/02/">
                 <span class="level-start">
                     <span class="level-item">二月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1209,7 +1578,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/alibaba/">
                         <span class="tag">alibaba</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">6</span>
                     </a>
                 </div>
                 
@@ -1258,6 +1627,20 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/stack/">
                         <span class="tag">stack</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E7%BE%8E%E5%9B%A2/">
+                        <span class="tag">美团</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/%E8%85%BE%E8%AE%AF/">
+                        <span class="tag">腾讯</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
