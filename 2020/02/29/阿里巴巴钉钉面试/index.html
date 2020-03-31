@@ -19,7 +19,7 @@
 <meta property="og:description" content="一面 个人介绍 项目介绍 亮点 多节点乐观锁实现 重复支付解决办法  支付系统设计中，如何防止重复支付? rbac介绍 具体实现">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-03-14T07:27:42.082Z">
+<meta property="og:updated_time" content="2020-03-31T07:24:39.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -153,7 +153,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 607 个字)
+                    5 分钟 读完 (大约 824 个字)
                 </span>
                 
                 
@@ -220,6 +220,17 @@
 <li>说一下项目中的难点，你在里面承担了什么角色，如何和同学协作，如何解决</li>
 <li>介绍了钉钉开放平台的业务</li>
 <li>有什么问题</li>
+</ul>
+</li>
+<li>交叉面<ul>
+<li>自我介绍</li>
+<li>array ArrayList区别</li>
+<li>进程和线程概念　区别</li>
+<li>计网七层</li>
+<li>jdk jre区别</li>
+<li>爱奇艺实习</li>
+<li>烧一根不均匀的绳子需要一小时，用烧绳法如何确定1小时15分钟</li>
+<li>评测题目: 无<br>Given a string, determine if it is a palindrome（回文，如果不清楚，按字面意思脑补下）, considering only alphanumeric characters and ignoring cases.<br>For example,<br>“A man, a plan, a canal: Panama” is a palindrome.<br>“race a car” is not a palindrome.<br>Note:  ====<br>Have you consider that the string might be empty? This is a good question to ask during an interview.<br>For the purpose of this problem, we define empty string as valid palindrome.<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Write your code here</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">solution</span><span class="hljs-params">(String str)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">   <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">   <span class="hljs-keyword">int</span>[] ch = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[str.length()];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">      <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;str.length();i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">     <span class="hljs-keyword">if</span>((str.charAt(i)&gt;=<span class="hljs-string">'a'</span>&amp;&amp;str.charAt(i)&lt;=<span class="hljs-string">'z'</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">               ||(str.charAt(i)&gt;=<span class="hljs-string">'A'</span>&amp;&amp;str.charAt(i)&lt;=<span class="hljs-string">'Z'</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">              <span class="hljs-keyword">char</span> c = str.charAt(i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">ch[count++] = c&gt;=<span class="hljs-string">'A'</span>?c-<span class="hljs-string">'A'</span>:c-<span class="hljs-string">'a'</span>;            </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i =<span class="hljs-number">0</span>;i&lt;count/<span class="hljs-number">2</span>;i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">if</span>(ch[i]!=ch[count-<span class="hljs-number">1</span>-i])&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">               <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -570,14 +581,14 @@
             
             <a href="/2020/03/24/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B9%B3%E5%8F%B0%E4%B8%80%E9%9D%A2/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="字节跳动抖音直播平台一面">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="字节跳动抖音直播平台面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-24T07:04:07.000Z">2020-03-24</time></div>
-                    <a href="/2020/03/24/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B9%B3%E5%8F%B0%E4%B8%80%E9%9D%A2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">字节跳动抖音直播平台一面</a>
+                    <a href="/2020/03/24/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B9%B3%E5%8F%B0%E4%B8%80%E9%9D%A2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">字节跳动抖音直播平台面试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
@@ -901,14 +912,14 @@
             
             <a href="/2020/03/24/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B9%B3%E5%8F%B0%E4%B8%80%E9%9D%A2/" class="media-left">
 <!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="字节跳动抖音直播平台一面">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="字节跳动抖音直播平台面试">
                 </p>-->
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-24T07:04:07.000Z">2020-03-24</time></div>
-                    <a href="/2020/03/24/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B9%B3%E5%8F%B0%E4%B8%80%E9%9D%A2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">字节跳动抖音直播平台一面</a>
+                    <a href="/2020/03/24/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E6%8A%96%E9%9F%B3%E7%9B%B4%E6%92%AD%E5%B9%B3%E5%8F%B0%E4%B8%80%E9%9D%A2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">字节跳动抖音直播平台面试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/note/">note</a>
                     </p>
