@@ -1,13 +1,14 @@
 ---
-title: 美团到店saas业务面试
+title: 美团到店Saas业务部门面试
 date: 2020-03-19 11:39:20
-categories: note
+categories: 面试
 tags: 美团
 ---
 - 一面
     - HashSet的实现;如何判断不重复;插入数据是头插入还是尾插入
         同样要遍历比较key，为啥要采用头插入
-    - 多线程了解吗;x打印值的范围为多少；如何是打印值为200，有集中方法
+        <!--more-->
+    - 多线程了解吗;x打印值的范围为多少；如何是打印值为200，有几种方法
 ```java
         public class Test implements Runnable{
         static int x;
@@ -84,7 +85,7 @@ public static void main(String[] args){
     }).start();
 }
  ```
- - 二叉树前序遍历非递归实现，后序遍历非递归实现
+    - 二叉树前序遍历非递归实现，后序遍历非递归实现
  ```
 // pre
 

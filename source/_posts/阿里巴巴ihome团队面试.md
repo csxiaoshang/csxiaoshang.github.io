@@ -1,7 +1,7 @@
 ---
 title: 阿里巴巴ihome团队面试
 date: 2020-03-03 20:33:18
-categories: note
+categories: 面试
 tags: alibaba
 ---
 #### 一面
