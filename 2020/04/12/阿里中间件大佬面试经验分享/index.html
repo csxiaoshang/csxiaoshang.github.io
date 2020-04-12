@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>TCP状态问题 - 刘云尚|个人博客</title>
+<title>阿里中间件大佬面试经验分享 - 刘云尚|个人博客</title>
 
 
-    <meta name="description" content="TCP三次握手建立连接 Client发送带有SYN和seq &#x3D; x的包到Server;Client转为SYN_SENT Server返回SYN、ACK、ack &#x3D; x +1和seq &#x3D; y的包，Server从LISTEN切换到SYN_RCVD Client发送ACK、 ack &#x3D; y +1和seq &#x3D; x+1 的包，都转为ESTABLISHED">
-<meta name="keywords" content="TCP">
+    <meta name="description" content="准备工作阿里中间件团队博客 扎实的计算机基础 计算机组成原理 计算机网络 操作系统 基本数据结构与算法 数据库 JAVA基础  熟悉基本语法与常用库  学习源码、io、util、current、collection  了解常用框架，spring、netty、dubbo等  提高编程能力、编程比赛 阿里巴巴天池比赛 华为软件精英挑战赛 中兴捧月挑战赛积极参加项目实战对平时做的项目多思考，对使用的技术">
+<meta name="keywords" content="经验分享">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP状态问题">
-<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2019&#x2F;12&#x2F;27&#x2F;TCP%E7%8A%B6%E6%80%81%E9%97%AE%E9%A2%98&#x2F;index.html">
+<meta property="og:title" content="阿里中间件大佬面试经验分享">
+<meta property="og:url" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;2020&#x2F;04&#x2F;12&#x2F;%E9%98%BF%E9%87%8C%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%A4%A7%E4%BD%AC%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB&#x2F;index.html">
 <meta property="og:site_name" content="刘云尚|个人博客">
-<meta property="og:description" content="TCP三次握手建立连接 Client发送带有SYN和seq &#x3D; x的包到Server;Client转为SYN_SENT Server返回SYN、ACK、ack &#x3D; x +1和seq &#x3D; y的包，Server从LISTEN切换到SYN_RCVD Client发送ACK、 ack &#x3D; y +1和seq &#x3D; x+1 的包，都转为ESTABLISHED">
+<meta property="og:description" content="准备工作阿里中间件团队博客 扎实的计算机基础 计算机组成原理 计算机网络 操作系统 基本数据结构与算法 数据库 JAVA基础  熟悉基本语法与常用库  学习源码、io、util、current、collection  了解常用框架，spring、netty、dubbo等  提高编程能力、编程比赛 阿里巴巴天池比赛 华为软件精英挑战赛 中兴捧月挑战赛积极参加项目实战对平时做的项目多思考，对使用的技术">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-29T05:23:12.016Z">
+<meta property="og:updated_time" content="2020-04-12T01:04:26.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;csxiaoshang.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -87,7 +87,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/head.jpeg" alt="TCP状态问题" height="28">
+                <img src="/images/head.jpeg" alt="阿里中间件大佬面试经验分享" height="28">
             
             </a>
         </div>
@@ -143,17 +143,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-27T03:10:46.000Z">2019-12-27</time>
+                <time class="level-item has-text-grey" datetime="2020-04-12T00:49:28.000Z">2020-04-12</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/%E7%BD%91%E7%BB%9C/">网络</a>
+                <a class="has-link-grey -link" href="/categories/note/">note</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 637 个字)
+                    1 分钟 读完 (大约 201 个字)
                 </span>
                 
                 
@@ -162,25 +162,31 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                TCP状态问题
+                阿里中间件大佬面试经验分享
             
         </h1>
         <div class="content">
-            <h4 id="TCP三次握手建立连接"><a href="#TCP三次握手建立连接" class="headerlink" title="TCP三次握手建立连接"></a>TCP三次握手建立连接</h4><ul>
-<li>Client发送带有SYN和seq = x的包到Server;Client转为SYN_SENT</li>
-<li>Server返回SYN、ACK、ack = x +1和seq = y的包，Server从LISTEN切换到SYN_RCVD</li>
-<li>Client发送ACK、 ack = y +1和seq = x+1 的包，都转为ESTABLISHED</li>
+            <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>阿里中间件团队博客</p>
+<h4 id="扎实的计算机基础"><a href="#扎实的计算机基础" class="headerlink" title="扎实的计算机基础"></a>扎实的计算机基础</h4><ul>
+<li>计算机组成原理</li>
+<li>计算机网络</li>
+<li>操作系统</li>
+<li>基本数据结构与算法</li>
+<li>数据库</li>
+<li>JAVA基础<br>  熟悉基本语法与常用库<br>  学习源码、io、util、current、collection<br>  了解常用框架，spring、netty、dubbo等</li>
 </ul>
-<a id="more"></a>
-
-<p>三次握手的主要目的是：<strong>信息对等和防止超时</strong>。防止超时导致脏连接。<br>如果使用的是两次握手建立连接，假设有这样一种场景，客户端发送了第一个请求连接并且没有丢失，只是因为在网络结点中滞留的时间太长了，由于TCP的客户端迟迟没有收到确认报文，以为服务器没有收到，此时重新向服务器发送这条报文，此后客户端和服务器经过两次握手完成连接，传输数据，然后关闭连接。<br>此时此前滞留的那一次请求连接，网络通畅了到达了服务器，这个报文本该是失效的，但是，两次握手的机制将会让客户端和服务器再次建立连接，这将导致不必要的错误和资源的浪费。如果采用的是三次握手，就算是那一次失效的报文传送过来了，服务端接受到了那条失效报文并且回复了确认报文，但是客户端不会再次发出确认。由于服务器收不到确认，就知道客户端并没有请求连接。</p>
-<h4 id="TCP四次挥手释放连接"><a href="#TCP四次挥手释放连接" class="headerlink" title="TCP四次挥手释放连接"></a>TCP四次挥手释放连接</h4><ul>
-<li>Client发送带有FIN和seq = x的包到Server，Client从ESTABLISHED转为FIN_WAIT_1</li>
-<li>Server发送带有Ack 、ack= x+1和seq = y的包到Client，Server进入到CLOSE_WAIT状态</li>
-<li>Client收到确认请求后，进入FIN_WAIT_2，等待服务器发送释放报文</li>
-<li>Server最后的数据发送完毕后，便发送释放报文，FIN = 1,ack = x+1 和 seq = w ,Server进入到LAST_ACK状态</li>
-<li>Client收到释放报文后，发出ACK、ack = w+1和seq = x+1，进入到TIME_WAIT状态。这是TCP连接还没有释放，必须等待2<br>MSL（最长报文段寿命）时间后，当Client撤销相应的TCB后，才进入CLOSED状态</li>
-<li>Server只要收到了客户端发出的确认，立即进入CLOSED状态。Server结束TCP连接的时间要比客户端早一些。</li>
+<h4 id="提高编程能力、编程比赛"><a href="#提高编程能力、编程比赛" class="headerlink" title="提高编程能力、编程比赛"></a>提高编程能力、编程比赛</h4><ul>
+<li>阿里巴巴天池比赛</li>
+<li>华为软件精英挑战赛</li>
+<li>中兴捧月挑战赛<h4 id="积极参加项目实战"><a href="#积极参加项目实战" class="headerlink" title="积极参加项目实战"></a>积极参加项目实战</h4>对平时做的项目多思考，对使用的技术深入了了解，多方比较<h4 id="笔试准备"><a href="#笔试准备" class="headerlink" title="笔试准备"></a>笔试准备</h4></li>
+<li>LeetCode</li>
+<li>《编程珠玑》</li>
+<li>《算法》</li>
+</ul>
+<h4 id="面试准备"><a href="#面试准备" class="headerlink" title="面试准备"></a>面试准备</h4><ul>
+<li>记笔记</li>
+<li>厚积薄发<br>单背面经有些不够</li>
+<li>对不同的公司专门准备</li>
 </ul>
 
         </div>
@@ -189,7 +195,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/TCP/" rel="tag">TCP</a>
+                    <a class="has-link-grey -link" href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" rel="tag">经验分享</a>
                 </div>
             </div>
         </div>
@@ -216,17 +222,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/12/30/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Java基础</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/21/2019%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">
-                <span class="level-item">2019年终总结</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/04/09/%E8%85%BE%E8%AE%AF%E5%A4%A9%E7%BE%8E%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/">
+                <span class="level-item">腾讯天美实习面试</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -245,7 +244,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 	var gitment = new Gitment({
-		id: '24b815db753a68b8883f39bc2643cb4d',
+		id: 'c44b6dbc38cc8cf6da03fe0d512ac3bf',
 		owner: 'ashang',
 		repo: 'csxiaoshang.github.io',
 		oauth: {
@@ -1226,7 +1225,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/head.jpeg" alt="TCP状态问题" height="28">
+                    <img src="/images/head.jpeg" alt="阿里中间件大佬面试经验分享" height="28">
                 
                 </a>
                 <p class="is-size-7">

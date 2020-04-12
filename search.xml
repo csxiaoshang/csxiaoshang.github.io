@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>阿里中间件大佬面试经验分享</title>
+      <link href="/2020/04/12/%E9%98%BF%E9%87%8C%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%A4%A7%E4%BD%AC%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
+      <url>/2020/04/12/%E9%98%BF%E9%87%8C%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%A4%A7%E4%BD%AC%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</url>
+      
+        <content type="html"><![CDATA[<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><p>阿里中间件团队博客</p><h4 id="扎实的计算机基础"><a href="#扎实的计算机基础" class="headerlink" title="扎实的计算机基础"></a>扎实的计算机基础</h4><ul><li>计算机组成原理</li><li>计算机网络</li><li>操作系统</li><li>基本数据结构与算法</li><li>数据库</li><li>JAVA基础<br>  熟悉基本语法与常用库<br>  学习源码、io、util、current、collection<br>  了解常用框架，spring、netty、dubbo等</li></ul><h4 id="提高编程能力、编程比赛"><a href="#提高编程能力、编程比赛" class="headerlink" title="提高编程能力、编程比赛"></a>提高编程能力、编程比赛</h4><ul><li>阿里巴巴天池比赛</li><li>华为软件精英挑战赛</li><li>中兴捧月挑战赛<h4 id="积极参加项目实战"><a href="#积极参加项目实战" class="headerlink" title="积极参加项目实战"></a>积极参加项目实战</h4>对平时做的项目多思考，对使用的技术深入了了解，多方比较<h4 id="笔试准备"><a href="#笔试准备" class="headerlink" title="笔试准备"></a>笔试准备</h4></li><li>LeetCode</li><li>《编程珠玑》</li><li>《算法》</li></ul><h4 id="面试准备"><a href="#面试准备" class="headerlink" title="面试准备"></a>面试准备</h4><ul><li>记笔记</li><li>厚积薄发<br>单背面经有些不够</li><li>对不同的公司专门准备</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 经验分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>腾讯天美实习面试</title>
+      <link href="/2020/04/09/%E8%85%BE%E8%AE%AF%E5%A4%A9%E7%BE%8E%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
+      <url>/2020/04/09/%E8%85%BE%E8%AE%AF%E5%A4%A9%E7%BE%8E%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面<ul><li>个人介绍</li><li>比赛介绍</li><li>节点服务故障里如何处理</li><li>项目中多节点同时构建如何实现</li><li>mysql和redis区别</li><li>redis内存和硬盘数据一致性</li><li>aof形式，set 数据　delete数据流程</li><li>redis崩溃后如何恢复</li><li>mysql索引类型,b+树</li><li>hash冲突解决办法</li><li>大量的ip地址查找</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 腾讯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面试技巧</title>
       <link href="/2020/03/31/%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/"/>
       <url>/2020/03/31/%E9%9D%A2%E8%AF%95%E6%8A%80%E5%B7%A7/</url>
@@ -13,10 +63,16 @@
       
       <categories>
           
-          <category> 面试 </category>
+          <category> note </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 经验分享 </tag>
+            
+        </tags>
       
     </entry>
     
