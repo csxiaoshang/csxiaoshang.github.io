@@ -158,7 +158,7 @@
       <link href="/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
       <url>/2020/03/13/%E8%85%BE%E8%AE%AFpcg%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<ul><li>一面<br>  -自我介绍<ul><li>linux命令　cat awk top</li><li>mysql 查询　多表查询　sql语句<a id="more"></a></li><li>联合索引查询 idx(a,b) select * from t where a = 1和select * from t where b = 1　走不走索引<br>  <a href="https://www.cnblogs.com/xcsg/p/11109713.html" target="_blank" rel="noopener">https://www.cnblogs.com/xcsg/p/11109713.html</a></li><li>垃圾回收</li><li>redis sds hash 扩容　增长因子还是二倍扩容</li><li>10TB数据找出最大值</li><li>负载均衡算法</li><li>1000个值里找最小值</li></ul></li><li>二面<ul><li>中间件负载均衡比赛</li><li>多个负载节点如何处理</li><li>爱奇艺实习多久</li><li>是否想来深圳发展</li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li><p>一面<br>  -自我介绍</p><ul><li>linux命令　cat awk top</li><li>mysql 查询　多表查询　sql语句<a id="more"></a></li><li>联合索引查询 idx(a,b) select * from t where a = 1和select * from t where b = 1　走不走索引<br>  <a href="https://www.cnblogs.com/xcsg/p/11109713.html" target="_blank" rel="noopener">https://www.cnblogs.com/xcsg/p/11109713.html</a></li><li>垃圾回收</li><li>redis sds hash 扩容　增长因子还是二倍扩容</li><li>10TB数据找出最大值</li><li>负载均衡算法</li><li>1000个值里找最小值</li></ul></li><li><p>二面</p><ul><li>中间件负载均衡比赛</li><li>多个负载节点如何处理</li><li>爱奇艺实习多久</li><li>是否想来深圳发展</li></ul></li><li><p>一面(2020/4/15)</p><ul><li>负载均衡比赛</li><li>爱奇艺实习</li><li>象棋　马的走法，从一个位置到另一个位置要多少步数</li><li>操作系统避免重复运行程序，进程通信，kill程序算什么异常</li><li>找用户三度好友的方法，eg:1-3-4-2 找1　2这种;存储一个用户所有好友用户的所用到的内存大小</li></ul></li></ul>]]></content>
       
       
       <categories>
