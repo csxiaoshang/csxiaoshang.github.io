@@ -4,6 +4,106 @@
   
     
     <entry>
+      <title>度小满2020春招实习面试</title>
+      <link href="/2020/04/27/%E5%BA%A6%E5%B0%8F%E6%BB%A12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
+      <url>/2020/04/27/%E5%BA%A6%E5%B0%8F%E6%BB%A12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面<ul><li>自我介绍</li><li>http如何完成一次请求</li><li>我有火狐和谷歌都访问一个网站，如何辨别是哪个程序<br>  答：根据tcp报文中的源端口</li><li>死锁概念<br>  说完死锁，如何破坏死锁也说了，破坏死锁的算法</li><li>java exception和error区别</li><li>常见的几个RuntimeException</li><li>NoClassDefFound异常</li><li>leetcode 水桶问题</li></ul></li><li>二面<ul><li>自我介绍</li><li>jdk源码看过哪些</li><li>linux命令用过哪些</li><li>java垃圾回收算法</li><li>full gc什么时候触发</li><li>gc优化</li><li>负载均衡比赛</li><li>redis常用数据结构</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 度小满 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>springboot笔记</title>
+      <link href="/2020/04/23/springboot%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/04/23/springboot%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<ul><li>springboot启动过程<br>启动过程主要包括创建配置环境、spring listeners、application context。<br><a href="https://www.cnblogs.com/xiaoxi/p/7999885.html" target="_blank" rel="noopener">启动原理解析</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> springboot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> interview </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>京东2020春招实习</title>
+      <link href="/2020/04/23/%E4%BA%AC%E4%B8%9C2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/"/>
+      <url>/2020/04/23/%E4%BA%AC%E4%B8%9C2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面(04/23)<ul><li>个人介绍</li><li>实习亮点</li><li>final关键字</li><li>gc过程</li><li>springboot启动过程</li><li>实习时长</li></ul></li><li>二面(04/26)<ul><li>个人介绍</li><li>继承的作用　父类继承和接口继承区别</li><li>重写和重载</li><li>类加载</li><li>双亲委派</li><li>jenkins createJob具体介绍</li><li>jenkins获取多个builder的build日志<br>  build时携带任务id,使用回调函数的形式更新任务表，查询日志时直接<br>  查询任务表，而不去请求jenkins　restful接口</li><li>jenkins pipeline groovy脚本实现回调</li><li>xss攻击</li><li>缓存redis实现细节<br>  先更新数据库表，再删除缓存</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 京东 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网易互娱2020春招实习</title>
+      <link href="/2020/04/23/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/"/>
+      <url>/2020/04/23/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面<ul><li>自我介绍</li><li>redis使用的地方，使用过了redis哪些数据结构,redis　字符串结构</li><li>spring项目启动时端口被占用，如何处理</li><li>查询端口进程,kill;kill kill -9区别</li><li>http响应码，301 302区别</li><li>tcp粘包</li><li>tcp　udp开始做过吗</li><li>http https区别,https详细过程</li><li>spring aop</li><li>spring bean 属性注入在什么时候</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网易 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>从准备找暑期实习开始，已过了两个月</title>
       <link href="/2020/04/18/%E4%BB%8E%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%B7%B2%E8%BF%87%E4%BA%86%E4%B8%A4%E4%B8%AA%E6%9C%88/"/>
       <url>/2020/04/18/%E4%BB%8E%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%B7%B2%E8%BF%87%E4%BA%86%E4%B8%A4%E4%B8%AA%E6%9C%88/</url>
