@@ -4,6 +4,150 @@
   
     
     <entry>
+      <title>度小满2020春招实习面试</title>
+      <link href="/2020/04/27/%E5%BA%A6%E5%B0%8F%E6%BB%A12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
+      <url>/2020/04/27/%E5%BA%A6%E5%B0%8F%E6%BB%A12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面<ul><li>自我介绍</li><li>http如何完成一次请求</li><li>我有火狐和谷歌都访问一个网站，如何辨别是哪个程序<br>  答：根据tcp报文中的源端口</li><li>死锁概念<br>  说完死锁，如何破坏死锁也说了，破坏死锁的算法</li><li>java exception和error区别</li><li>常见的几个RuntimeException</li><li>NoClassDefFound异常</li><li>leetcode 水桶问题</li></ul></li><li>二面<ul><li>自我介绍</li><li>jdk源码看过哪些</li><li>linux命令用过哪些</li><li>java垃圾回收算法</li><li>full gc什么时候触发</li><li>gc优化</li><li>负载均衡比赛</li><li>redis常用数据结构</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 度小满 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>springboot笔记</title>
+      <link href="/2020/04/23/springboot%E7%AC%94%E8%AE%B0/"/>
+      <url>/2020/04/23/springboot%E7%AC%94%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<ul><li>springboot启动过程<br>启动过程主要包括创建配置环境、spring listeners、application context。<br><a href="https://www.cnblogs.com/xiaoxi/p/7999885.html" target="_blank" rel="noopener">启动原理解析</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> springboot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> interview </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>京东2020春招实习</title>
+      <link href="/2020/04/23/%E4%BA%AC%E4%B8%9C2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/"/>
+      <url>/2020/04/23/%E4%BA%AC%E4%B8%9C2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面(04/23)<ul><li>个人介绍</li><li>实习亮点</li><li>final关键字</li><li>gc过程</li><li>springboot启动过程</li><li>实习时长</li></ul></li><li>二面(04/26)<ul><li>个人介绍</li><li>继承的作用　父类继承和接口继承区别</li><li>重写和重载</li><li>类加载</li><li>双亲委派</li><li>jenkins createJob具体介绍</li><li>jenkins获取多个builder的build日志<br>  build时携带任务id,使用回调函数的形式更新任务表，查询日志时直接<br>  查询任务表，而不去请求jenkins　restful接口</li><li>jenkins pipeline groovy脚本实现回调</li><li>xss攻击</li><li>缓存redis实现细节<br>  先更新数据库表，再删除缓存</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 京东 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网易互娱2020春招实习</title>
+      <link href="/2020/04/23/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/"/>
+      <url>/2020/04/23/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面<ul><li>自我介绍</li><li>redis使用的地方，使用过了redis哪些数据结构,redis　字符串结构</li><li>spring项目启动时端口被占用，如何处理</li><li>查询端口进程,kill;kill kill -9区别</li><li>http响应码，301 302区别</li><li>tcp粘包</li><li>tcp　udp开始做过吗</li><li>http https区别,https详细过程</li><li>spring aop</li><li>spring bean 属性注入在什么时候</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网易 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>从准备找暑期实习开始，已过了两个月</title>
+      <link href="/2020/04/18/%E4%BB%8E%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%B7%B2%E8%BF%87%E4%BA%86%E4%B8%A4%E4%B8%AA%E6%9C%88/"/>
+      <url>/2020/04/18/%E4%BB%8E%E5%87%86%E5%A4%87%E6%89%BE%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E5%BC%80%E5%A7%8B%EF%BC%8C%E5%B7%B2%E8%BF%87%E4%BA%86%E4%B8%A4%E4%B8%AA%E6%9C%88/</url>
+      
+        <content type="html"><![CDATA[<ul><li>阶段性总结<br>  目前流程：钉钉offer<pre><code>字节抖音直播三面后没有消息快手效率工程hr面后无消息美团到店saas一面挂百度笔试后无消息腾讯挂了四次网易云音乐面了一面几天后面网易互娱今晚京东笔试</code></pre>  10号收到意向书以来，心态就有点放松了，有些想报复性玩一玩，又不敢玩。<br>  这几天的学习效率一直不高，上午刷题，下午没有精神，晚上复习。</li><li>复习情况和计划<br>  经过这两个月以来的复习，操作系统、网络、java基础、spring、jvm、数据库、并发<br>  都看了几遍，接下来在整体复习的基础上，重点深入算法、操作系统、分布式框架。<br>  具体来说，看《算法》刷leetcode、复习操作系统书、学习netty dubbo</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序人生 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>网易云音乐2020春招实习</title>
+      <link href="/2020/04/17/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%902020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/"/>
+      <url>/2020/04/17/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%902020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<ul><li>一面(2020/04/17)<ul><li>自我介绍</li><li>项目或者比赛中遇到的挑战</li><li>项目中的收获</li><li>支付问题　重复支付、支付回调延时和无法收到回调</li><li>无法收到支付回调的错误订单如何解决，业务系统挂了、回调消息丢失</li><li>数据库事务如何实现的</li><li>分布式事务，两阶段提交会出现哪些问题，如何解决<br>  事务提交的时候，有的节点提交成功，有的节点提交失败，如何回滚</li><li>索引底层数据结构、索引优化</li><li>学生表，包含姓名、年龄、班级、分数；用一个sql获取如下数据：<br>  写sql 获取每个班级成绩前三的学生名称（A）<br>  如何建索引、索引如何优化</li><li>两字符串，找到最长的公共子序列</li><li>如何学习技术的、看了哪些博客、最近在看哪些书</li><li>有什么想问的(网易云最近有哪些新的业务)</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网易 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阿里中间件大佬2020/04/15号经验分享</title>
       <link href="/2020/04/15/%E9%98%BF%E9%87%8C%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%A4%A7%E4%BD%AC2020-04-15%E5%8F%B7%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/"/>
       <url>/2020/04/15/%E9%98%BF%E9%87%8C%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%A4%A7%E4%BD%AC2020-04-15%E5%8F%B7%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/</url>
@@ -33,7 +177,7 @@
       <link href="/2020/04/14/%E5%BF%AB%E6%89%8B%E6%95%88%E7%8E%87%E5%B7%A5%E7%A8%8B2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
       <url>/2020/04/14/%E5%BF%AB%E6%89%8B%E6%95%88%E7%8E%87%E5%B7%A5%E7%A8%8B2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<ul><li><p>一面(2020/04/14)</p><ul><li><p>自我介绍</p></li><li><p>停车云业务以及架构介绍</p></li><li><p>负载均衡比赛介绍</p></li><li><p>hashMap　concurrentHashMap</p></li><li><p>spring ioc 以及aop的使用</p></li><li><p>jvm内存</p></li><li><p>实现多线程的方法</p></li><li><p>避免订单重复支付的方法</p><a id="more"></a></li><li><p>手写sql<br>  Person<br>  id    gender    age     name<br>  1        M           35       zhangsan<br>  2         F            29      lisi</p><p>  select count(*) from Person where gender=”M” and age &gt; 35 group by age;</p></li><li><p>spring中用到的设计模式</p></li><li><p>手写单例模式</p>  <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">singleton</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">public</span>   <span class="hljs-keyword">volatile</span> Singleton singleton;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">private</span> Object lock = <span class="hljs-keyword">new</span> Object();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Singleton <span class="hljs-title">getSingletion</span><span class="hljs-params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">if</span>(singleton == <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">synchronized</span>(lock)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">                <span class="hljs-keyword">if</span>(singleton == <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">                    singleton = <span class="hljs-keyword">new</span> Singleton();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">return</span> singleton;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure><ul><li>部门主要做的业务 </li></ul></li><li><p>二面(2020/04/15)</p><ul><li>负载均衡比赛</li><li>aop原理</li><li>array和list区别</li><li>hashmap和list初始容量 扩容</li><li>currentHashMap线程安全原理</li><li>@Tranactional注解原理</li><li>hibenate和mybatis区别</li><li>full gc触发条件</li><li>年轻代和老年代的比例，年轻带　eden surivrior比例</li><li>实现一个方法，判断一个字符串，最多删除一个字符，能否成为回文串。<br>abccbca</li><li>公司对新的实习生的培养机制</li></ul></li><li><p>hr面</p><ul><li>面试过程中的收获、评价</li><li>目前有哪些面试流程以及offer</li><li>个人对想去的部门和想做的业务是如何考虑的</li><li>对快手面试以及其他公司的面试过程体验如何</li><li>想问的问题(问了部门业务)</li></ul></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li><p>一面(2020/04/14)</p><ul><li><p>自我介绍</p></li><li><p>停车云业务以及架构介绍</p></li><li><p>负载均衡比赛介绍</p></li><li><p>hashMap　concurrentHashMap</p></li><li><p>spring ioc 以及aop的使用</p></li><li><p>jvm内存</p></li><li><p>实现多线程的方法</p></li><li><p>避免订单重复支付的方法</p><a id="more"></a></li><li><p>手写sql<br>  Person<br>  id    gender    age     name<br>  1        M           35       zhangsan<br>  2         F            29      lisi</p><p>  select count(*) from Person where gender=”M” and age &gt; 35 group by age;</p></li><li><p>spring中用到的设计模式</p></li><li><p>手写单例模式</p>  <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">singleton</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">public</span>   <span class="hljs-keyword">volatile</span> Singleton singleton;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-keyword">private</span> Object lock = <span class="hljs-keyword">new</span> Object();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Singleton <span class="hljs-title">getSingletion</span><span class="hljs-params">()</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">if</span>(singleton == <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">            <span class="hljs-keyword">synchronized</span>(lock)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">                <span class="hljs-keyword">if</span>(singleton == <span class="hljs-keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">                    singleton = <span class="hljs-keyword">new</span> Singleton();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="hljs-keyword">return</span> singleton;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure><ul><li>部门主要做的业务 </li></ul></li><li><p>二面(2020/04/15)</p><ul><li>负载均衡比赛</li><li>aop原理</li><li>array和list区别</li><li>hashmap和list初始容量 扩容</li><li>currentHashMap线程安全原理</li><li>@Tranactional注解原理</li><li>hibenate和mybatis区别</li><li>full gc触发条件</li><li>年轻代和老年代的比例，年轻带　eden surivrior比例</li><li>实现一个方法，判断一个字符串，最多删除一个字符，能否成为回文串。<br>abccbca</li><li>公司对新的实习生的培养机制</li></ul></li><li><p>hr面(2020/04/16)</p><ul><li>面试过程中的收获、评价</li><li>目前有哪些面试流程以及offer</li><li>个人对想去的部门和想做的业务是如何考虑的</li><li>对快手面试以及其他公司的面试过程体验如何</li><li>想问的问题(问了部门业务)</li></ul></li></ul></li></ul>]]></content>
       
       
       <categories>
