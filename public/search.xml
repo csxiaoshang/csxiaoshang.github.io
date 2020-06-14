@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title>暑期实习入职阿里两周了</title>
+      <link href="/2020/06/14/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E5%85%A5%E8%81%8C%E9%98%BF%E9%87%8C%E4%B8%A4%E5%91%A8%E4%BA%86/"/>
+      <url>/2020/06/14/%E6%9A%91%E6%9C%9F%E5%AE%9E%E4%B9%A0%E5%85%A5%E8%81%8C%E9%98%BF%E9%87%8C%E4%B8%A4%E5%91%A8%E4%BA%86/</url>
+      
+        <content type="html"><![CDATA[<h3 id="四五月份的成果"><a href="#四五月份的成果" class="headerlink" title="四五月份的成果"></a>四五月份的成果</h3><ul><li>看书<ul><li>redis设计与实现</li><li>mysql　innodb引擎</li><li>java大型网站与中间件</li></ul></li><li>刷题<ul><li>后续应该刷了有100道左右</li></ul></li><li>面试</li></ul><p>后面面了京东等，最后都凉了</p><ul><li>实验室项目</li></ul><p>完善了下支付，修了点bug</p><p>总结：总的来说，效率太低，每天有效学习时间不足６小时</p><h3 id="入职两周"><a href="#入职两周" class="headerlink" title="入职两周"></a>入职两周</h3><ul><li>第一周</li></ul><p>第一周基本就在学习<br>学习hsf diamond metaQ lwp等各种中间件的使用，学习集团的数据安全等课程<br><br>看代码的核心接口，梳理业务逻辑，总的来说逻辑还是挺复杂的</p><ul><li>第二周</li></ul><p>第二周接了一个小需求<br><br>写web端增加的页面的后台接口<br><br>涉及到两个模块的代码，也就说web端的controller层和service层是分开的，以rpc的形式提供服务<br><br>代码基本写完，写完了单元测试，提交到集成平台上出现点问题，解决中</p><p><strong>这次需求使用到的技术</strong><br>spring hsf diamond</p><p><strong>收获</strong><br>在看不懂diamond监听器如何注册的时候，在相应的端口打了断点，进行debug，<br>梳理清楚了系统中各种diamond监听器注册的过程</p><h3 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h3><p>实习期间学习工作时间是挺多的，但是还要好好分配学习和工作的时间比例<br><br>感觉不到一个月就要秋招提前批了，自己还没有准备好的样子<br><br>还是那一套刷题、看书、看面经<br>感觉重点应该是<strong>看面经了</strong></p><p>之前在论坛上看学长们讨论北邮人的出路并不只有互联网这一条的时候，确实有点想考公务员了</p><p>目前先好好刷刷面经，准备秋招<br><br>好好实习，拿个转正offer<br><br>后续，再说！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序人生 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>让子弹飞分析</title>
+      <link href="/2020/05/10/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E5%88%86%E6%9E%90/"/>
+      <url>/2020/05/10/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/ratels/p/12373699.html" target="_blank" rel="noopener">《让子弹飞》系列</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 观点 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 让子弹飞 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>度小满2020春招实习面试</title>
       <link href="/2020/04/27/%E5%BA%A6%E5%B0%8F%E6%BB%A12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/"/>
       <url>/2020/04/27/%E5%BA%A6%E5%B0%8F%E6%BB%A12020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/</url>
