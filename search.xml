@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>腾讯秋招面试</title>
+      <link href="/2020/08/31/%E8%85%BE%E8%AE%AF%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
+      <url>/2020/08/31/%E8%85%BE%E8%AE%AF%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="WXG一面-8-31-19-00"><a href="#WXG一面-8-31-19-00" class="headerlink" title="WXG一面(8.31 19:00)"></a>WXG一面(8.31 19:00)</h3><ul><li>自我介绍</li><li>实习做的东西</li><li>白屏监控<ul><li>消息队列使用中需要注意的东西<ul><li>可能多次消费同一消息，消费接口幂等</li><li>保证消费成功，通过抛出异常实现</li></ul></li></ul></li><li>cpl业务<ul><li>组织用户粒度隔离　分布式锁</li><li>并发超额造成资损 异步补偿</li></ul></li><li>优惠券<ul><li>是否出现优惠券已经消费了，但是个人显示优惠券仍然可以使用<ul><li>这块回答的不好</li></ul></li></ul></li><li>redis有序集合的底层数据接口的实现</li><li>对redis的理解</li><li>缓存穿透的解决方案</li><li>跳表和红黑树的比较</li><li>算法题目<ul><li>int型判断是否是回文<ul><li>注意溢出</li></ul></li><li>字符串比较<ul><li>暴力解决</li><li>KMP算法<ul><li>不会，现场查资料，然后回答</li></ul></li></ul></li></ul></li><li>http和https的区别<ul><li>https的具体过程<ul><li>说的不准确，现场查资料，回答</li></ul></li></ul></li><li>mysql索引，B+树的好处</li><li>问面试官问题<ul><li>部门业务<br>  微信支付、客户营销、客户资料</li><li>团队规模</li><li>团队base地</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 腾讯 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>猿辅导秋招面试</title>
+      <link href="/2020/08/31/%E7%8C%BF%E8%BE%85%E5%AF%BC%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
+      <url>/2020/08/31/%E7%8C%BF%E8%BE%85%E5%AF%BC%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一面-8-29-09-00"><a href="#一面-8-29-09-00" class="headerlink" title="一面(8.29 09::00)"></a>一面(8.29 09::00)</h3><ul><li>redis线程模型</li><li>redis跳表<br>其他的忘了，常规面试题目</li><li>算法题题目<br>1231212312 转换为ip　比如123.12.123.12<br>有多少种列多少种</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 猿辅导 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>京东技术中台秋招面试</title>
       <link href="/2020/08/05/%E4%BA%AC%E4%B8%9C%E6%8A%80%E6%9C%AF%E4%B8%AD%E5%8F%B0%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
       <url>/2020/08/05/%E4%BA%AC%E4%B8%9C%E6%8A%80%E6%9C%AF%E4%B8%AD%E5%8F%B0%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
