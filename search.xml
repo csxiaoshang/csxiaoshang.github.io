@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>美团到家秋招面试</title>
+      <link href="/2020/09/01/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%AE%B6%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
+      <url>/2020/09/01/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%AE%B6%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一面-9-1-17-00"><a href="#一面-9-1-17-00" class="headerlink" title="一面(9.1 17:00)"></a>一面(9.1 17:00)</h3><ul><li>面试官介绍业务</li><li>自我介绍</li><li>时间轮算法的实现<ul><li>稳定性的保障</li></ul></li><li>负载均衡比赛<ul><li>实现</li><li>有没有看过排名靠前的代码</li><li>并发队列有哪些种</li><li>算法优缺点</li><li>异步非堵塞如何实现</li><li>说说nio</li><li>自己用nio实现</li></ul></li><li>cpl 分布式锁</li><li>白屏监控实现</li><li>做题<br>  -　一串信封有长和宽，最多可以套多少层<ul><li>sql题目，select c1,sum(c2) as s from t group by c1 order by s desc limit 1,1;</li><li>二叉树前序遍历的递归和非递归实现</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 美团 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>腾讯秋招面试</title>
       <link href="/2020/08/31/%E8%85%BE%E8%AE%AF%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
       <url>/2020/08/31/%E8%85%BE%E8%AE%AF%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
