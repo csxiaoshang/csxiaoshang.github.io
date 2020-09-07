@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>快手秋招面试</title>
+      <link href="/2020/09/07/%E5%BF%AB%E6%89%8B%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
+      <url>/2020/09/07/%E5%BF%AB%E6%89%8B%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一面-9-7-14-00"><a href="#一面-9-7-14-00" class="headerlink" title="一面(9.7 14:00)"></a>一面(9.7 14:00)</h3><ul><li>面试官介绍</li><li>自我介绍</li><li>String和StringBuilder区别和使用场景</li><li>String并发问题的解决方案</li><li>String s1 = new String(“xyz”) String s2 = new String(“xyz”)  String s3 = “xy” + “z”<br>判断一共生成了几个字符串对象</li><li>HashMap实现源码</li><li>HashMap什么时候扩容</li><li>ConcurrentHashMap实现源码　如何解决并发问题</li><li>并发情况下如何实现一个计数器</li><li>除了Synchronized还是用哪些解决并发问题的工具</li><li>volatile的作用以及使用场景</li><li>分布式锁的使用以及注意的问题</li><li>爱奇艺中的基于数据库构建无法构建任务</li><li>时间轮算法的实现</li><li>负载均衡比赛中QPS的优化思路</li><li>算法题:一个有序数据找出其中一个元素的重复次数</li><li>有什么问题　主要做的哪些业务</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 快手 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>快速成长</title>
       <link href="/2020/09/04/%E5%BF%AB%E9%80%9F%E6%88%90%E9%95%BF/"/>
       <url>/2020/09/04/%E5%BF%AB%E9%80%9F%E6%88%90%E9%95%BF/</url>
@@ -77,7 +102,7 @@
       <link href="/2020/08/31/%E8%85%BE%E8%AE%AF%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
       <url>/2020/08/31/%E8%85%BE%E8%AE%AF%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<h3 id="WXG一面-8-31-19-00"><a href="#WXG一面-8-31-19-00" class="headerlink" title="WXG一面(8.31 19:00)"></a>WXG一面(8.31 19:00)</h3><ul><li>自我介绍</li><li>实习做的东西</li><li>白屏监控<ul><li>消息队列使用中需要注意的东西<ul><li>可能多次消费同一消息，消费接口幂等</li><li>保证消费成功，通过抛出异常实现</li></ul></li></ul></li><li>cpl业务<ul><li>组织用户粒度隔离　分布式锁</li><li>并发超额造成资损 异步补偿</li></ul></li><li>优惠券<ul><li>是否出现优惠券已经消费了，但是个人显示优惠券仍然可以使用<ul><li>这块回答的不好</li></ul></li></ul></li><li>redis有序集合的底层数据接口的实现</li><li>对redis的理解</li><li>缓存穿透的解决方案</li><li>跳表和红黑树的比较</li><li>算法题目<ul><li>int型判断是否是回文<ul><li>注意溢出</li></ul></li><li>字符串比较<ul><li>暴力解决</li><li>KMP算法<ul><li>不会，现场查资料，然后回答</li></ul></li></ul></li></ul></li><li>http和https的区别<ul><li>https的具体过程<ul><li>说的不准确，现场查资料，回答</li></ul></li></ul></li><li>mysql索引，B+树的好处</li><li>问面试官问题<ul><li>部门业务<br>  微信支付、客户营销、客户资料</li><li>团队规模</li><li>团队base地</li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="WXG一面-8-31-19-00"><a href="#WXG一面-8-31-19-00" class="headerlink" title="WXG一面(8.31 19:00)"></a>WXG一面(8.31 19:00)</h3><ul><li>自我介绍</li><li>实习做的东西</li><li>白屏监控<ul><li>消息队列使用中需要注意的东西<ul><li>可能多次消费同一消息，消费接口幂等</li><li>保证消费成功，通过抛出异常实现</li></ul></li></ul></li><li>cpl业务<ul><li>组织用户粒度隔离　分布式锁</li><li>并发超额造成资损 异步补偿</li></ul></li><li>优惠券<ul><li>是否出现优惠券已经消费了，但是个人显示优惠券仍然可以使用<ul><li>这块回答的不好</li></ul></li></ul></li><li>redis有序集合的底层数据接口的实现</li><li>对redis的理解</li><li>缓存穿透的解决方案</li><li>跳表和红黑树的比较</li><li>算法题目<ul><li>int型判断是否是回文<ul><li>注意溢出</li></ul></li><li>字符串比较<ul><li>暴力解决</li><li>KMP算法<ul><li>不会，现场查资料，然后回答</li></ul></li></ul></li></ul></li><li>http和https的区别<ul><li>https的具体过程<ul><li>说的不准确，现场查资料，回答</li></ul></li></ul></li><li>mysql索引，B+树的好处</li><li>问面试官问题<ul><li>部门业务<br>  微信支付、客户营销、客户资料</li><li>团队规模</li><li>团队base地</li></ul></li></ul><h3 id="WXG二面-9-7-12-00"><a href="#WXG二面-9-7-12-00" class="headerlink" title="WXG二面(9.7 12:00)"></a>WXG二面(9.7 12:00)</h3><ul><li>两个有序数组进行归并</li><li>快排的时间复杂度</li><li>如果一个数组基本有序，那个排序算法效率最高</li><li>100枚硬币其中有一枚是假币，现在有一个天平如何用最少的称重次数，判断假币和真币哪个重</li></ul>]]></content>
       
       
       <categories>
