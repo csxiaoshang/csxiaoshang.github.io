@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>男人来自火星 女人来自金星</title>
+      <link href="/2020/09/16/%E7%94%B7%E4%BA%BA%E6%9D%A5%E8%87%AA%E7%81%AB%E6%98%9F-%E5%A5%B3%E4%BA%BA%E6%9D%A5%E8%87%AA%E9%87%91%E6%98%9F/"/>
+      <url>/2020/09/16/%E7%94%B7%E4%BA%BA%E6%9D%A5%E8%87%AA%E7%81%AB%E6%98%9F-%E5%A5%B3%E4%BA%BA%E6%9D%A5%E8%87%AA%E9%87%91%E6%98%9F/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p>记住我们的不同<br>男人和女人没有警觉彼此应该有所不同，因此纷争不断</p></li><li><p>不要在女人碰到问题的时候给予解决方案<br>在第一时间做一个好的倾听者，仔细听女人说的话，然后给予理解；<br>过后再讨论解决方案。</p></li><li><p>在面临问题时，男人更希望沉默　女人更希望讨论<br>可能下班后，男人更希望安静地继续解决上班时碰到的问题，或者自己单独看看电视、球赛等放松下；<br>女人会更希望讨论自己上班时碰到问题，在和别人讨论时能够放松自己的心情。</p></li><li><p>如何让男人说话<br>很多时候男人说话是需要理由的，很少能做到只为单纯的分享而谈话<br>当自己不想说话或者过分亲密时，可以表达出来，说明“我需要些时间独处”</p></li><li><p>男女有不同的情感需求<br>当男人对女人的感觉表示兴趣、关心她的幸福时,她会觉得被爱、被关<br>心;<br>男人如果能不加判断,感同身受地倾听女人传送感觉,她会觉得自己被<br>爱与了解;<br>如果男人能认知和优先考虑她的权利、愿望和需求,她会觉得自己很受<br>尊重,以送花或记得结婚周年庆这样的方式表示尊重是满足女人第三个基本<br>需要的必要手段;</p></li><li><p>看到了第九章如何避免争论　等后续碰到了问题接着看吧</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>书单</title>
       <link href="/2020/09/15/%E4%B9%A6%E5%8D%95/"/>
       <url>/2020/09/15/%E4%B9%A6%E5%8D%95/</url>
@@ -27,7 +46,7 @@
       <link href="/2020/09/07/%E5%BF%AB%E6%89%8B%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/"/>
       <url>/2020/09/07/%E5%BF%AB%E6%89%8B%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/</url>
       
-        <content type="html"><![CDATA[<h3 id="一面-9-7-14-00"><a href="#一面-9-7-14-00" class="headerlink" title="一面(9.7 14:00)"></a>一面(9.7 14:00)</h3><ul><li>面试官介绍</li><li>自我介绍</li><li>String和StringBuilder区别和使用场景</li><li>String并发问题的解决方案</li><li>String s1 = new String(“xyz”) String s2 = new String(“xyz”)  String s3 = “xy” + “z”<br>判断一共生成了几个字符串对象</li><li>HashMap实现源码</li><li>HashMap什么时候扩容</li><li>ConcurrentHashMap实现源码　如何解决并发问题</li><li>并发情况下如何实现一个计数器</li><li>除了Synchronized还是用哪些解决并发问题的工具</li><li>volatile的作用以及使用场景</li><li>分布式锁的使用以及注意的问题</li><li>爱奇艺中的基于数据库构建无法构建任务</li><li>时间轮算法的实现</li><li>负载均衡比赛中QPS的优化思路</li><li>算法题:一个有序数据找出其中一个元素的重复次数</li><li>有什么问题　主要做的哪些业务</li></ul><h3 id="二面-9-12-14-00"><a href="#二面-9-12-14-00" class="headerlink" title="二面(9.12 14:00)"></a>二面(9.12 14:00)</h3><ul><li>自我介绍</li><li>实习做的东西介绍</li><li>负载均衡比赛介绍</li><li>java多态</li><li>接口和抽象类的区别</li><li>volatile的作用</li><li>mysql事务隔离级别</li><li>联合索引(a,b,c)命中</li><li>算法题：一个数组返回排序后的p95</li></ul>]]></content>
+        <content type="html"><![CDATA[<h3 id="一面-9-7-14-00"><a href="#一面-9-7-14-00" class="headerlink" title="一面(9.7 14:00)"></a>一面(9.7 14:00)</h3><ul><li>面试官介绍</li><li>自我介绍</li><li>String和StringBuilder区别和使用场景</li><li>String并发问题的解决方案</li><li>String s1 = new String(“xyz”) String s2 = new String(“xyz”)  String s3 = “xy” + “z”<br>判断一共生成了几个字符串对象</li><li>HashMap实现源码</li><li>HashMap什么时候扩容</li><li>ConcurrentHashMap实现源码　如何解决并发问题</li><li>并发情况下如何实现一个计数器</li><li>除了Synchronized还是用哪些解决并发问题的工具</li><li>volatile的作用以及使用场景</li><li>分布式锁的使用以及注意的问题</li><li>爱奇艺中基于数据库构建无法构建任务</li><li>时间轮算法的实现</li><li>负载均衡比赛中QPS的优化思路</li><li>算法题:一个有序数据找出其中一个元素的重复次数</li><li>有什么问题　主要做的哪些业务</li></ul><h3 id="二面-9-12-14-00"><a href="#二面-9-12-14-00" class="headerlink" title="二面(9.12 14:00)"></a>二面(9.12 14:00)</h3><ul><li>自我介绍</li><li>实习做的东西介绍</li><li>负载均衡比赛介绍</li><li>java多态</li><li>接口和抽象类的区别</li><li>volatile的作用</li><li>mysql事务隔离级别</li><li>联合索引(a,b,c)命中</li><li>算法题：一个数组返回排序后的p95</li></ul><h3 id="HR面-9-18-15-30"><a href="#HR面-9-18-15-30" class="headerlink" title="HR面(9.18 15:30)"></a>HR面(9.18 15:30)</h3><ul><li>自我介绍</li><li>介绍下在爱奇艺的实习</li><li>介绍下在钉钉的实习</li><li>比较下两段实习有何不同以及有哪些收获</li><li>介绍下在实验室做的停车项目</li><li>用快手吗 喜欢看哪类视频</li><li>你站在用户的角度觉得快手有哪些可以改进的地方</li><li>手里收到了哪些offer</li><li>在收到的offer，你会如何做选择，依据是什么</li><li>你会来快手吗</li><li>你有什么想问的问题吗<br>接下来多久能收到面试反馈</li></ul>]]></content>
       
       
       <categories>

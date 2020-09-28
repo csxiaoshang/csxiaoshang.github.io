@@ -140,6 +140,150 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-07-12T08:35:13.000Z">2020-07-12</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 713 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/07/12/%E5%AD%97%E8%8A%82%E5%B9%BF%E5%91%8A%E7%A7%8B%E6%8B%9B%E6%8F%90%E5%89%8D%E6%89%B9%E9%9D%A2%E8%AF%95/">字节广告秋招提前批面试</a>
+            
+        </h1>
+        <div class="content">
+            <ul>
+<li><p>一面(7.12 14:00)</p>
+<ul>
+<li>自我介绍</li>
+<li>介绍中间件负载均衡比赛<ul>
+<li>介绍比赛场景</li>
+<li>介绍使用算法、优化思路</li>
+<li>业内常见的负载均衡算法、谈到一致性hash算法</li>
+<li>聊了有15min</li>
+</ul>
+</li>
+<li>具体讲解一致性hash算法如何实现，解决什么痛点</li>
+<li>如果通过一致性hash算法负载均衡后，发现某些服务器总是比其他服务器的负载高一些,问题的原因和如何解决<ul>
+<li>原因<ul>
+<li>hash字段的选取(重要)</li>
+<li>hash函数(不太重要)</li>
+<li>虚拟节点(面试的时候没提)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>面对redis缓存雪崩和击穿时的解决方案<ul>
+<li>讲了补偿的解决方案，通过监控处理，做补偿操作</li>
+</ul>
+</li>
+<li>假设有人恶意攻击，找缓存纰漏，伪造缓存key等，制造缓存问题有没有什么解决方案<ul>
+<li>从事前拦截预防<ul>
+<li>根据缓存key粒度，做不命中计数，并设定阈值，在超过阈值后，做补偿方案</li>
+</ul>
+</li>
+<li>事后补偿<ul>
+<li>根据监控和报警，在发现请求rt突然升高后，调节开关做，补偿操作 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>redis zset的实现</li>
+<li>mysql　innodb的索引结构</li>
+<li>联合索引(a,b,c,d) where d = 1 and a = 1 and b = 2 and c &gt; 1; 走不走索引</li>
+<li>做了一道题目，m位的整数，移除n位，求移除后的最大值</li>
+<li>有什么问题<br>  -　主要问了业务，重要做穿山甲，承接广告资源，对各类企业提供商业变现支持</li>
+</ul>
+</li>
+<li><p>二面(7.12 15:00)</p>
+<ul>
+<li>自我介绍<ul>
+<li>聊到爱奇艺实习了，被打断　讲实习中碰到的难点</li>
+</ul>
+</li>
+<li>如何根据复杂的业务场景生成jenkins config.xml<ul>
+<li>顺便一提，有人根据github问我有没有更好的解决方案</li>
+</ul>
+</li>
+<li>实习过程中有没有哪些比较有难度的工作<ul>
+<li>cpl　部分的业务调整</li>
+</ul>
+</li>
+<li>喜欢高并发形式的工作还是喜欢业务比较复杂的工作<ul>
+<li>都可以</li>
+</ul>
+</li>
+<li>做了一道题,二叉树前序和中序　找后序遍历<ul>
+<li>做的有点僵硬,加上调试有半个小时多。。</li>
+</ul>
+</li>
+<li>有什么问题<br>  -问了技术栈</li>
+</ul>
+</li>
+<li><p>三面(7.16 20:00)</p>
+<ul>
+<li>自我介绍</li>
+<li>介绍负载均衡比赛<ul>
+<li>使用的协议</li>
+<li>consumer节点如何发送消息到provider节点</li>
+</ul>
+</li>
+<li>聊到延时队列时间轮的实现<ul>
+<li>遍历set优化</li>
+<li>其他的实现方式</li>
+<li>弊端</li>
+</ul>
+</li>
+<li>rbac模型<ul>
+<li>实现</li>
+<li>具体如何对当前操作判断是否拥有权限</li>
+</ul>
+</li>
+<li>mysql innodb和myisam区别</li>
+<li>mysql索引和mongodb索引区别</li>
+<li>内存直接映射的方法</li>
+<li>两个进程可不可以操作同一块内存</li>
+<li>算法题：<ul>
+<li>全排列的下一个排列</li>
+<li>两个节点的最近公共父节点</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-06-14T01:30:59.000Z">2020-06-14</time>
                 
                 <div class="level-item">
@@ -698,76 +842,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-14T09:43:09.000Z">2020-04-14</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/note/">note</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 324 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/04/14/%E5%BF%AB%E6%89%8B%E6%95%88%E7%8E%87%E5%B7%A5%E7%A8%8B2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/">快手效率工程2020春招实习面试</a>
-            
-        </h1>
-        <div class="content">
-            <ul>
-<li><p>一面(2020/04/14)</p>
-<ul>
-<li><p>自我介绍</p>
-</li>
-<li><p>停车云业务以及架构介绍</p>
-</li>
-<li><p>负载均衡比赛介绍</p>
-</li>
-<li><p>hashMap　concurrentHashMap</p>
-</li>
-<li><p>spring ioc 以及aop的使用</p>
-</li>
-<li><p>jvm内存</p>
-</li>
-<li><p>实现多线程的方法</p>
-</li>
-<li><p>避免订单重复支付的方法</p></li></ul></li></ul>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/04/14/%E5%BF%AB%E6%89%8B%E6%95%88%E7%8E%87%E5%B7%A5%E7%A8%8B2020%E6%98%A5%E6%8B%9B%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -838,7 +912,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            58
+                            59
                         </p>
                     </a>
                 </div>
@@ -1058,7 +1132,7 @@
                 <span class="level-item">读书</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">3</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/%E9%9D%A2%E8%AF%95/">
@@ -1091,6 +1165,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/09/16/%E7%94%B7%E4%BA%BA%E6%9D%A5%E8%87%AA%E7%81%AB%E6%98%9F-%E5%A5%B3%E4%BA%BA%E6%9D%A5%E8%87%AA%E9%87%91%E6%98%9F/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="男人来自火星 女人来自金星">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-16T14:18:52.000Z">2020-09-16</time></div>
+                    <a href="/2020/09/16/%E7%94%B7%E4%BA%BA%E6%9D%A5%E8%87%AA%E7%81%AB%E6%98%9F-%E5%A5%B3%E4%BA%BA%E6%9D%A5%E8%87%AA%E9%87%91%E6%98%9F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">男人来自火星 女人来自金星</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1168,25 +1261,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/09/01/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%AE%B6%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="美团到家秋招面试">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-01T10:42:22.000Z">2020-09-01</time></div>
-                    <a href="/2020/09/01/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%AE%B6%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">美团到家秋招面试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1204,7 +1278,7 @@
                     <span class="level-item">九月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -1547,6 +1621,25 @@
         
         <article class="media">
             
+            <a href="/2020/09/16/%E7%94%B7%E4%BA%BA%E6%9D%A5%E8%87%AA%E7%81%AB%E6%98%9F-%E5%A5%B3%E4%BA%BA%E6%9D%A5%E8%87%AA%E9%87%91%E6%98%9F/" class="media-left">
+<!--                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="男人来自火星 女人来自金星">
+                </p>-->
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-16T14:18:52.000Z">2020-09-16</time></div>
+                    <a href="/2020/09/16/%E7%94%B7%E4%BA%BA%E6%9D%A5%E8%87%AA%E7%81%AB%E6%98%9F-%E5%A5%B3%E4%BA%BA%E6%9D%A5%E8%87%AA%E9%87%91%E6%98%9F/" class="title has-link-black-ter is-size-6 has-text-weight-normal">男人来自火星 女人来自金星</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/09/15/%E4%B9%A6%E5%8D%95/" class="media-left">
 <!--                <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="书单">
@@ -1621,25 +1714,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/09/01/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%AE%B6%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/" class="media-left">
-<!--                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="美团到家秋招面试">
-                </p>-->
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-09-01T10:42:22.000Z">2020-09-01</time></div>
-                    <a href="/2020/09/01/%E7%BE%8E%E5%9B%A2%E5%88%B0%E5%AE%B6%E7%A7%8B%E6%8B%9B%E9%9D%A2%E8%AF%95/" class="title has-link-black-ter is-size-6 has-text-weight-normal">美团到家秋招面试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1657,7 +1731,7 @@
                     <span class="level-item">九月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
