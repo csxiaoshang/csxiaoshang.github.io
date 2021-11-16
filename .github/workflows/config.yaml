@@ -1,0 +1,15 @@
+## baiduPush.yml
+name: 'messagePush'
+ 
+on:
+  push:
+  schedule:
+    - cron: '0 8 * * *'
+    - cron: '0 21 * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest # 运行环境为最新版的Ubuntu
+    steps:
+      - name: 'Run messagePush.sh' # 执行sh命令文件
+        run: bash messagePush.sh # 运行命令。（注意，运行目录是仓库根目录）
