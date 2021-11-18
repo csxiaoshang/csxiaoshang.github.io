@@ -4,7 +4,7 @@ name: 'messagePush'
 on:
   push:
   schedule:
-    - cron: '0 0,8,13,21,22 * * *'
+    - cron: '0 0,13 * * *'
 
 jobs:
   bot:
